@@ -1,7 +1,7 @@
 # AppComponent
 
 ## Template (mdp-component)
-Uma div de classe [appWrapper](/src/Styles.md#.appWrapper) ou [appWrapperPortrait](/src/Styles.md#.appWrapperPortrait) envolvendo um [header](/src/app/components/structure/Header.md), uma [navigation-bar](/src/app/components/structure/NavigationBar.md) e um router-outlet. 
+Uma div de classe [appWrapper](/Docs/src/Styles.md#.appWrapper) ou [appWrapperPortrait](/Docs/src/Styles.md#.appWrapperPortrait) envolvendo um [header](/Docs/src/app/components/structure/Header.md), uma [navigation-bar](/Docs/src/app/components/structure/NavigationBar.md) e um router-outlet. 
 ## Typescript
 
 ## Styles
