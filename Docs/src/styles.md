@@ -1,4 +1,4 @@
-# Styles.csss
+# Styles.scss
 
 ## .verticalFlex
 - display:flex;
