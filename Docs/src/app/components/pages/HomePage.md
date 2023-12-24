@@ -1,4 +1,4 @@
-# Component
+# HomePageComponent
 
 ## Template
 
