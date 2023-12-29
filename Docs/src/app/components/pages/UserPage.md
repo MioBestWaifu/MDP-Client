@@ -1,4 +1,4 @@
-# Component
+# UserPageComponent
 
 ## Template
 
