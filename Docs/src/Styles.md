@@ -11,9 +11,9 @@ Grid para envolver o aplicativo. Tem um slot para o [header](/Docs/src/app/compo
 *Extends appWrapper*
 Grid para envolver o aplicativo no mobile. Elimina o espaço para [navigation-bar](/Docs/src/app/components/structure/NavigationBar.md) e counteúdo adicional, redefinindo também a proporção do [header](/Docs/src/app/components/structure/Header.md) e do router-outlet.
 
-## .pageWrapper
-Grid para envolver uma page. Tem um slot para conteúdo principal na esquerda (centro da página) e um menor na direita para conteúdo secundário. 
+## .contentWrapper
+Grid para envolver o conteúdo de uma page. Tem um slot para conteúdo principal na esquerda (centro da página) e um menor na direita para conteúdo secundário. 
 
-## .pageWrapperPortrait
+## .contentWrapperPortrait
 *Extends verticalFlex*
-Flexbox para envolver uma page do mobile. 
+Flexbox para envolver o conteúdo de uma page do mobile. 

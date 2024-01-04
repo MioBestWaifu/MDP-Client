@@ -6,4 +6,6 @@ Uma div de classe [appWrapper](/Docs/src/Styles.md#.appWrapper) ou [appWrapperPo
 
 ## Styles
 ### mdp-header
-- z-index: 99 
+- z-index: 99
+### router-outlet
+- z-index: 98
