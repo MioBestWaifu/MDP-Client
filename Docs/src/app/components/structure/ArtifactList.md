@@ -3,11 +3,7 @@
 ## Template
 
 ## Typescript
-*implements OnInit*
-
-Input() connection:BaseConnectionService 
+*implements OnInit*<br>
 Input() artifacts:Artifact[]
 
-### async ngOnInit
-chama o método loadArtifacts do connection e carrega o resultado no array artifacts
 ## Styles
