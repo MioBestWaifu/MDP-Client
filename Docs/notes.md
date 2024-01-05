@@ -1,0 +1,2 @@
+- InterestSetupPage fica para depois, não tem utilidade agora
+- CommunityPage também fica para depois, quando o formato de community for definido
