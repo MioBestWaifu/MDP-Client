@@ -1,9 +1,9 @@
-# CommunityPageComponent
+# BasePageComponent
 
 ## Template
 
 ## Typescript
 *implements OnInit*
-public connection:BaseConnectionService()
+public connection:BaseConnectionService
 
 ## Styles
