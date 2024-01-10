@@ -1,0 +1,10 @@
+# Person
+## Typescript
+- shortName:string
+- fullName:string
+- nicknames:string[]
+- imgUrl:string
+- country:string
+- roles:string[]
+- description:string
+- birthday:Date

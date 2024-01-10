@@ -9,4 +9,7 @@ Chama o loadPage do this.connection e passa o resultado para this.pageModel
 ## Styles
 ### .interestList
 - display: flex
-- justify-content: space-evenly
+- justify-content: start
+
+### mdp-interest-card
+- margin-left: 12px
