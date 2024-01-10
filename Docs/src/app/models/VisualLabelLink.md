@@ -1,4 +1,5 @@
 # VisualLabelLink
 - imgUrl:string
-- label: string
+- mainLabel: string
+- secondaryLabel: string
 - redirectTo: string
