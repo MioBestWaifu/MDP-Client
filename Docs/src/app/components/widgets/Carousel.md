@@ -6,7 +6,7 @@ Uma div de id #container englobando uma img cujo source é *imgUrl* links na pos
 currentLink:number<br>
 secondsPassed:number<br>
 secondsUntilSwitching:number = 5<br>
-links:[VisualRoleLink\[\]](/Docs/src/app/models/VisualRoleLink.md)<br><br>
+links:[VisualLabelLink\[\]](/Docs/src/app/models/VisualLabelLink.md)<br><br>
 ### SecondPassed()
 Aumenta o secondsPassed em um. Se chegou em secondsUntilSwitching, zera secondsPassed e aumenta currentLink em 1, ou volta a 0, caso este esteja no último link.
 ## Styles
