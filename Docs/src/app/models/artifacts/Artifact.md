@@ -9,6 +9,11 @@
 - categories:string[]<br>
 - targetDemographics:string[]<br>
 - ageRating:string<br>
+- cardImgUrl:string
+- mainImgUrl:string
+- otherImgUrls:string[]
+- mainParticipantRole:string<br>Essa propriedade e a seguinte servem para mostrar ao usuário a figura mais importante na criação deste artefato, que varia de acordo com a mídia (anime é estúdio, livro é autor, etc).
+- mainParticipant:string
 - averageRating:number<br>
 - releaseDate:Date<br><br>
 ## Outras propriedades

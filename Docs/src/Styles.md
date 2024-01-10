@@ -16,4 +16,7 @@ Grid para envolver o conteúdo de uma page. Tem um slot para conteúdo principal
 
 ## .contentWrapperPortrait
 *Extends verticalFlex*
-Flexbox para envolver o conteúdo de uma page do mobile. 
+Flexbox para envolver o conteúdo de uma page do mobile.
+
+## .roundedImage
+- border-radius: 50%
