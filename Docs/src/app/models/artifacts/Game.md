@@ -1,4 +1,4 @@
 # Game
 *extends Artifact*<br><br>
-plataforms:string[]<br>
-averageLength:number
+- plataforms:string[]<br>
+- averageLength:number
