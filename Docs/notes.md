@@ -3,3 +3,4 @@
 - O esquema de cores será deifnido por ultimo, até la toda referencia a uma cor estará notada como REVISAR CORES
 - Os tamanhos e tipos de fontes serão definidos depois, até lá toda referencia aos mesmos estará notada como REVISAR FONTES
 - Tem que definir o conteúdo e comportamento do navigation-icons
+- GERAL: definir como tratar uma publicação de mangá e similires, assim como plataformas de jogos
