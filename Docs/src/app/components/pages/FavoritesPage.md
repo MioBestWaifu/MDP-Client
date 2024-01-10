@@ -7,7 +7,7 @@ public pageModel:[FavoritesPageModel](/Docs/src/app/models/pages/FavoritesPageMo
 ## ngOnInit
 Chama o LoadPage do connection e carrega os resultados em pageModel. 
 ## RegroupArtifacts
-Repopula this.pageModel.groupedArtifacts com o novo critério. Usa as propriedades da própria classe [Artifact](/Docs/src/app/models/artifacts/Artifact.md) para isso.
+Repopula this.pageModel.groupedArtifacts com o novo critério. Para isso, chama [Utils.GroupArtifacts()](/Docs/src/app/classes/Utils.md#groupartifactsgroupbystringbaseartifactsartifact-dictionary).
 ## Styles
 ### \#main 
 - width: 95%
