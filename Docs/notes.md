@@ -1,3 +1,5 @@
 - InterestSetupPage fica para depois, não tem utilidade agora
 - CommunityPage também fica para depois, quando o formato de community for definido
 - O esquema de cores será deifnido por ultimo, até la toda referencia a uma cor estará notada como REVISAR CORES
+- Os tamanhos e tipos de fontes serão definidos depois, até lá toda referencia aos mesmos estará notada como REVISAR FONTES
+- Tem que definir o conteúdo e comportamento do navigation-icons
