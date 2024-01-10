@@ -3,4 +3,4 @@
 - publication:string<br>
 - numberOfChapters:number<br>
 ## Outras propriedades
-- episódios como fractions
+- capítulos como fractions
