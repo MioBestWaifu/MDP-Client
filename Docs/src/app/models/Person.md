@@ -3,8 +3,11 @@
 - shortName:string
 - fullName:string
 - nicknames:string[]
-- imgUrl:string
+- cardImgUrl:string
+- mainImgUrl:string
+- otherImgUrls:string[]
 - country:string
 - roles:string[]
 - description:string
 - birthday:Date
+- averageRating:number

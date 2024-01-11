@@ -2,7 +2,10 @@
 ## Typescript
 - shortName:string
 - fullName:string
-- imgUrl:string
+- cardImgUrl:string
+- mainImgUrl:string
+- otherImgUrls:string[]
 - country:string
 - role:string
 - foundingDate:Date
+- averageRating:number

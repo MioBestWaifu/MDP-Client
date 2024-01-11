@@ -3,6 +3,7 @@
 - user:User
 - rating:number
 - comment:string
+- status:string
 - dateStarted:Date
 - dateEnded:Date
 - dateInteractionMade:Date

@@ -20,3 +20,15 @@ Flexbox para envolver o conteúdo de uma page do mobile.
 
 ## .roundedImage
 - border-radius: 50%
+
+## .twoRowsGrid
+- display: grid
+- grid-template-rows: auto auto;
+
+## .twoColumnsGrid
+- display: grid
+- grid-template-columns: auto auto;
+
+## .centerInternalText
+- text-align: center
+- vertical-align: middle

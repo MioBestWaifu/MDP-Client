@@ -6,3 +6,7 @@
 - GERAL: definir como tratar uma publicação de mangá e similires, assim como plataformas de jogos
 - GERAL: fazer um schedule de lançamento, tanto um geral quanto um personalizado
 - Definir direito a divisão de structure e widget
+- Com um pouco de abstração work, person e company e user basic widgets podem ser transformados em um componente só. 
+- Já deixar a responsividade preparada
+- Fazer todo mundo herdar de BaseComponent
+- UserInteracctions seria algo tão grande que vai virar a própria page
