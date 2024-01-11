@@ -5,3 +5,4 @@
 - Tem que definir o conteúdo e comportamento do navigation-icons
 - GERAL: definir como tratar uma publicação de mangá e similires, assim como plataformas de jogos
 - GERAL: fazer um schedule de lançamento, tanto um geral quanto um personalizado
+- Definir direito a divisão de structure e widget

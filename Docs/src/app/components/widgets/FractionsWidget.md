@@ -1,0 +1,7 @@
+# WidgetComponent
+
+## Template
+
+## Typescript
+
+## Styles
