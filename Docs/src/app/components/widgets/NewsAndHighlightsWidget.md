@@ -5,12 +5,13 @@ Um loop pelos *links* criando divs contendo dois p's, um de classe .newsTitle e 
 ## Typescript
 
 ## Styles
+*import [Variables](/Docs/src/Variables.md)*
 ### .newsTitle
 - REVISAR FONTES
 ### .newsBlock
 - REVISAR FONTES
 ### div
 - border-bottom-width: 1px
-- border-color: REVISAR CORES
+- border-color: $strongBackgroundColor
 ### img
 - float: left

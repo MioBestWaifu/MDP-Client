@@ -10,7 +10,8 @@ Uma div de id #container englobando uma série de ícones clicáveis. O conteúd
 - justify-content: space-between
 
 ### i
-- color: REVISAR CORES
+*import [Variables](/Docs/src/Variables.md)*
+- color: $strongBackgroundColor
 - font-size: REVISAR FONTES
 - (hover): 
     - cursor: pointer

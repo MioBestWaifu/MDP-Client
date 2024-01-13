@@ -8,7 +8,8 @@ Uma div de id #container englobando uma div com um i para o menu lateral com *cl
 ### ToggleLateralBar()
 Emite lateralBarToggled
 ## Styles
+*import [Variables](/Docs/src/Variables.md)*
 ### \#container
 - display:flex
 - justify-content: space-between
-- background-color: REVISAR CORES
+- background-color: $strongMainColor

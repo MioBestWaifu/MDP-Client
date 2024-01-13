@@ -5,13 +5,11 @@ Uma div de id #container e classe [vertical-flex](/Docs/src/Styles.md#verticalfl
 ## Typescript
 
 ## Styles
+*import [Variables](/Docs/src/Variables.md)*
 ### \#container 
-- border-right-width: 1px
-- border-color: REVISAR CORES
-
 ### .navBlock
-- background-color: REVISAR CORES
+- background-color: $mediumMainColor
 - border-bottom-width: 1px
-- border-color: REVISAR CORES
+- border-color: $strongBackgroundColor
 - width: 100%
 - flex: 1

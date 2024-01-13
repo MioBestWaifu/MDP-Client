@@ -1,11 +1,14 @@
 # WidgetStyles
-
+*import [Variables](/Docs/src/Variables.md)*
 ## .mainBlockText
 REVISAR FONTES
+- color: $strongOutlineColor
 ## .secondaryBlockText
 REVISAR FONTES
+- color: $mediumOutlineColor
 ## .titleText
 REVISAR FONTES
+- color: $mediumMainColor
 
 ## .summaryGrid
 - display: grid

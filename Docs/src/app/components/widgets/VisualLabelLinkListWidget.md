@@ -8,14 +8,13 @@ Uma div de classe .flexbox englobando uma lista de divs de classe .flexbox e ngC
 ## Styles: [WidgetStyles](/Docs/src/app/components/widgets/WidgetStyles.md)
 ### .secondaryBlockText
 - font-size: REVISAR FONTES
-- color: REVISAR FONTES REVISAR CORES
 - hover:
     - cursor: pointer
     - text-decoration: underline
 ### .block
 Essa borda provavelmente não vai ficar tão legal, mas alguma borda provavelmente é necessária. Revisar isso. 
 - border-width: 0px 1px 1px 0px
-- border-color: REVISAR CORES
+- border-color: $strongBackgroundColor
 - width: 150px
 - height: 100px
 ### .smallBlock

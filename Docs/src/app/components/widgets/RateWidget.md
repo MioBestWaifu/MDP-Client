@@ -5,6 +5,7 @@ Um i de classe "material-symbols-outlined icon" e conteúdo = "star" ao lado de 
 ## Typescript
 Input() rate:number
 ## Styles
+*import [Variables](/Docs/src/Variables.md)*
 ### i, p
-- color: REVISAR CORES
+- color: $strongSecondaryColor
 - font-size: inherit
