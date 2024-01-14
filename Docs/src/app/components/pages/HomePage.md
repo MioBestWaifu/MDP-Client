@@ -6,7 +6,7 @@ Uma div de classe [contentWrapper](/Docs/src/Styles.md#.contentWrapper) ou [port
 *extends [BasePageComponent](/Docs/src/app/components/pages/BasePage.md)*<br><br>
 public pageModel:[HomePageModel](/Docs/src/app/models/pages/HomePageModel.md)<br><br>
 ### ngOnInit()
-Chama o loadPage do this.connection e passa o resultado para this.pageModel
+Chama o LoadPage do this.connection com parametro this.connection.home e passa o resultado para this.pageModel
 ## Styles
 ### \#main 
 - width: 95%

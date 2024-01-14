@@ -6,7 +6,7 @@ Uma div de classe [contentWrapper](/Docs/src/Styles.md#.contentWrapper) ou [port
 *extends [BasePageComponent](/Docs/src/app/components/pages/BasePage.md)*<br><br>
 - pageModel: [InterestPageModel](/Docs/src/app/models/pages/InterestUpdatePageModel.md)<br>
 ### ngOnInit()
-Chama o loadPage do this.connection e passa o resultado para this.pageModel
+Chama o LoadPage do this.connection com parametro this.connection.interestUpdate e passa o resultado para this.pageModel
 ## Styles
 ### .interestList
 - display: flex

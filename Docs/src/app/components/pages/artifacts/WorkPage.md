@@ -6,7 +6,4 @@ Uma div de classe [contentWrapper](/Docs/src/Styles.md#.contentWrapper) ou [port
 *extends [BasePageComponent](/Docs/src/app/components/pages/BasePage.md)*<br><br>
 - public pageModel: [WorkPageModel](/Docs/src/app/models/pages/WorkPageModel.md)
 - fractionsLabel:string
-<br>
-### ngOnInit()
-Chama o loadPage do this.connection e passa o resultado para this.pageModel
 ## Styles

@@ -6,5 +6,5 @@ Uma div de classe [contentWrapper](/Docs/src/Styles.md#.contentWrapper) ou [port
 *extends [BasePageComponent](/Docs/src/app/components/pages/BasePage.md)*<br><br>
 public pageModel:[CompanyPageModel](/Docs/src/app/models/pages/CompanyPageModel.md)<br><br>
 ### ngOnInit()
-Chama o loadPage do this.connection e passa o resultado para this.pageModel
+Chama LoadPage do this.connection com parametro this.connection.company + o id no url  e passa o resultado para this.pageModel
 ## Styles

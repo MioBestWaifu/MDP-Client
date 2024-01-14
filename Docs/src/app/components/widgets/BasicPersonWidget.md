@@ -5,6 +5,7 @@ Uma div de classe [summaryGrid](/Docs/src/app/components/widgets/WidgetStyles.md
 ## Typescript
 *extends [BaseComponent](/Docs/src/app/components/BaseComponent.md)*<br><br>
 - Input() person:[Person](/Docs/src/app/models/Person.md)
+- connection:[InteractionService](/Docs/src/app/services/InteractionService.md)
 ### RateChanged(newRate:number)
-Chama o connection (qual? um user interaction global? REVISAR SERVICES REVISAR CONNECTIONS) e aplica a nova rating. 
+Chama o connection.Rate(), passando connection.rateUser, newRate e person.id como parametros.  
 ## Styles

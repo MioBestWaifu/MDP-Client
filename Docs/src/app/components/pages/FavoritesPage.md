@@ -6,7 +6,7 @@ Uma div de classe [contentWrapper](/Docs/src/Styles.md#.contentWrapper) ou [port
 *extends [BasePageComponent](/Docs/src/app/components/pages/BasePage.md)*<br><br>
 public pageModel:[FavoritesPageModel](/Docs/src/app/models/pages/FavoritesPageModel.md)
 ## ngOnInit
-Chama o LoadPage do connection e carrega os resultados em pageModel. 
+Chama LoadPage do this.connection com parametro this.connection.favorites e carrega os resultados em pageModel. 
 ## RegroupArtifacts
 Repopula this.pageModel.groupedArtifacts com o novo critério. Para isso, chama [Utils.GroupArtifacts()](/Docs/src/app/classes/Utils.md#groupartifactsgroupbystringbaseartifactsartifact-dictionary).
 ## Styles
