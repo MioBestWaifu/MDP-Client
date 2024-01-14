@@ -36,6 +36,7 @@ Flexbox para envolver o conteúdo de uma page do mobile.
 - text-align: center
 - vertical-align: middle
 
-## p
-REVISAR FONTES
+## p, i, label, div
+- font-family: $standardFont
+- font-size: $mediumFontSize
 - color: $mediumOutlineColor

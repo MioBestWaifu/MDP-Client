@@ -13,3 +13,7 @@ Uma div de id #container e classe [vertical-flex](/Docs/src/Styles.md#verticalfl
 - border-color: $strongBackgroundColor
 - width: 100%
 - flex: 1
+
+### i
+- font-size: $largeFontSize
+- color: $strongBackgroundColor

@@ -11,5 +11,4 @@
 - border-width-right: 3px
 - border-color: $mediumMainColor
 ## i
-- font-size: REVISAR FONTES
 - color: $mediumMainColor

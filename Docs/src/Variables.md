@@ -13,3 +13,14 @@
 - $strongBackgroundColor: #ffffff;
 - $mediumBackgroundColor: #f2f2f2;
 - $lightBackgroundColor: #f9f9f9;
+
+## Fonts
+- $standardFont: Arial
+- $highlightFont: Arial
+
+## Font-sizes
+- $extraSmallFontSize: 10px
+- $smallFontSize: 12px
+- $mediumFontSize: 16px
+- $largeFontSize: 20px 
+- $extraLargeFontSize: 24px 

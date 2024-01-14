@@ -12,6 +12,6 @@ Uma div de id #container englobando uma série de ícones clicáveis. O conteúd
 ### i
 *import [Variables](/Docs/src/Variables.md)*
 - color: $strongBackgroundColor
-- font-size: REVISAR FONTES
+- font-size: $largeFontSize
 - (hover): 
     - cursor: pointer

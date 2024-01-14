@@ -1,7 +1,7 @@
 - InterestSetupPage fica para depois, não tem utilidade agora
 - CommunityPage também fica para depois, quando o formato de community for definido
-- O esquema de cores será deifnido por ultimo, até la toda referencia a uma cor estará notada como REVISAR CORES
-- Os tamanhos e tipos de fontes serão definidos depois, até lá toda referencia aos mesmos estará notada como REVISAR FONTES
+- ~~O esquema de cores será deifnido por ultimo, até la toda referencia a uma cor estará notada como REVISAR CORES~~
+- ~~Os tamanhos e tipos de fontes serão definidos depois, até lá toda referencia aos mesmos estará notada como REVISAR FONTES~~
 - Tem que definir o conteúdo e comportamento do navigation-icons
 - GERAL: definir como tratar uma publicação de mangá e similires, assim como plataformas de jogos
 - GERAL: fazer um schedule de lançamento, tanto um geral quanto um personalizado
@@ -9,4 +9,4 @@
 - Com um pouco de abstração work, person e company e user basic widgets podem ser transformados em um componente só. 
 - Já deixar a responsividade preparada
 - Fazer todo mundo herdar de BaseComponent
-- UserInteracctions seria algo tão grande que vai virar a própria page
+- UserInteractions seria algo tão grande que vai virar a própria page

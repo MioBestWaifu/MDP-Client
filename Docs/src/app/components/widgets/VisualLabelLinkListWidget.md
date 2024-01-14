@@ -7,7 +7,6 @@ Uma div de classe .flexbox englobando uma lista de divs de classe .flexbox e ngC
 - Input() forceSmallBlock:bolean = false
 ## Styles: [WidgetStyles](/Docs/src/app/components/widgets/WidgetStyles.md)
 ### .secondaryBlockText
-- font-size: REVISAR FONTES
 - hover:
     - cursor: pointer
     - text-decoration: underline
