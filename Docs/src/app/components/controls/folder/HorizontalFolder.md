@@ -3,6 +3,7 @@ Isso aq está feito para ser usado apenas pela lateral bar. Se afor usar em algu
 ## Template
 Uma div de classe [.collapsableHorizontal] englobando um i de chevron inicialmente para baixo e *click* = **Toggle()** e um ng-content, nessa ordem. A div principal tem o trigger *@expandCollapse* como {value: expanded? expanded : collapsed}
 ## Typescript
+*extends [BaseComponent](/Docs/src/app/components/BaseComponent.md)*
 ### Animation
 - trigger: expandCollapse
     - state: collapsed

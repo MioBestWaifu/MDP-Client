@@ -3,6 +3,7 @@
 ## Template
 Uma div de id #container englobando uma img cujo source é *imgUrl* links na posição *currentLink* e quando clicada leva para o *redirectTo* do mesmo. Além disso, posssui um [mdp-timer] com seu *secondPassed* setado para **SecondPassed()**.  
 ## Typescript
+*extends [BaseComponent](/Docs/src/app/components/BaseComponent.md)*<br><br>
 - currentLink:number
 - secondsPassed:number
 - secondsUntilSwitching:number = 5

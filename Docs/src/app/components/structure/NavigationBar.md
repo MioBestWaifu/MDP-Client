@@ -3,7 +3,7 @@ Barra lateral de navegação
 ## Template
 Uma div de id #container e classe [vertical-flex](/Docs/src/Styles.md#verticalflex) englobando uma série de divs de classe .navBlock. Essas divs contém um ícone e um label e um link levando para a página relevante. Essas divs são hardcoded. 
 ## Typescript
-
+*extends [BaseComponent](/Docs/src/app/components/BaseComponent.md)*<br><br>
 ## Styles
 *import [Variables](/Docs/src/Variables.md)*
 ### \#container 

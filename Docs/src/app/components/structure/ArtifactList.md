@@ -3,6 +3,7 @@
 ## Template
 Possui uma div de id #main e classe \(if *vertical*:[verticalFlex](/Docs/src/Styles.md#verticalflex)\). A #main contem um [mdp-artifact-card](/Docs/src/app/components/cards/ArtifactCard.md) para cada artifact em *artifacts*.
 ## Typescript
+*extends [BaseComponent](/Docs/src/app/components/BaseComponent.md)*<br><br>
 Input() vertical:boolean = false
 Input() artifacts:Artifact[]
 

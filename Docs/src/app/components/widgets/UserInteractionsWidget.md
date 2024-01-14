@@ -5,5 +5,5 @@ Isso aq é lista de tudo oq o usuário ja viu, com nota, data e etc. Deve ser po
 ## Template
 
 ## Typescript
-
+*extends [BaseComponent](/Docs/src/app/components/BaseComponent.md)*<br><br>
 ## Styles

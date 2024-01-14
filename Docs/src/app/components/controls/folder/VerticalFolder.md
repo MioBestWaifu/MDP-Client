@@ -2,6 +2,7 @@
 ## Template
 Uma div de classe [.collapsableVertical] englobando um i de chevron inicialmente para baixo e *click* = **Toggle()** e um ng-content, nessa ordem. A div principal tem o trigger *@expandCollapse* como {value: expanded? expanded : collapses, params: {maxHeight: maxHeight}}
 ## Typescript
+*extends [BaseComponent](/Docs/src/app/components/BaseComponent.md)*
 ### Animation
 - trigger: expandCollapse
     - state: collapsed

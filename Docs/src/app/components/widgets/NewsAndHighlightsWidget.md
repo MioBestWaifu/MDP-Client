@@ -3,7 +3,7 @@ Um loop pelos *links* criando divs contendo dois p's, um de classe .newsTitle e 
 ## Template
 - links:[VisualLabelLink[]](/Docs/src/app/models/VisualLabelLink.md)
 ## Typescript
-
+*extends [BaseComponent](/Docs/src/app/components/BaseComponent.md)*<br><br>
 ## Styles
 *import [Variables](/Docs/src/Variables.md)*
 ### .newsTitle
