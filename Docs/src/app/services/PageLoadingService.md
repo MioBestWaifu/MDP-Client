@@ -1,4 +1,4 @@
-# BaseConnectionService.ts
+# PageLaodingService.ts
 ## Propriedades
 - baseURL = "api.yancosta.online/mdp/"
 - pages = "pages/"
@@ -21,5 +21,5 @@
 ## Métodos
 ### LoadPage(page:string):BasePageModel
 Usa um get do http do angular para retornar o valor na url page. 
-### LoadPage(page:string, params:[Dictionary](/Docs/src/app/classes/Dictionary.md)):BasePageModel
+### LoadPageWithParams(page:string, params:[Dictionary](/Docs/src/app/classes/Dictionary.md)):BasePageModel
 Usa um get do http do angular para retornar o valor na url page + Utils.ResolveParams(params). 
