@@ -6,5 +6,5 @@
 *extends [BasePageComponent](/Docs/src/app/components/pages/BasePageComponent.md)*<br><br>
 
 ### ngOnInit
-Chama LoadPage do this.connection com parametro this.connection.community + o id no url 
+Chama LoadPage do this.connection com parametro this.connection.community + o id no url (isso é um query param)
 ## Styles

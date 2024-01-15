@@ -6,5 +6,5 @@ Uma div de classe [contentWrapper](/Docs/src/Styles.md#.contentWrapper) ou [port
 *extends [BasePageComponent](/Docs/src/app/components/pages/BasePage.md)*<br><br>
 public pageModel:[PersonPageModel](/Docs/src/app/models/pages/PersonPageModel.md)<br><br>
 ### ngOnInit()
-Chama o LoadPage do this.connection com parametro this.connection.person + o id no url e passa o resultado para this.pageModel
+Chama o LoadPage do this.connection com parametro this.connection.person + o id no url (isso é um query param) e passa o resultado para this.pageModel
 ## Styles
