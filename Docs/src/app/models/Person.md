@@ -11,3 +11,4 @@
 - description:string
 - birthday:Date
 - averageRating:number
+- gender: string

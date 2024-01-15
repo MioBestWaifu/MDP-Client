@@ -1,0 +1,11 @@
+# User
+- email: string
+- password: string
+- nickname:string
+- cardImgUrl:string
+- mainImgUrl:string
+- otherImgUrls:string[]
+- country:string
+- description:string
+- birthday:Date
+- gender:string
