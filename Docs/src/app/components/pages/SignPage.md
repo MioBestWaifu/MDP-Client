@@ -5,6 +5,8 @@ Um [mdp-login-forms](/Docs/src/app/components/forms/LoginForms.md) de id #login 
 
 ## Typescript
 *extends [BasePageComponent](/Docs/src/app/components/pages/BasePage.md)*<br><br>
+### constructor(public mediaQuery:MediaQueryService, public common:CommonContainerService, public connecttion:PageLoadingService, private auth:AuthenticatorService)
+também chama o constructor da super, obviamente.
 ### SwitchToRegister()
 Esconde o #login e mostra o #register.
 ### SwitchToLogin()

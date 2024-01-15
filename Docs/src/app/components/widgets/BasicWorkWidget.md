@@ -6,6 +6,8 @@ Uma div de classe [summaryGrid](/Docs/src/app/components/widgets/WidgetStyles.md
 *extends [BaseComponent](/Docs/src/app/components/BaseComponent.md)*<br><br>
 - Input() work:[Artifact](/Docs/src/app/models/Artifact.md)
 - connection:[InteractionService](/Docs/src/app/services/InteractionService.md)
+### constructor (public mediaQuery:MediaQueryService, public common:CommonContainerService, public connection:[InteractionService](/Docs/src/app/services/InteractionService.md))
+Também chama o constructor da super, obviamente
 ### RateChanged(newRate:number)
 Chama o connection.Rate(), passando connection.rateUser, newRate e work.id como parametros.
 ## Styles
