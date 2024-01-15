@@ -1,13 +1,18 @@
 # CarouselComponent
 
 ## Template
-Uma div de id #container englobando uma img cujo source é *imgUrl* links na posição *currentLink* e quando clicada leva para o *redirectTo* do mesmo. Além disso, posssui um [mdp-timer] com seu *secondPassed* setado para **SecondPassed()**.  
+Uma div de id #container englobando uma img cujo source é *imgUrl* links na posição *currentLink* e quando clicada leva para o *redirectTo* do mesmo.  
 ## Typescript
 *extends [BaseComponent](/Docs/src/app/components/BaseComponent.md)*<br><br>
 - currentLink:number
 - secondsPassed:number
 - secondsUntilSwitching:number = 5
 - links:[VisualLabelLink[]](/Docs/src/app/models/VisualLabelLink.md)
+- intervalId:number;
+### ngOnInit
+Chama super.ngOnInit(); Cria um window interval de um segundo para SecondPassed(), passando seu id para this.intervalId. 
+### ngOnDestroy
+Limpa o window interval de id = this.intervalId. 
 ### SecondPassed()
 Aumenta o secondsPassed em um. Se chegou em secondsUntilSwitching, zera secondsPassed e aumenta currentLink em 1, ou volta a 0, caso este esteja no último link.
 ## Styles
