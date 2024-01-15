@@ -1,6 +1,6 @@
 # BaseConnectionService.ts
 ## Propriedades
-- baseURL = "yancosta.online/mdp/api/"
+- baseURL = "api.yancosta.online/mdp/"
 - pages = "pages/"
 - community = baseURL + pages + "community"
 - company = baseURL + pages + "company"
@@ -20,6 +20,6 @@
 - music = work + "music"
 ## Métodos
 ### LoadPage(page:string)):BasePageModel
-Usa um get do http do angular para retornar o valor na url page. Usa Utils.token como bearer.
+Usa um get do http do angular para retornar o valor na url page. 
 ### LoadPage(page:string, params:[Dictionary](/Docs/src/app/classes/Dictionary.md)):BasePageModel
-Usa um get do http do angular para retornar o valor na url page + Utils.ResolveParams(params). Usa Utils.token como bearer.
+Usa um get do http do angular para retornar o valor na url page + Utils.ResolveParams(params). 
