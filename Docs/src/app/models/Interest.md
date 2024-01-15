@@ -1,5 +1,5 @@
 # Interest
 ## Typescript
-- link:[VisualLabelLink](/Docs/src/app/models/VisualLabelLink.md)
+- link:[Link](/Docs/src/app/models/Link.md)
 - description:string
 - targetDemographic:string

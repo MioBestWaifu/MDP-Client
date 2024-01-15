@@ -1,4 +1,4 @@
-# VisualLabelLink
+# Link
 - imgUrl:string
 - mainLabel: string
 - secondaryLabel: string

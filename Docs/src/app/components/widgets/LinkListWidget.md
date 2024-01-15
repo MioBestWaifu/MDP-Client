@@ -1,10 +1,10 @@
-# VisualLabelLinkListWidgetComponent
+# LinkListWidgetComponent
 
 ## Template
 Uma div de classe .flexbox englobando uma lista de divs de classe .flexbox e ngClass = \(if mediaQuery.portrait or forceSmallBlock: smallBlock, else block\), geradas com um for nos *links*. Essas divs possuem uma img de *src* = *iteration.imgUrl* e link para *iteration.redirectTo* e uma div contendo dois p's, um com o *iteration.mainLabel* e classe [mainBlockText](/Docs/src/app/components/widgets/WidgetStyles.md#mainblocktext) e outro com *iteration.secondaryLabel* e classe [secondaryBlockText](/Docs/src/app/components/widgets/WidgetStyles.md#secondaryblocktext).
 ## Typescript
 *extends [BaseComponent](/Docs/src/app/components/BaseComponent.md)*<br><br>
-- Input() links:[VisualLabelLink[]](/Docs/src/app/models/VisualLabelLink.md)
+- Input() links:[Link[]](/Docs/src/app/models/Link.md)
 - Input() forceSmallBlock:bolean = false
 ## Styles: [WidgetStyles](/Docs/src/app/components/widgets/WidgetStyles.md)
 ### .secondaryBlockText

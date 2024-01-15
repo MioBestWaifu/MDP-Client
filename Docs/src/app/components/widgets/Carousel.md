@@ -7,7 +7,7 @@ Uma div de id #container englobando uma img cujo source é *imgUrl* links na pos
 - currentLink:number
 - secondsPassed:number
 - secondsUntilSwitching:number = 5
-- links:[VisualLabelLink[]](/Docs/src/app/models/VisualLabelLink.md)
+- links:[Link[]](/Docs/src/app/models/Link.md)
 - intervalId:number;
 ### ngOnInit
 Chama super.ngOnInit(); Cria um window interval de um segundo para SecondPassed(), passando seu id para this.intervalId. 
