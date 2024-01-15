@@ -1,0 +1,19 @@
+@import '/src/variables.scss';
+
+.collapsableVertical {
+  display: grid;
+  grid-template-rows: 10px auto;
+  border-top-width: 3px;
+  border-color: $mediumMainColor;
+}
+
+.collapsableHorizontal {
+  display: grid;
+  grid-template-columns: auto 10px;
+  border-right-width: 3px;
+  border-color: $mediumMainColor;
+}
+
+i {
+  color: $mediumMainColor;
+}

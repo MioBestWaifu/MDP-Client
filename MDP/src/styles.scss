@@ -1,1 +1,61 @@
-/* You can add global styles to this file, and also import other style files */
+@import './variables.scss';
+
+.verticalFlex {
+  display: flex;
+  flex-direction: column;
+}
+
+.appWrapper {
+  display: grid;
+  grid-template-rows: 120px auto;
+  grid-template-columns: 250px auto;
+  background-color: $mediumBackgroundColor;
+}
+
+.appWrapperPortrait {
+  @extend .appWrapper;
+  grid-template-rows: 80px auto;
+  grid-template-columns: 0px auto;
+}
+
+.contentWrapper {
+  display: grid;
+  grid-template-columns: 8fr 2fr;
+}
+
+.contentWrapperPortrait {
+  @extend .verticalFlex;
+}
+
+.roundedImage {
+  border-radius: 50%;
+}
+
+.twoRowsGrid {
+  display: grid;
+  grid-template-rows: auto auto;
+}
+
+.twoColumnsGrid {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.centerInternalText {
+  text-align: center;
+  vertical-align: middle;
+}
+
+p, i, label, div {
+  font-family: $standardFont;
+  font-size: $mediumFontSize;
+  color: $mediumOutlineColor;
+}
+
+input {
+  // Styles for input elements go here
+}
+
+mdp-artifact-card, mdp-interest-card, mdp-review-card, mdp-vertical-folder, mdp-horizontal-folder, mdp-rate-control, mdp-search-bar, mdp-search-filter {
+  display: block;
+}
