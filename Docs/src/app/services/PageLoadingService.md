@@ -21,5 +21,5 @@
 ## Métodos
 ### LoadPage(page:string):BasePageModel
 Usa um get do http do angular para retornar o valor na url page. 
-### LoadPageWithParams(page:string, params:[Dictionary](/Docs/src/app/classes/Dictionary.md)):BasePageModel
+### LoadPageWithParams(page:string, params:[Dictionary](/Docs/src/app/classes/Dictionary.md)<string,string>):BasePageModel
 Usa um get do http do angular para retornar o valor na url page + Utils.ResolveParams(params). 

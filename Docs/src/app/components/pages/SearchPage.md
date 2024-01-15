@@ -7,7 +7,7 @@ Uma div de classe [contentWrapper](/Docs/src/Styles.md#.contentWrapper) ou [port
 query:string<br>
 public pageModel:[SearchPageModel](/Docs/src/app/models/pages/SearchPageModel.md)<br><br>
 ### ngOnInit
-Pega a query do URL e cria um [Dictionary](/Docs/src/app/classes/Dictionary.md) com  para this.query e LoadPageWithParams do this.connection com parametros this.connection.search e o Dictionary criando anteriormente, carregando o resultado no pageModel.
+Pega a query do URL e cria um [Dictionary](/Docs/src/app/classes/Dictionary.md)<string,string> com  para this.query e LoadPageWithParams do this.connection com parametros this.connection.search e o Dictionary criando anteriormente, carregando o resultado no pageModel.
 ## Styles
 ### mdp-search-filter
 - float: left
