@@ -19,9 +19,9 @@ Uma div de classe [appWrapper](/Docs/src/Styles.md#.appWrapper) ou [appWrapperPo
 - start:string = "250px"
 - end:string = "auto"
 ### ngOnInit
-expandLateralBar = false se portrait = true
+Chama this.mediaQuery.QueryMedia() .expandLateralBar = false se mediaQuery.portrait = true.
 ### ToggleLateralBar
-Inverte expandLateralBar. Se portrait, start = auto e end = 0px; senão start = 250px e end = auto.
+Inverte expandLateralBar. Se mediaQuery.portrait, start = auto e end = 0px; senão start = 250px e end = auto.
 ## Styles
 ### mdp-header
 - z-index: 99
