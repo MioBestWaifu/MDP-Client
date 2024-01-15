@@ -2,20 +2,20 @@ import { Injectable } from '@angular/core';
 import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { AuthenticatorService } from './authenticator.service';
-import { Utils } from '../classes/utils';
+import { CommonContainerService } from './common-container.service';
 
 @Injectable()
 export class AuthInterceptorService implements HttpInterceptor {
-  constructor(private authenticatorService: AuthenticatorService) {}
+  constructor(private authenticatorService: AuthenticatorService, private common:CommonContainerService) {}
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    if (Utils.token || Utils.token.expiration > Date.now()) {
+    if (this.common.token == undefined || this.common.token.expiration > Date.now()) {
       this.authenticatorService.Authenticate().subscribe(token => {
-        Utils.token = token;
+        this.common.token = token;
       });
     }
     const clonedReq = req.clone({
-      headers: req.headers.set('Authorization', `Bearer ${Utils.token.content}`)
+      headers: req.headers.set('Authorization', `Bearer ${this.common.token.content}`)
     });
     return next.handle(clonedReq);
   }
