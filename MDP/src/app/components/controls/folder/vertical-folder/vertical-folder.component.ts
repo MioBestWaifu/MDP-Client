@@ -9,11 +9,11 @@ import { BaseComponent } from '../../../base/base.component';
   animations: [
     trigger('expandCollapse', [
       state('collapsed', style({
-        height: '10px'
+        height: '14px'
       })),
       state('expanded', style({
-        height: '{{maxHeight}}px'
-      }), {params: {maxHeight: 10}}),
+        height: '{{maxHeight}}'
+      }), {params: {maxHeight: '14px'}}),
       transition('collapsed <=> expanded', [
         animate('150ms')
       ])
@@ -21,7 +21,7 @@ import { BaseComponent } from '../../../base/base.component';
   ]
 })
 export class VerticalFolderComponent extends BaseComponent {
-  @Input() maxHeight: number = 10;
+  @Input() maxHeight: string = '10px';
   expanded: boolean = false;
   currentIcon: string = "expand_more";
   moreIcon = "expand_more"

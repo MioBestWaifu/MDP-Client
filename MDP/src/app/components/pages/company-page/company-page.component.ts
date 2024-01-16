@@ -5,8 +5,6 @@ import { BasePageComponent } from '../base-page/base-page.component';
 
 @Component({
   selector: 'mdp-company-page',
-  
-  
   templateUrl: './company-page.component.html',
   styleUrl: './company-page.component.scss'
 })

@@ -53,6 +53,7 @@ import { FullLogoComponent } from './components/full-logo/full-logo.component';
 import { SmallLogoComponent } from './components/small-logo/small-logo.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { CompanyPageComponent } from './components/pages/company-page/company-page.component';
 
 
 @NgModule({
@@ -78,6 +79,7 @@ import { FormsModule } from '@angular/forms';
     WorkPageComponent,
     BasePageComponent,
     CommunityPageComponent,
+    CompanyPageComponent,
     FavoritesPageComponent,
     HomePageComponent,
     InterestSetupPageComponent,
