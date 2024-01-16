@@ -1,1 +1,14 @@
-<p>person-page works!</p>
+<div [ngClass]="mediaQuery.portrait ? 'portraitContentWrapper' : 'contentWrapper'">
+    <div id="main" class="verticalFlex">
+      <mdp-basic-person-widget [person]="pageModel.person"></mdp-basic-person-widget>
+      <p class="highlightText">Worked in:</p>
+      <mdp-vertical-folder>
+        <mdp-link-list-widget [links]="pageModel.artifactParticipations??[]"></mdp-link-list-widget>
+      </mdp-vertical-folder>
+      <p class="highlightText">Works for::</p>
+      <mdp-vertical-folder>
+        <mdp-link-list-widget [links]="pageModel.companyAffiliations??[]"></mdp-link-list-widget>
+      </mdp-vertical-folder>
+    </div>
+    <mdp-ad-list *ngIf="!mediaQuery.portrait"></mdp-ad-list>
+</div>

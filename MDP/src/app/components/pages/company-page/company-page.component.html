@@ -1,6 +1,6 @@
 <div [ngClass]="mediaQuery.portrait ? 'portraitContentWrapper' : 'contentWrapper'">
     <div id="main" class="verticalFlex">
-      <mdp-basic-company-widget></mdp-basic-company-widget>
+      <mdp-basic-company-widget [company]="pageModel.company"></mdp-basic-company-widget>
       <p class="highlightText">Worked in:</p>
       <mdp-vertical-folder>
         <mdp-link-list-widget [links]="pageModel.artifactParticipations??[]"></mdp-link-list-widget>
