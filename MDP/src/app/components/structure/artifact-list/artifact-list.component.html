@@ -1,1 +1,5 @@
-<p>artifact-list works!</p>
+<div id="main" [class.verticalFlex]="vertical">
+    @for (artifact of artifacts; track artifact.id){
+        <mdp-artifact-card [artifact]="artifact"></mdp-artifact-card>
+    }
+</div>
