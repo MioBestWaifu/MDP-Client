@@ -1,1 +1,6 @@
-<p>user-page works!</p>
+<div [ngClass]="mediaQuery.portrait ? 'portraitContentWrapper' : 'contentWrapper'">
+    <div id="main" class="verticalFlex">
+      <mdp-user-widget [user]="pageModel.user"></mdp-user-widget>
+    </div>
+    <mdp-ad-list *ngIf="!mediaQuery.portrait"></mdp-ad-list>
+</div>
