@@ -1,0 +1,25 @@
+#container{
+    height: 100%;
+}
+
+.navBlock{
+    background-color: $mediumMainColor;
+    border-bottom-width: 1px;
+    border-color: $strongBackgroundColor;
+    width: 100%;
+    flex: 1;
+    :hover{
+        background-color: $lightMainColor;
+        cursor: pointer;
+    }
+}
+
+i{
+    font-size: $largeFontSize;
+    color: $strongBackgroundColor;
+}
+
+p{
+    font-size: $largeFontSize;
+    color: $strongBackgroundColor;
+}
