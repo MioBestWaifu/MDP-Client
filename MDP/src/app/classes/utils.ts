@@ -7,6 +7,12 @@ export class Utils {
 
     baseArtifacts.forEach(artifact => {
       const key = artifact[groupBy];
+      
+      if (typeof key !== 'string') {
+        console.warn('Warning: key is not a string');
+        return; 
+      }
+      
       if (!groupedArtifacts.Get(key)) {
         groupedArtifacts.Add(key, []);
       }

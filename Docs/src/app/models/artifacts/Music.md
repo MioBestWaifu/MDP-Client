@@ -1,1 +1,2 @@
 # Music
+*extends Artifact*

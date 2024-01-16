@@ -1,11 +1,11 @@
 # Anime
 ## Typescript
 *extends Artifact*<br><br>
-- endDate:Date<br>
-- weekday:string<br>
-- hour:string<br>
-- numberOfEpisodes:number<br>
-- type:string (TV, OVA, etc)<br>
+- endDate:Date
+- weekday:string
+- hour:string
+- numberOfEpisodes:number
+- type:string (TV, OVA, etc)
 ## Outras propriedades
 - schedule de lançamento
 - episódios como fractions

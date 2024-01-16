@@ -8,5 +8,5 @@
 - Definir direito a divisão de structure e widget
 - Com um pouco de abstração work, person e company e user basic widgets podem ser transformados em um componente só. 
 - Já deixar a responsividade preparada
-- Fazer todo mundo herdar de BaseComponent
+- ~~Fazer todo mundo herdar de BaseComponent~~
 - UserInteractions seria algo tão grande que vai virar a própria page
