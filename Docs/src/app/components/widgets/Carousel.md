@@ -1,7 +1,7 @@
 # CarouselComponent
 
 ## Template
-Uma div de id #container englobando uma img cujo source é *imgUrl* links na posição *currentLink* e quando clicada leva para o *redirectTo* do mesmo.  
+Uma div de id #container englobando uma img cujo source é *links[currentLink].imgUrl* e quando clicada leva para o *link.redirectTo* do mesmo.  
 ## Typescript
 *extends [BaseComponent](/Docs/src/app/components/BaseComponent.md)*<br><br>
 - currentLink:number
@@ -21,9 +21,7 @@ Aumenta o secondsPassed em um. Se chegou em secondsUntilSwitching, zera secondsP
 - width: 100%
 - height: 100%
 - background-color: $lightOutlineColor
-### mdp-timer
-- display: none
 ### img
 - min-height: 100%
 - max-heigt: 100%
-- aspect-ratio: maintain
+- max-width: 100%

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonContainerService } from '../../services/common-container.service';
 import { MediaQueryService } from '../../services/media-query.service';
 
@@ -7,7 +7,11 @@ import { MediaQueryService } from '../../services/media-query.service';
   templateUrl: './base.component.html',
   styleUrl: './base.component.scss'
 })
-export class BaseComponent {
+export class BaseComponent implements OnInit{
   constructor (public mediaQuery:MediaQueryService, public common:CommonContainerService){
+  }
+
+  ngOnInit() {
+    this.mediaQuery.QueryMedia();
   }
 }
