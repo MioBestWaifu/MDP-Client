@@ -1,11 +1,11 @@
 <div [ngClass]="mediaQuery.portrait ? 'portraitContentWrapper' : 'contentWrapper'">
     <div id="main" class="verticalFlex">
       <mdp-basic-company-widget></mdp-basic-company-widget>
-      <p>Worked in:</p>
+      <p class="highlightText">Worked in:</p>
       <mdp-vertical-folder>
         <mdp-link-list-widget [links]="pageModel.artifactParticipations??[]"></mdp-link-list-widget>
       </mdp-vertical-folder>
-      <p>Affiliates:</p>
+      <p class="highlightText">Affiliates:</p>
       <mdp-vertical-folder>
         <mdp-link-list-widget [links]="pageModel.affiliates??[]"></mdp-link-list-widget>
       </mdp-vertical-folder>
