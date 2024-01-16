@@ -1,0 +1,24 @@
+.secondaryBlockText:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+.block {
+    border-width: 0px 1px 1px 0px;
+    border-color: $strongBackgroundColor;
+    width: 150px;
+    height: 100px;
+}
+  
+.smallBlock {
+    @extend .block;
+    width: 110px;
+}
+  
+.flexbox {
+    display: flex;
+}
+  
+.block.flexbox {
+    justify-content: space-between;
+}

@@ -1,1 +1,11 @@
-<p>link-list-widget works!</p>
+<div class="flexbox">
+    <div *ngFor="let link of links" class="flexbox" [ngClass]="(mediaQuery.portrait || forceSmallBlock) ? 'smallBlock' : 'block'">
+      <a [routerLink]="link.redirectTo">
+        <img [src]="link.imgUrl">
+      </a>
+      <div>
+        <p class="mainBlockText">{{link.mainLabel}}</p>
+        <p class="secondaryBlockText">{{link.secondaryLabel}}</p>
+      </div>
+    </div>
+</div>
