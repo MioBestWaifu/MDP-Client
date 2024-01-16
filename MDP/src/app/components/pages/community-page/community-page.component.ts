@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'mdp-community-page',
-  standalone: true,
-  imports: [],
+  
+  
   templateUrl: './community-page.component.html',
   styleUrl: './community-page.component.scss'
 })

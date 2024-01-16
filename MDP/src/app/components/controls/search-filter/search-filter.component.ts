@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'mdp-search-filter',
-  standalone: true,
-  imports: [],
+  
+  
   templateUrl: './search-filter.component.html',
   styleUrl: './search-filter.component.scss'
 })
