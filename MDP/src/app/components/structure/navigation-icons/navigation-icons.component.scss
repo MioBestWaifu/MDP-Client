@@ -1,0 +1,12 @@
+i{
+    color: $strongBackgroundColor;
+    font-size: $largeFontSize;
+    display: inline;
+    :hover{
+        cursor: pointer;
+    }
+} #container{
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+}

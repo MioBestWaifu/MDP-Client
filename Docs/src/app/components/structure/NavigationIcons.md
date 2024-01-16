@@ -8,7 +8,6 @@ Uma div de id #container englobando uma série de ícones clicáveis. O conteúd
 ### \#container
 - display: inline-flex
 - justify-content: space-between
-
 ### i
 *import [Variables](/Docs/src/Variables.md)*
 - color: $strongBackgroundColor
