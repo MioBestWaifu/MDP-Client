@@ -18,7 +18,8 @@
 - margin-top: 5px
 
 ## img
-- aspec-ratio: maintain
+- width: 100%
+- height: auto
 
 ## .wrapper 
 - overflow: auto

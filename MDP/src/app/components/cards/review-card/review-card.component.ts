@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Interaction } from '../../../models/interaction';
 
 @Component({
   selector: 'mdp-review-card',
   
   
   templateUrl: './review-card.component.html',
-  styleUrl: './review-card.component.scss'
+  styleUrl: '../card.scss'
 })
 export class ReviewCardComponent {
-
+  @Input() review:Interaction = new Interaction();
 }

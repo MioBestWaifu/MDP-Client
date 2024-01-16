@@ -1,0 +1,16 @@
+<div id="main" class="collapsableGrid" [@expandCollapse]="expanded ? 'expanded' : 'collapsed'" (mouseenter)="ToggleExpanded()" (mouseleave)="ToggleExpanded()">
+    <div id="collapsedBlock">
+    <a [routerLink]="['/', artifact.media, artifact.id]">
+        <img [src]="artifact.cardImgUrl">
+    </a>
+      <p class="cardMainText">{{ artifact.shortName }}</p>
+    </div>
+    <div id="expandedBlock">
+      <p class="cardTopText">{{ artifact.media }}</p> 
+      <p class="cardBlockText bold">{{ artifact.mainParticipantRole }}</p><p class="cardBlockText inline">{{ artifact.mainParticipant }}</p>
+      <p class="cardBlockText bold">Categories:</p> <p class="cardBlockText inline">{{ artifact.categories}}</p>
+      <p class="cardBlockText bold">Demographics:</p> <p class="cardBlockText inline">{{ artifact.targetDemographics}}</p>
+      <p class="cardBlockText bold">Rating:</p> <mdp-rate-widget class="inline" [rate]="artifact.averageRating"></mdp-rate-widget>
+      <p class="cardBlockText">{{ artifact.description | slice:0:100 }}</p> 
+    </div>
+</div>

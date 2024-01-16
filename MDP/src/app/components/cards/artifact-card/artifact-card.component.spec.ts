@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AritifactCardComponent } from './aritifact-card.component';
+import { ArtifactCardComponent } from './artifact-card.component';
 
 describe('AritifactCardComponent', () => {
-  let component: AritifactCardComponent;
-  let fixture: ComponentFixture<AritifactCardComponent>;
+  let component: ArtifactCardComponent;
+  let fixture: ComponentFixture<ArtifactCardComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AritifactCardComponent]
+      imports: [ArtifactCardComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(AritifactCardComponent);
+    fixture = TestBed.createComponent(ArtifactCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -4,7 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { AritifactCardComponent } from './components/cards/aritifact-card/aritifact-card.component';
+import { ArtifactCardComponent } from './components/cards/artifact-card/artifact-card.component';
 import { InterestCardComponent } from './components/cards/interest-card/interest-card.component';
 import { ReviewCardComponent } from './components/cards/review-card/review-card.component';
 import { HorizontalFolderComponent } from './components/controls/folder/horizontal-folder/horizontal-folder.component';
@@ -51,13 +51,13 @@ import { WorkRelationsComponent } from './components/widgets/work-relations/work
 import { UserWidgetComponent } from './components/widgets/user-widget/user-widget.component';
 import { FullLogoComponent } from './components/full-logo/full-logo.component';
 import { SmallLogoComponent } from './components/small-logo/small-logo.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AritifactCardComponent,
+    ArtifactCardComponent,
     InterestCardComponent,
     ReviewCardComponent,
     HorizontalFolderComponent,
@@ -109,7 +109,8 @@ import { SmallLogoComponent } from './components/small-logo/small-logo.component
     CommonModule,
     BrowserModule,
     AppRoutingModule,
-    LayoutModule
+    LayoutModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -56,6 +56,13 @@ input {
   // Styles for input elements go here
 }
 
+.bold{
+  font-weight: bold;
+}
+
+.inline{
+  display: inline;
+}
 mdp-artifact-card, mdp-interest-card, mdp-review-card, mdp-vertical-folder, mdp-horizontal-folder, mdp-rate-control, mdp-search-bar, mdp-search-filter {
   display: block;
 }
