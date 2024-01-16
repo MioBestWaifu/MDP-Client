@@ -1,12 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from "@angular/core";
+import { BaseComponent } from "../../base/base.component";
 
 @Component({
   selector: 'mdp-header',
-  
-  
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent {
+export class HeaderComponent extends BaseComponent {
+  @Output() lateralBarToggled = new EventEmitter<void>();
 
+  ToggleLateralBar() {
+    this.lateralBarToggled.emit();
+  }
 }

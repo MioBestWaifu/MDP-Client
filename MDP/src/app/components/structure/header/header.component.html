@@ -1,1 +1,11 @@
-<p>header works!</p>
+<div id="container">
+    <div>
+        <i (click)="ToggleLateralBar()"></i>
+        @if (mediaQuery.portrait){
+            <mdp-small-logo></mdp-small-logo>
+        } @else {
+            <mdp-full-logo></mdp-full-logo>
+        }
+        <mdp-navigation-icons></mdp-navigation-icons>
+    </div>
+  </div>
