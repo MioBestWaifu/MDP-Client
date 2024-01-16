@@ -1,1 +1,5 @@
-<p>reviews-list works!</p>
+<div id="main" [ngClass]="{'verticalFlex':vertical}">
+    @for (review of reviews; track review.user.id){
+        <mdp-review-card [review]="review" [ngClass]="{'margin':vertical}"></mdp-review-card>
+    }
+</div>
