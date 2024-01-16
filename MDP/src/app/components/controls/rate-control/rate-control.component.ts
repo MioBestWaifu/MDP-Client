@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, Input } from '@angular/core';
 import { BaseComponent } from '../../base/base.component';
 
 @Component({
@@ -7,6 +7,7 @@ import { BaseComponent } from '../../base/base.component';
   styleUrls: ['./rate-control.component.scss']
 })
 export class RateControlComponent extends BaseComponent {
+  @Input() rate: number | string = '-';
   @Output() rated = new EventEmitter<number>();
 
   SelectionChanged(event: Event) {

@@ -1,1 +1,16 @@
-<p>basic-company-widget works!</p>
+<div class="summaryGrid">
+    <img [src]="company.mainImgUrl">
+    <div class="titleText centerInternalText">{{company.fullName}}</div>
+    <div class="twoColumnsGrid">
+        <div>
+            <mdp-rate-widget [rate]="company.averageRating"></mdp-rate-widget>
+            <mdp-rate-control (rated)="RateChanged($event)"></mdp-rate-control>
+        </div>
+        <div class="flexbox">
+        <!-- Add relevant information here -->
+            <div class="summaryBlockTextContainer">
+                <p class="mainBlockText">Main Text:</p><p class="secondaryBlockText inline">Secondary Text</p>
+            </div>
+        </div>
+    </div>
+</div>

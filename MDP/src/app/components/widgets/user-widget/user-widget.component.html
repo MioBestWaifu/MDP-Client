@@ -1,1 +1,11 @@
-<p>user-widget works!</p>
+<div class="summaryGrid">
+    <img [src]="user.mainImgUrl" style="grid-row: 1 / span 2;">
+    <div class="titleText centerInternalText">{{user.nickname}}</div>
+    <div class="flexbox">
+      <!-- Add relevant information here -->
+      <div class="summaryBlockTextContainer">
+        <p class="mainBlockText">Main Text</p>
+        <p class="secondaryBlockText">Secondary Text</p>
+      </div>
+    </div>
+</div>
