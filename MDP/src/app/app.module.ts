@@ -52,6 +52,7 @@ import { UserWidgetComponent } from './components/widgets/user-widget/user-widge
 import { FullLogoComponent } from './components/full-logo/full-logo.component';
 import { SmallLogoComponent } from './components/small-logo/small-logo.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -110,6 +111,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     LayoutModule,
+    FormsModule,
     BrowserAnimationsModule
   ],
   providers: [],

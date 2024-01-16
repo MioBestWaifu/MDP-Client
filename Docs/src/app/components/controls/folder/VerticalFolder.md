@@ -17,4 +17,4 @@ Uma div de classe [.collapsableVertical] englobando um i de chevron inicialmente
 - expanded:boolean = false
 ### Toggle()
 inverte expanded
-## Styles: [FolderStyles]
+## Styles: [FolderStyles](FolderStyles.md)

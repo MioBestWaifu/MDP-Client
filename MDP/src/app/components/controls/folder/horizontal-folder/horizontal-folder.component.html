@@ -1,1 +1,4 @@
-<p>horizontal-folder works!</p>
+<div class="collapsableHorizontal" [@expandCollapse]="expanded ? 'expanded' : 'collapsed'">
+    <ng-content></ng-content>
+    <i class="material-symbols-outlined icon" (click)="Toggle()">{{currentIcon}}</i>
+</div>
