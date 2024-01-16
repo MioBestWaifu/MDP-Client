@@ -1,1 +1,7 @@
-<p>news-and-highlights-widget works!</p>
+<div *ngFor="let link of links">
+    <a [routerLink]="link.redirectTo">
+      <img [src]="link.imgUrl">
+      <p class="newsTitle">{{link.mainLabel}}</p>
+    </a>
+    <p>{{link.secondaryLabel}}</p>
+</div>
