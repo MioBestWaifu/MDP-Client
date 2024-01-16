@@ -1,12 +1,18 @@
 import { Component } from '@angular/core';
+import { BaseComponent } from '../../base/base.component';
+import { CommonContainerService } from '../../../services/common-container.service';
+import { MediaQueryService } from '../../../services/media-query.service';
+import { PageLoadingService } from '../../../services/page-loading.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'mdp-base-page',
-  
-  
   templateUrl: './base-page.component.html',
   styleUrl: './base-page.component.scss'
 })
-export class BasePageComponent {
-
+export class BasePageComponent extends BaseComponent{
+  constructor (mediaQuery:MediaQueryService,common:CommonContainerService,
+     public connection:PageLoadingService, protected route:ActivatedRoute){
+    super(mediaQuery,common);
+  }
 }
