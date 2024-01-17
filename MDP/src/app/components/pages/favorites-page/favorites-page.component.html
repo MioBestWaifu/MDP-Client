@@ -1,1 +1,12 @@
-<p>favorites-page works!</p>
+<div [ngClass]="mediaQuery.portrait ? 'portraitContentWrapper' : 'contentWrapper'">
+    <div id="main" class="verticalFlex">
+      <select (change)="RegroupArtifacts($event)">
+        <option *ngFor="let group of ['media', 'category']">{{group}}</option>
+      </select>
+      <div *ngFor="let key of pageModel.groupedArtifacts.keys">
+        <p>{{key}}</p>
+        <mdp-artifact-list [artifacts]="pageModel.groupedArtifacts.Get(key)??[]"></mdp-artifact-list>
+      </div>
+    </div>
+    <mdp-ad-list *ngIf="!mediaQuery.portrait"></mdp-ad-list>
+</div>

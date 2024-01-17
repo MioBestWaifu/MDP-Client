@@ -5,5 +5,5 @@ import { BasePageModel } from "./base-page-model"
 export class FavoritesPageModel extends BasePageModel{
     groups!: string[]
     allFavorites: Artifact[] | undefined
-    groupedArtifacts:Dictionary<string,Artifact[]> | undefined
+    groupedArtifacts:Dictionary<string,Artifact[]> = new Dictionary<string,Artifact[]>()
 }
