@@ -4,22 +4,34 @@ import { Dictionary } from "./dictionary";
 export class Utils {
   static GroupArtifacts(groupBy: string, baseArtifacts: Artifact[]): Dictionary<string, Artifact[]> {
     const groupedArtifacts = new Dictionary<string,Artifact[]>();
-
+    groupBy = Utils.ResolveArtifactProperty(groupBy);
     baseArtifacts.forEach(artifact => {
       const key = artifact[groupBy];
       
-      if (typeof key !== 'string') {
+      if (typeof key == 'string') {
+        if (!groupedArtifacts.Get(key)) {
+          groupedArtifacts.Add(key, []);
+        }
+        const group = groupedArtifacts.Get(key);
+          if (group !== null) {
+            group.push(artifact);
+        }
+      } else if (Array.isArray(key) && typeof key[0] == 'string'){
+        key.forEach(k => {
+          if (!groupedArtifacts.Get(k)) {
+            groupedArtifacts.Add(k, []);
+          }
+          const group = groupedArtifacts.Get(k);
+          if (group !== null) {
+            group.push(artifact);
+          }
+        });
+      }
+      else {
         console.warn('Warning: key is not a string');
         return; 
       }
       
-      if (!groupedArtifacts.Get(key)) {
-        groupedArtifacts.Add(key, []);
-      }
-      const group = groupedArtifacts.Get(key);
-        if (group !== null) {
-          group.push(artifact);
-        }
     });
 
     return groupedArtifacts;
@@ -38,5 +50,18 @@ export class Utils {
     }
 
     return queryParams;
+  }
+
+  static ResolveArtifactProperty(property:string): string {
+    if (property == "category")
+      return "categories";
+    else if (property == "targetDemographic")
+      return "targetDemographics";
+    else if (property == "otherName")
+      return "otherNames";
+    else if (property == "otherImgUrl")
+      return "otherImgUrls";
+    else
+      return property;
   }
 }
