@@ -1,1 +1,22 @@
-<p>work-page works!</p>
+<div [ngClass]="mediaQuery.portrait ? 'portraitContentWrapper' : 'contentWrapper'">
+    <div id="main" class="verticalFlex">
+        <mdp-basic-work-widget [work]="pageModel.work"></mdp-basic-work-widget>
+        <mdp-news-and-highlights-widget [links]="pageModel.newsAndHighlights??[]"></mdp-news-and-highlights-widget>
+        @if (showFractions){
+            <p class="highlightText">{{fractionsLabel}}</p>
+            <mdp-vertical-folder maxHeight="auto">
+                <mdp-link-list-widget [links]="pageModel.fractions??[]"></mdp-link-list-widget>
+            </mdp-vertical-folder>
+        }
+        <p class="highlightText">Participants</p>
+        <mdp-vertical-folder maxHeight="auto">
+            <mdp-link-list-widget [links]="pageModel.participants??[]"></mdp-link-list-widget>
+        </mdp-vertical-folder>
+        <p class="highlightText">Related {{pageModel.work.media}}</p>
+        <mdp-vertical-folder maxHeight="auto">
+            <mdp-link-list-widget [links]="pageModel.relatedWorks??[]"></mdp-link-list-widget>
+        </mdp-vertical-folder>
+        <mdp-reviews-list *ngIf="mediaQuery.portrait" [reviews]="pageModel.reviews"></mdp-reviews-list>
+    </div>
+    <mdp-reviews-list *ngIf="!mediaQuery.portrait" [reviews]="pageModel.reviews"></mdp-reviews-list>
+</div>

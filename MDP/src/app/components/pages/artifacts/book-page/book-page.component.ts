@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
+import { WorkPageComponent } from '../work-page/work-page.component';
 
 @Component({
   selector: 'mdp-book-page',
-  
-  
-  templateUrl: './book-page.component.html',
-  styleUrl: './book-page.component.scss'
+  templateUrl: '../work-page/work-page.component.html',
+  styleUrl: '../work-page/work-page.component.scss'
 })
-export class BookPageComponent {
+export class BookPageComponent extends WorkPageComponent{
 
 }

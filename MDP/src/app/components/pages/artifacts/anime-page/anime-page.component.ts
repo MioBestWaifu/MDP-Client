@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
+import { WorkPageComponent } from '../work-page/work-page.component';
 
 @Component({
   selector: 'mdp-anime-page',
-  
-  
-  templateUrl: './anime-page.component.html',
-  styleUrl: './anime-page.component.scss'
+  templateUrl: '../work-page/work-page.component.html',
+  styleUrl: '../work-page/work-page.component.scss'
 })
-export class AnimePageComponent {
+export class AnimePageComponent extends WorkPageComponent{
 
 }
