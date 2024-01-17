@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 import { Link } from "../../../models/link";
 import { CommonContainerService } from "../../../services/common-container.service";
 import { InteractionService } from "../../../services/interaction.service";
@@ -15,7 +15,7 @@ export class CarouselComponent extends BaseComponent {
   currentLink: number = 0;
   secondsPassed: number = 0;
   secondsUntilSwitching: number = 5;
-  links!: Link[];
+  @Input() links!: Link[];
   intervalId: number | undefined;
 
   constructor( mediaQuery: MediaQueryService,common: CommonContainerService, public router:Router

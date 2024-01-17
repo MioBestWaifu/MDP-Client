@@ -1,1 +1,8 @@
-<p>home-page works!</p>
+<div [ngClass]="mediaQuery.portrait ? 'portraitContentWrapper' : 'contentWrapper'">
+    <div id="main" class="verticalFlex">
+      <mdp-search-bar></mdp-search-bar>
+      <mdp-carousel [links]="pageModel.newsAndHighlights"></mdp-carousel>
+      <mdp-artifact-list [artifacts]="pageModel.artifacts"></mdp-artifact-list>
+    </div>
+    <mdp-ad-list *ngIf="!mediaQuery.portrait"></mdp-ad-list>
+</div>
