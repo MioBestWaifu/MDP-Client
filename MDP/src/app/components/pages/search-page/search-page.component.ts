@@ -13,14 +13,17 @@ export class SearchPageComponent extends BasePageComponent {
   public pageModel: SearchPageModel = new SearchPageModel();
 
   override ngOnInit() {
+    super.ngOnInit();
     const queryParamsMap = this.route.snapshot.queryParamMap;
-    const queryDictionaty = new Dictionary<string,string>();
+    const queryDictionary = new Dictionary<string,string>();
     queryParamsMap.keys.forEach(key => {
-      queryDictionaty.Add(key,queryParamsMap.get(key) ?? '');
+      queryDictionary.Add(key,queryParamsMap.get(key) ?? '');
     });
-    this.query = queryDictionaty.Get('query')??'';
-    this.connection.LoadPageWithParams(this.connection.search, queryDictionaty).subscribe(result => {
+    this.query = queryDictionary.Get('query')??'';
+    console.log(queryDictionary);
+    console.log(this.query);
+    /* this.connection.LoadPageWithParams(this.connection.search, queryDictionaty).subscribe(result => {
       this.pageModel = result as SearchPageModel;
-    });
+    }); */
   }
 }
