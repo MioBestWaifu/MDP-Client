@@ -16,13 +16,13 @@ export class PersonPageComponent extends BasePageComponent{
   override ngOnInit(){
     super.ngOnInit();
     
-    let requestUrl = this.connection.person;
+    /* let requestUrl = this.connection.person;
     const id = this.route.snapshot.paramMap.get('id');
     if (id) {
       requestUrl += `?id=${id}`;
     }
     this.connection.LoadPage(requestUrl).subscribe((result: BasePageModel) => {
       this.pageModel = result as PersonPageModel;
-    });
+    }); */
   }
 }
