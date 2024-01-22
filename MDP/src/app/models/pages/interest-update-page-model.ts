@@ -11,7 +11,7 @@ export class InterestUpdatePageModel extends BasePageModel{
         for (let i = 0; i < 10; i++) {
             interestArray.push(Interest.testInterest)
         }
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 3; i++) {
             this.interestDictionary.Add("Interest" + i, interestArray)
         }
     }
