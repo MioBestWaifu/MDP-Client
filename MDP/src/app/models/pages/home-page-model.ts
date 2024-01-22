@@ -10,9 +10,13 @@ export class HomePageModel extends BasePageModel{
         super()
         this.artifacts = []
 
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 15; i++) {
             this.artifacts.push(Artifact.testArtifact)
         }
         this.newsAndHighlights = []
+
+        for (let i = 0; i < 16; i++) {
+            this.newsAndHighlights.push(Link.testCarouselItem)
+        }
     }
 }
