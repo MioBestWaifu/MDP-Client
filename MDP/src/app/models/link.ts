@@ -24,4 +24,11 @@ export class Link {
         secondaryLabel: 'Role',
         redirectTo: 'https://www.google.com'
     }
+
+    static readonly testCompanyAffiliation:Link = {
+        imgUrl: 'https://aishow.blob.core.windows.net/images/2.png',
+        mainLabel: 'Company',
+        secondaryLabel: 'Role',
+        redirectTo: 'https://www.google.com'
+    }
 }
