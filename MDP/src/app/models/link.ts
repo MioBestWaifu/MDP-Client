@@ -11,6 +11,13 @@ export class Link {
         redirectTo: 'https://www.google.com'
     }
 
+    static readonly testInterest:Link = {
+        imgUrl: 'https://aishow.blob.core.windows.net/images/2.png',
+        mainLabel: 'Main Label',
+        secondaryLabel: 'Secondary Label',
+        redirectTo: 'https://www.google.com'
+    }
+
     static readonly testParticipation:Link = {
         imgUrl: 'https://aishow.blob.core.windows.net/images/2.png',
         mainLabel: 'Artifact',
