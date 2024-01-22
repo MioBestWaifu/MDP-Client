@@ -13,9 +13,9 @@ export class FavoritesPageComponent extends BasePageComponent {
 
   override ngOnInit() {
     super.ngOnInit();
-    this.connection.LoadPage(this.connection.favorites).subscribe(result => {
+    /* this.connection.LoadPage(this.connection.favorites).subscribe(result => {
       this.pageModel = result as FavoritesPageModel;
-    });
+    }); */
   }
 
   RegroupArtifacts(event: Event) {
