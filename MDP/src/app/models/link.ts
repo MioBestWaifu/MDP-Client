@@ -1,3 +1,7 @@
+import { Artifact } from "./artifacts/artifact"
+import { Company } from "./company"
+import { Person } from "./person"
+
 export class Link {
     imgUrl!:string
     mainLabel!: string
@@ -5,35 +9,35 @@ export class Link {
     redirectTo!: string
 
     static readonly testCarouselItem:Link = {
-        imgUrl: 'https://aishow.blob.core.windows.net/images/2.png',
+        imgUrl: 'file:///D:/Images/Projects/MDP/Tests/Carousel.png',
         mainLabel: 'Main Label',
         secondaryLabel: 'Secondary Label',
         redirectTo: 'https://www.google.com'
     }
 
     static readonly testInterest:Link = {
-        imgUrl: 'https://aishow.blob.core.windows.net/images/2.png',
+        imgUrl: 'file:///D:/Images/Projects/MDP/Tests/Interest.png',
         mainLabel: 'Main Label',
         secondaryLabel: 'Secondary Label',
         redirectTo: 'https://www.google.com'
     }
 
     static readonly testParticipation:Link = {
-        imgUrl: 'https://aishow.blob.core.windows.net/images/2.png',
+        imgUrl: Artifact.testArtifact.cardImgUrl,
         mainLabel: 'Artifact',
         secondaryLabel: 'Role',
         redirectTo: 'https://www.google.com'
     }
 
     static readonly testAffiliate:Link = {
-        imgUrl: 'https://aishow.blob.core.windows.net/images/2.png',
+        imgUrl: Person.testPerson.cardImgUrl,
         mainLabel: 'Person',
         secondaryLabel: 'Role',
         redirectTo: 'https://www.google.com'
     }
 
     static readonly testCompanyAffiliation:Link = {
-        imgUrl: 'https://aishow.blob.core.windows.net/images/2.png',
+        imgUrl: Company.testCompany.cardImgUrl,
         mainLabel: 'Company',
         secondaryLabel: 'Role',
         redirectTo: 'https://www.google.com'
