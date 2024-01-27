@@ -21,10 +21,12 @@
 .contentWrapper {
   display: grid;
   grid-template-columns: 8fr 2fr;
+  max-width: 100vw;
 }
 
 .contentWrapperPortrait {
   @extend .verticalFlex;
+  max-width: 100vw;
 }
 
 .roundedImage {

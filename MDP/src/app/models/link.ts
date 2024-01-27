@@ -9,14 +9,14 @@ export class Link {
     redirectTo!: string
 
     static readonly testCarouselItem:Link = {
-        imgUrl: 'file:///D:/Images/Projects/MDP/Tests/Carousel.png',
+        imgUrl: 'assets/imgs/Carousel.png',
         mainLabel: 'Main Label',
         secondaryLabel: 'Secondary Label',
         redirectTo: 'https://www.google.com'
     }
 
     static readonly testInterest:Link = {
-        imgUrl: 'file:///D:/Images/Projects/MDP/Tests/Interest.png',
+        imgUrl: 'assets/imgs/Interest.png',
         mainLabel: 'Main Label',
         secondaryLabel: 'Secondary Label',
         redirectTo: 'https://www.google.com'
