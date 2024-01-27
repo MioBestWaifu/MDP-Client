@@ -1,7 +1,7 @@
 <div class="wrapper">
     <img class="roundedImage" [src]="review.user.cardImgUrl">
     <div>
-      <mdp-rate-widget class="cardTopText" [rate]="review.rating"></mdp-rate-widget>
+      <mdp-rate-widget class="cardTopText" [rate]="review.rating!!"></mdp-rate-widget>
       <p class="cardBlockText">{{ review.comment }}</p>
     </div>
   </div>

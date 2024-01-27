@@ -34,7 +34,7 @@ export class PageLoadingService {
     return this.http.get<BasePageModel>(page);
   }
 
-  LoadPageWithParams(page: string, params: Dictionary): Observable<BasePageModel> {
+  LoadPageWithParams(page: string, params: Dictionary<string,string>): Observable<BasePageModel> {
     const resolvedParams = Utils.ResolveParams(params);
     return this.http.get<BasePageModel>(`${page}?${resolvedParams}`);
   }

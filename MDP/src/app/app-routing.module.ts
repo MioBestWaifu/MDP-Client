@@ -13,7 +13,7 @@ import { SignPageComponent } from './components/pages/sign-page/sign-page.compon
 import { UserPageComponent } from './components/pages/user-page/user-page.component';
 
 const routes: Routes = [
-  { path: '', component: SignPageComponent },
+  { path: '', component: HomePageComponent },
   { path: 'home', component: HomePageComponent },
   { path: 'community/:id', component: CommunityPageComponent },
   { path: 'company/:id', component: CompanyPageComponent },
