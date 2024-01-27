@@ -9,6 +9,6 @@
 - Interações do usuário são feitas pelo componente em que a interação ocorre, por razões de organização. Ex: o método de login é chamado no [LoginForms](/Docs/src/app/components/forms/LoginForms.md).
 
 ## Resoluções
-- Card images são 1:1.6
+- Card images são 3:4
 - Main images são 1:1
 - Carousel images são idealmente 16:9, ratios menores geram pillarbox e ratios maiores são cortados.
