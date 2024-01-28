@@ -1,3 +1,4 @@
+@import '../../../variables.scss';
 .collapsableGrid {
   display: grid;
   grid-template-columns: 150px auto;
@@ -12,7 +13,7 @@
 .cardTopText {
   font-size: $largeFontSize;
   font-family: $highlightFont;
-  color: $mediumPrimaryColor;
+  color: $mediumMainColor;
 }
 
 .cardBlockText {
