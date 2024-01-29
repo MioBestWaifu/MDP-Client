@@ -1,7 +1,9 @@
 #main{
     width: 100%;
+    max-width: 100%;
     display: flex;
     justify-content: start;
+    flex-wrap: wrap;
 } mdp-artifact-card{
     margin-left: 30px;
 }
