@@ -1,11 +1,11 @@
 <div id="container">
-    <div>
-        <i (click)="ToggleLateralBar()"></i>
+    <div style="display: flex;">
+        <i style="font-size: 35px; color: azure;" class="material-symbols-outlined icon" (click)="ToggleLateralBar()">menu</i>
         @if (mediaQuery.portrait){
             <mdp-small-logo></mdp-small-logo>
         } @else {
             <mdp-full-logo></mdp-full-logo>
         }
-        <mdp-navigation-icons></mdp-navigation-icons>
     </div>
+    <mdp-navigation-icons></mdp-navigation-icons>
   </div>

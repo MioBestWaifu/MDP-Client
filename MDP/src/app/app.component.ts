@@ -10,7 +10,6 @@ import { BaseComponent } from "./components/base/base.component";
     trigger('expandCollapse', [
       state('collapsed', style({
         'grid-template-columns': '0px auto',
-        'height': '{{maxHeight}}px'
       }), {params: {maxHeight: 10}}),
       state('expanded', style({
         'grid-template-columns': '{{start}} {{end}}'
@@ -23,7 +22,7 @@ import { BaseComponent } from "./components/base/base.component";
 })
 export class AppComponent extends BaseComponent{
   expandLateralBar: boolean = true;
-  start: string = "250px";
+  start: string = "170px";
   end: string = "auto";
 
   override ngOnInit() {
@@ -35,12 +34,13 @@ export class AppComponent extends BaseComponent{
   }
 
   ToggleLateralBar() {
+    console.log("App received");
     this.expandLateralBar = !this.expandLateralBar;
     if (this.mediaQuery.portrait) {
       this.start = "auto";
       this.end = "0px";
     } else {
-      this.start = "250px";
+      this.start = "170px";
       this.end = "auto";
     }
   }

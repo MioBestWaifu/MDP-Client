@@ -10,6 +10,7 @@ export class HeaderComponent extends BaseComponent {
   @Output() lateralBarToggled = new EventEmitter<void>();
 
   ToggleLateralBar() {
+    console.log("ToggleLateralBar");
     this.lateralBarToggled.emit();
   }
 }
