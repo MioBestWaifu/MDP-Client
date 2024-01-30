@@ -14,9 +14,8 @@ export class HomePageModel extends BasePageModel{
             this.artifacts.push(Artifact.testArtifact)
         }
         this.newsAndHighlights = []
-
-        for (let i = 0; i < 16; i++) {
-            this.newsAndHighlights.push(Link.testCarouselItem)
-        }
+        this.newsAndHighlights.push(Link.testCarouselItem0)
+        this.newsAndHighlights.push(Link.testCarouselItem1)
+        this.newsAndHighlights.push(Link.testCarouselItem2)
     }
 }

@@ -8,8 +8,22 @@ export class Link {
     secondaryLabel: string | undefined
     redirectTo!: string
 
-    static readonly testCarouselItem:Link = {
+    static readonly testCarouselItem0:Link = {
         imgUrl: 'assets/imgs/Carousel.png',
+        mainLabel: 'Main Label',
+        secondaryLabel: 'Secondary Label',
+        redirectTo: 'https://www.google.com'
+    }
+
+    static readonly testCarouselItem1:Link = {
+        imgUrl: 'assets/imgs/Carousel1.png',
+        mainLabel: 'Main Label',
+        secondaryLabel: 'Secondary Label',
+        redirectTo: 'https://www.google.com'
+    }
+
+    static readonly testCarouselItem2:Link = {
+        imgUrl: 'assets/imgs/Carousel2.png',
         mainLabel: 'Main Label',
         secondaryLabel: 'Secondary Label',
         redirectTo: 'https://www.google.com'
