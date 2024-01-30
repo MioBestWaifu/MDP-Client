@@ -1,6 +1,6 @@
 <div id="main">
     @for (row of artifactRows; track row[0]){
-        <div class="innerFlex">
+        <div class="innerFlex" [class.lastInnerFlex]="$last">
             @for (artifact of row[1]; track artifact.id){
                 <mdp-artifact-card [artifact]="artifact"></mdp-artifact-card>
             }

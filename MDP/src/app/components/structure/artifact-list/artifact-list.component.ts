@@ -12,6 +12,7 @@ export class ArtifactListComponent extends BaseComponent{
   @Input() vertical:boolean = false;
   @Input() artifacts!:Artifact[];
   artifactRows!:Dictionary<number,Artifact[]>;
+  effectiveMargin!:number;
 
   RecalculateRows(availaibleWidth: number) {
     console.log("Recalculating rows");
@@ -19,7 +20,13 @@ export class ArtifactListComponent extends BaseComponent{
     while (rowItems * 150 <= availaibleWidth - 380) {
       rowItems++;
     }
+    /* console.log("Row items: " + rowItems);
+
+    console.log("Availaible width: " + availaibleWidth);
     console.log("Row items: " + rowItems);
+    this.effectiveMargin = (Math.floor(availaibleWidth) - rowItems * 150)/(rowItems+1);
+    console.log("Effective margin: " + this.effectiveMargin);
+    this.effectiveMargin = Math.floor(this.effectiveMargin); */
 
     this.artifactRows = new Dictionary<number, Artifact[]>();
     let index = 0;
@@ -28,5 +35,7 @@ export class ArtifactListComponent extends BaseComponent{
       this.artifactRows.Add(index, row);
       index += rowItems;
     }
+
   }
+  
 }

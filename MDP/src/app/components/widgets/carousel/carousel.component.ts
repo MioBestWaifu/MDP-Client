@@ -35,13 +35,10 @@ export class CarouselComponent extends BaseComponent {
   }
 
   SecondPassed() {
-    console.log("SecondPassed called");
     this.secondsPassed++;
-    console.log("Seconds passed: "+this.secondsPassed);
     if (this.secondsPassed >= this.secondsUntilSwitching) {
       this.secondsPassed = 0;
       this.currentLink = this.currentLink < this.links.length - 1 ? this.currentLink + 1 : 0;
-      console.log("CurrentLink "+this.currentLink);
     }
   }
 }
