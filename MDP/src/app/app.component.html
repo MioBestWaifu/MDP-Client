@@ -1,1 +1,7 @@
-<router-outlet></router-outlet>
+<div [ngClass]="mediaQuery.portrait ? 'appWrapperPortrait' : 'appWrapper'" [@expandCollapse]="{value: expandLateralBar ? 'expanded' : 'collapsed', params: {start: start, end:end}}">
+    <mdp-header></mdp-header>
+    <mdp-navigation-bar (lateralBarToggled)="ToggleLateralBar()"></mdp-navigation-bar>
+    <div class="route">
+        <router-outlet></router-outlet>
+    </div>
+</div>
