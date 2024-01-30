@@ -64,4 +64,26 @@ export class Utils {
     else
       return property;
   }
+
+  static GetContextualMaxWidth(context:string): number {
+    let maxWidth = 0, viewportWidth = window.innerWidth;
+    switch (context) {
+      case 'homeArtifactsCollapsed':
+        maxWidth = 0.76 * (viewportWidth);
+        return maxWidth;
+      case 'homeArtifactsExpanded':
+        viewportWidth = window.innerWidth;
+        maxWidth = 0.76 * (viewportWidth - 170);
+        return maxWidth;
+      case 'homeArtifactsCollapsedPortrait':
+          maxWidth = 0.76 * (viewportWidth);
+          return maxWidth;
+      case 'homeArtifactsExpandedPortrait':
+          viewportWidth = window.innerWidth;
+          maxWidth = 0.76 * (viewportWidth - 170);
+          return maxWidth;
+    }
+
+    return 0;
+  }
 }

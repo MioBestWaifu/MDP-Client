@@ -2,9 +2,14 @@
     width: 100%;
     max-width: 100%;
     display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    flex-direction: column;
+    flex-wrap: nowrap;
     row-gap: 25px;
 } mdp-artifact-card{
     height: 200px;
+} .innerFlex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
 }

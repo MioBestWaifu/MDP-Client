@@ -1,5 +1,9 @@
-<div id="main" [class.verticalFlex]="vertical">
-    @for (artifact of artifacts; track artifact.id){
-        <mdp-artifact-card [artifact]="artifact"></mdp-artifact-card>
+<div id="main">
+    @for (row of artifactRows; track row[0]){
+        <div class="innerFlex">
+            @for (artifact of row[1]; track artifact.id){
+                <mdp-artifact-card [artifact]="artifact"></mdp-artifact-card>
+            }
+        </div>
     }
 </div>
