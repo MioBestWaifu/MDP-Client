@@ -24,6 +24,7 @@ export class WorkPageModel extends BasePageModel{
             this.reviews.push(Interaction.testReview);
         }
 
+        this.participants.push(Link.testCompanyAffiliation);
         for (let i = 0; i < 7; i++) {
             this.participants.push(Link.testAffiliate);
         }

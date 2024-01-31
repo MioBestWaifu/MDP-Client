@@ -47,14 +47,14 @@ export class Link {
         imgUrl: Person.testPerson.cardImgUrl,
         mainLabel: 'Person',
         secondaryLabel: 'Role',
-        redirectTo: 'https://www.google.com'
+        redirectTo: '/person/1'
     }
 
     static readonly testCompanyAffiliation:Link = {
         imgUrl: Company.testCompany.cardImgUrl,
         mainLabel: 'Company',
         secondaryLabel: 'Role',
-        redirectTo: 'https://www.google.com'
+        redirectTo: '/company/1'
     }
 
     static readonly testWorkRelation:Link = {
