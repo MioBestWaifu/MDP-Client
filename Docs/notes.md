@@ -10,7 +10,8 @@
 - ~~Já deixar a responsividade preparada~~
 - ~~Fazer todo mundo herdar de BaseComponent~~
 - UserInteractions seria algo tão grande que vai virar a própria page
-- A ArtifactList passou a ser space-evenly. Para minimizar bizarrices de espaçamento, calcular o tamanho da fileira e já passar na request ou ajustar isso no client.
+- A ArtifactList passou a ser space-evenly. Para minimizar bizarrices de espaçamento, calcular o tamanho da fileira e já passar na request ou ajustar isso no client. NEW: É quase impossivel calcular o espaço exato que a flexbox usará. 
 - Por enquanto, tudo que precisa de um service mas não cabe em outor lugar vai para o CommonContainer. Eventualmente, revisar esse serviço e criar outros confome necessário.
 - A recalculação de rows do ArtifactList tá ignorando se é portrait, verificar isso dps
 - Temos um ExpressionChangedAfterItHasBeenCheckedError por mudar artifactRows em ngAfterViewInit no HomePageComponent. Não parece estar dando problema, mas fica atento a isso.
+- Muitas mudanças não estão sendo documentadas. Atualizar a documentação.
