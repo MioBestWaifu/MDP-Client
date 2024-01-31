@@ -4,7 +4,7 @@ import { Interaction } from '../../../models/interaction';
 @Component({
   selector: 'mdp-review-card',
   templateUrl: './review-card.component.html',
-  styleUrl: '../card.scss'
+  styleUrls: ['../card.scss','./review-card.component.scss']
 })
 export class ReviewCardComponent {
   @Input() review:Interaction = new Interaction();

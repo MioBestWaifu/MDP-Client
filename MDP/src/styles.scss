@@ -1,5 +1,9 @@
 @import './variables.scss';
 
+.flex{
+  display: flex;
+}
+
 .verticalFlex {
   display: flex;
   flex-direction: column;

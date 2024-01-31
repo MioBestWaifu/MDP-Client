@@ -17,5 +17,5 @@
         </mdp-vertical-folder>
         <mdp-reviews-list *ngIf="mediaQuery.portrait" [reviews]="pageModel.reviews"></mdp-reviews-list>
     </div>
-    <mdp-reviews-list *ngIf="!mediaQuery.portrait" [reviews]="pageModel.reviews"></mdp-reviews-list>
+    <mdp-reviews-list [vertical]="true" *ngIf="!mediaQuery.portrait" [reviews]="pageModel.reviews"></mdp-reviews-list>
 </div>
