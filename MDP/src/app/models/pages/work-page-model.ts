@@ -25,7 +25,7 @@ export class WorkPageModel extends BasePageModel{
         }
 
         for (let i = 0; i < 7; i++) {
-            this.participants.push(Link.testParticipation);
+            this.participants.push(Link.testAffiliate);
         }
 
         for (let i = 0; i < 7; i++) {

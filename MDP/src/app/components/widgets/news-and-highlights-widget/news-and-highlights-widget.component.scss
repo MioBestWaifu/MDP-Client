@@ -1,10 +1,22 @@
 @import '../../../../variables.scss';
-.newsTitle{
+
+#main{
+    display: flex;
+    flex-direction: column;
+} .newsTitle{
     font-size: $largeFontSize;
     color: $mediumMainColor;
-} div {
-    border-bottom-width: 1px;
-    border-color: $strongBackgroundColor;
-} img {
+    text-align: center;
+    margin-bottom: 8px;
+} .newsBlock {
+    margin-bottom: 15px;
+} .leftImg {
     float: left;
+    margin-right: 10px;
+} .rightImg{
+    float: right;
+    margin-left: 10px;
+} img{
+    max-height: 500px;
+    width: auto;
 }
