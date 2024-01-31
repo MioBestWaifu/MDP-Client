@@ -8,7 +8,7 @@ import { BaseComponent } from "../../base/base.component";
 @Component({
   selector: 'mdp-basic-work-widget',
   templateUrl: './basic-work-widget.component.html',
-  styleUrls: ['./basic-work-widget.component.scss']
+  styleUrls: ['../widget.scss','./basic-work-widget.component.scss']
 })
 export class BasicWorkWidgetComponent extends BaseComponent {
   @Input() work: Artifact = new Artifact();

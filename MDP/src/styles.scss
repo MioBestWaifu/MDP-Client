@@ -24,7 +24,7 @@
 .contentWrapper {
   display: grid;
   grid-template-columns: 8fr 2fr;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
 .contentWrapperPortrait {
@@ -45,6 +45,16 @@
   grid-template-columns: auto auto;
 }
 
+.twoEqualRowsGrid {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.twoEqualColumnsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .centerInternalText {
   text-align: center;
   vertical-align: middle;
@@ -54,6 +64,7 @@ p, i, label, div {
   font-family: $standardFont;
   font-size: $mediumFontSize;
   color: $mediumOutlineColor;
+  margin: 0;
 }
 
 input {

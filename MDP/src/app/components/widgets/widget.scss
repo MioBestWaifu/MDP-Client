@@ -16,10 +16,47 @@
 
 .summaryGrid {
   display: grid;
-  grid-template-columns: 0.2fr 0.8fr;
-  grid-template-rows: 0.25fr 0.75fr;
+  grid-template-columns: $summaryWidgetHeight 0.2fr 0.8fr;
+  grid-template-rows: 0.15fr 0.85fr;
+  overflow: hidden;
+  height: 100%;
 }
 
 .summaryBlockTextContainer {
-  margin-left: 4px;
+  height: fit-content;
+  margin: 8px;
+}
+
+.rateWidget{
+  font-size: 28px;
+}
+
+#mainImage{
+  grid-row: 1 / span 2;
+  grid-column: 1;
+  height: 100%;
+  width: auto;
+}
+
+#title{
+  grid-row: 1;
+  grid-column: 2 / span 2;
+}
+
+#rateArea{
+  grid-row: 2;
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 6px;
+  align-items: center;
+}
+
+#miscInfo{
+  grid-row: 2;
+  grid-column: 3;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
 }
