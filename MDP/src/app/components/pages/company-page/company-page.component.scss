@@ -1,4 +1,9 @@
+@import '../../../../variables.scss';
+
 mdp-basic-company-widget{
     height: 200px;
     width: 100%;
+} mdp-vertical-folder{
+    font-size: $largeFontSize;
+    margin-top: 15px;
 }

@@ -1,0 +1,9 @@
+@import '../../../../variables.scss';
+
+mdp-basic-person-widget{
+    width: 100%;
+    height: $summaryWidgetHeight;
+} mdp-vertical-folder{
+    font-size: $largeFontSize;
+    margin-top: 15px;
+}
