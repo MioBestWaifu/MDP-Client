@@ -1,13 +1,27 @@
 @import '../../../../variables.scss';
+
 .secondaryBlockText:hover {
     cursor: pointer;
     text-decoration: underline;
-  }
+}
   
+.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    gap:6px;
+}
+  
+.block.flexbox {
+    justify-content: start;
+    column-gap:3px;
+    flex-wrap: nowrap;
+}
+
 .block {
     border-width: 0px 1px 1px 0px;
-    border-color: $strongBackgroundColor;
-    width: 150px;
+    border-color: $strongMainColor;
+    width: 185px;
     height: 100px;
 }
   
@@ -15,11 +29,8 @@
     @extend .block;
     width: 110px;
 }
-  
-.flexbox {
-    display: flex;
-}
-  
-.block.flexbox {
-    justify-content: space-between;
+
+img, a{
+    height: 100%;
+    width: auto;
 }

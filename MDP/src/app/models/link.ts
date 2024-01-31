@@ -59,7 +59,7 @@ export class Link {
 
     static readonly testWorkRelation:Link = {
         imgUrl: Artifact.testArtifact.cardImgUrl,
-        mainLabel: 'Related Work',
+        mainLabel: 'Related Wooooooork',
         secondaryLabel: 'Relation',
         redirectTo: 'https://www.google.com'
     }
