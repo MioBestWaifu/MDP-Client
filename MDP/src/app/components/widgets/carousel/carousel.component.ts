@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core";
+import { Component, ElementRef, Input, Renderer2 } from "@angular/core";
 import { Link } from "../../../models/link";
 import { CommonContainerService } from "../../../services/common-container.service";
 import { InteractionService } from "../../../services/interaction.service";
@@ -18,9 +18,9 @@ export class CarouselComponent extends BaseComponent {
   @Input() links!: Link[];
   intervalId: number | undefined;
 
-  constructor( mediaQuery: MediaQueryService,common: CommonContainerService, public router:Router
+  constructor( mediaQuery: MediaQueryService,common: CommonContainerService, public router:Router, elementRef: ElementRef, renderer: Renderer2
   ) {
-    super(mediaQuery, common);
+    super(mediaQuery, common, elementRef, renderer);
   }
 
   override ngOnInit() {

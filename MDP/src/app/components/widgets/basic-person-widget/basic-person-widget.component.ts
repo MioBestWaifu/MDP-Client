@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core";
+import { Component, ElementRef, Input, Renderer2 } from "@angular/core";
 import { Person } from "../../../models/person";
 import { CommonContainerService } from "../../../services/common-container.service";
 import { InteractionService } from "../../../services/interaction.service";
@@ -14,9 +14,9 @@ export class BasicPersonWidgetComponent extends BaseComponent {
   @Input() person: Person = new Person();
 
   constructor(mediaQuery: MediaQueryService, common: CommonContainerService, 
-    public connection: InteractionService
+    public connection: InteractionService, elementRef: ElementRef, renderer: Renderer2
   ) {
-    super(mediaQuery, common);
+    super(mediaQuery, common,elementRef, renderer);
   }
 
   RateChanged(newRate: number) {

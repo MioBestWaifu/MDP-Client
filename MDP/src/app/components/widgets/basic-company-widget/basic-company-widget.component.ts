@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, Input, Renderer2 } from '@angular/core';
 import { Company } from '../../../models/company';
 import { CommonContainerService } from '../../../services/common-container.service';
 import { InteractionService } from '../../../services/interaction.service';
@@ -16,9 +16,9 @@ export class BasicCompanyWidgetComponent extends BaseComponent {
   constructor(
     mediaQuery: MediaQueryService, 
     common: CommonContainerService, 
-    public connection: InteractionService
+    public connection: InteractionService, elementRef: ElementRef, renderer: Renderer2
   ) {
-    super(mediaQuery, common);
+    super(mediaQuery, common,elementRef, renderer);
   }
 
   RateChanged(newRate: number) {

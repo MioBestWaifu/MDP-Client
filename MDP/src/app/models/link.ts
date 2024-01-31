@@ -74,7 +74,7 @@ export class Link {
     static readonly testNews:Link = {
         imgUrl: Artifact.testArtifact.mainImgUrl,
         mainLabel: 'This is some news',
-        secondaryLabel: 'A bunch of things happened, or may have happened, or will happen, or something like that. Sombody '+ 
+        secondaryLabel: 'A bunch of things happened, or may have happened, or will happen, or something like that. Somebody '+ 
         'may have done it, or will do it, or not. Who knows. I certainly don\'t. I\'m just a placeholder for some news.',
         redirectTo: 'https://www.google.com'
     }

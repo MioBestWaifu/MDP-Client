@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import { BaseComponent } from '../../base/base.component';
 import { CommonContainerService } from '../../../services/common-container.service';
@@ -12,8 +12,9 @@ import { MediaQueryService } from '../../../services/media-query.service';
 export class SearchBarComponent extends BaseComponent {
   public query: string = '';
 
-  constructor(private router: Router,mediaQuery:MediaQueryService, common:CommonContainerService) {
-    super(mediaQuery, common);
+  constructor(private router: Router,mediaQuery:MediaQueryService, common:CommonContainerService, elementRef:ElementRef, 
+    renderer:Renderer2) {
+    super(mediaQuery, common,elementRef, renderer);
   }
 
   Search() {

@@ -1,9 +1,10 @@
 @import '../../../../variables.scss';
 .collapsableVertical {
   display: grid;
-  grid-template-rows: 10px auto;
+  grid-template-rows: auto auto;
   border-top-width: 3px;
   border-color: $mediumMainColor;
+  overflow: hidden;
 }
 
 .collapsableHorizontal {
@@ -13,9 +14,13 @@
   border-color: $mediumMainColor;
 }
 
-i {
-  color: $mediumMainColor;
-  font-size: $extraSmallFontSize;
+i{
+  cursor: pointer;
+}
+
+i, p, div {
+  color: $strongMainColor;
+  font-size: inherit;
 } #bar {
   height: 2px; 
   width: 100%; 

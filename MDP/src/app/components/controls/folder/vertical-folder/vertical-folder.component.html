@@ -1,7 +1,11 @@
-<div class="collapsableVertical" [@expandCollapse]="{value: expanded ? 'expanded' : 'collapsed', params: {maxHeight: maxHeight}}">
+<div class="collapsableVertical">
     <div>
-      <div id="bar"></div>
-      <i class="material-symbols-outlined icon" (click)="Toggle()">{{currentIcon}}</i>
+      <div >
+        <p class="inline">{{label}}</p><i class="material-symbols-outlined icon inline" (click)="Toggle()">{{currentIcon}}</i>
+      </div>
+      <div id="bar"></div> 
     </div>
-    <ng-content></ng-content>
-  </div>
+    <div id="content" [@expandCollapse]="{value: expanded ? 'expanded' : 'collapsed', params: {maxHeight: maxHeight}}">
+      <ng-content></ng-content>
+    </div>
+</div>

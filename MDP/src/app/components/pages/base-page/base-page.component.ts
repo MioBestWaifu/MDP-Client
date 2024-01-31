@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, Renderer2 } from '@angular/core';
 import { BaseComponent } from '../../base/base.component';
 import { CommonContainerService } from '../../../services/common-container.service';
 import { MediaQueryService } from '../../../services/media-query.service';
@@ -12,7 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class BasePageComponent extends BaseComponent{
   constructor (mediaQuery:MediaQueryService,common:CommonContainerService,
-     public connection:PageLoadingService, protected route:ActivatedRoute){
-    super(mediaQuery,common);
+     public connection:PageLoadingService, protected route:ActivatedRoute,elementRef:ElementRef, renderer:Renderer2){
+    super(mediaQuery,common,elementRef, renderer);
   }
 }
