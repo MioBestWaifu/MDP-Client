@@ -11,4 +11,4 @@
 ## Resoluções
 - Card images são 3:4
 - Main images são 1:1
-- Carousel images são idealmente 16:9, ratios menores geram pillarbox e ratios maiores são cortados.
+- Carousel images são idealmente 23:10, ratios menores geram pillarbox e ratios maiores são cortados.
