@@ -8,7 +8,7 @@ import { BaseComponent } from '../../base/base.component';
 @Component({
   selector: 'mdp-basic-company-widget',
   templateUrl: './basic-company-widget.component.html',
-  styleUrls: ['./basic-company-widget.component.scss']
+  styleUrls: ['../widget.scss','./basic-company-widget.component.scss']
 })
 export class BasicCompanyWidgetComponent extends BaseComponent {
   @Input() company: Company = new Company();

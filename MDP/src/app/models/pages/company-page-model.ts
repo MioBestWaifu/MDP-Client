@@ -9,7 +9,7 @@ export class CompanyPageModel extends BasePageModel{
 
     constructor(){
         super()
-        this.company = new Company()
+        this.company = Company.testCompany
         this.artifactParticipations = []
         for (let i = 0; i < 10; i++){
             this.artifactParticipations.push(Link.testParticipation)
