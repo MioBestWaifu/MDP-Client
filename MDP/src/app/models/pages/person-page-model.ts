@@ -18,7 +18,7 @@ export class PersonPageModel extends BasePageModel{
         }
 
         for (let i = 0; i < 3; i++) {
-            this.artifactParticipations.push(Link.testCompanyAffiliation)
+            this.companyAffiliations.push(Link.testCompanyAffiliation)
         }
     }
 }
