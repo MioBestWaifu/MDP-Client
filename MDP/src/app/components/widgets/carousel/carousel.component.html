@@ -1,3 +1,5 @@
-<div id="container">
+<div id="container" style="position: relative;">
     <img [src]="links[currentLink].imgUrl" (click)="router.navigate([links[currentLink].redirectTo])">
+    <i class="material-symbols-outlined icon left" (click)="Back()">chevron_left</i>
+    <i class="material-symbols-outlined icon right" (click)="Forward()">chevron_right</i>
 </div>

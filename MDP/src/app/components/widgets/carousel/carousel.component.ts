@@ -41,4 +41,14 @@ export class CarouselComponent extends BaseComponent {
       this.currentLink = this.currentLink < this.links.length - 1 ? this.currentLink + 1 : 0;
     }
   }
+
+  Back(){
+    this.secondsPassed = 0;
+    this.currentLink = this.currentLink > 0 ? this.currentLink - 1 : this.links.length - 1;
+  }
+
+  Forward(){
+    this.secondsPassed = 0;
+    this.currentLink = this.currentLink < this.links.length - 1 ? this.currentLink + 1 : 0;
+  }
 }
