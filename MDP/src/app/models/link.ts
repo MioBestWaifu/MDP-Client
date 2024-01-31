@@ -56,4 +56,26 @@ export class Link {
         secondaryLabel: 'Role',
         redirectTo: 'https://www.google.com'
     }
+
+    static readonly testWorkRelation:Link = {
+        imgUrl: Artifact.testArtifact.cardImgUrl,
+        mainLabel: 'Related Work',
+        secondaryLabel: 'Relation',
+        redirectTo: 'https://www.google.com'
+    }
+
+    static readonly testFraction:Link = {
+        imgUrl: Artifact.testArtifact.cardImgUrl,
+        mainLabel: 'Fraction',
+        secondaryLabel: 'secondaryLabel',
+        redirectTo: 'https://www.google.com'
+    }
+
+    static readonly testNews:Link = {
+        imgUrl: Artifact.testArtifact.mainImgUrl,
+        mainLabel: 'This is some news',
+        secondaryLabel: 'A bunch of things happened, or may have happened, or will happen, or something like that. Sombody '+ 
+        'may have done it, or will do it, or not. Who knows. I certainly don\'t. I\'m just a placeholder for some news.',
+        redirectTo: 'https://www.google.com'
+    }
 }

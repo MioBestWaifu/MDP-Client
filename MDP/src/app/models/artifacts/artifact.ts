@@ -23,7 +23,7 @@ export class Artifact {
         fullName: 'Artifact Full Name',
         otherNames: ['Artifact Other Name 1', ' Artifact Other Name 2'],
         description: 'This is a  artifact',
-        media:  'Media',
+        media:  'Anime',
         categories: ['Category 1', 'Category 2'],
         targetDemographics: ['Demographic 1', 'Demographic 2'],
         ageRating: ' Age Rating',
