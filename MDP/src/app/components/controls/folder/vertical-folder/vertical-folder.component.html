@@ -5,7 +5,7 @@
       </div>
       <div id="bar"></div> 
     </div>
-    <div id="content" [@expandCollapse]="{value: expanded ? 'expanded' : 'collapsed', params: {maxHeight: maxHeight}}">
+    <div #content [@expandCollapse]="{value: expanded ? 'expanded' : 'collapsed', params: {maxHeight: maxHeight, animationDuration:animationDuration}}">
       <ng-content></ng-content>
     </div>
 </div>
