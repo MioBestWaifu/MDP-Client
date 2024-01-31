@@ -1,11 +1,21 @@
 <div class="summaryGrid">
-    <img [src]="user.mainImgUrl" style="grid-row: 1 / span 2;">
-    <div class="titleText centerInternalText">{{user.nickname}}</div>
-    <div class="flexbox">
-      <!-- Add relevant information here -->
-      <div class="summaryBlockTextContainer">
-        <p class="mainBlockText">Main Text</p>
-        <p class="secondaryBlockText">Secondary Text</p>
-      </div>
+  <img id="mainImage" [src]="user.mainImgUrl">
+  <div id="title" class="titleText centerInternalText">{{user.nickname}}</div>
+  <div id="miscInfo">
+    <div class="summaryBlockTextContainer twoColumnsGrid">
+      <p class="mainBlockText">Main Text: </p><p class="secondaryBlockText">Secondary Text</p>
     </div>
+    <div class="summaryBlockTextContainer twoColumnsGrid">
+      <p class="mainBlockText">Main Text: </p><p class="secondaryBlockText">Secondary Text</p>
+    </div>
+    <div class="summaryBlockTextContainer twoColumnsGrid">
+      <p class="mainBlockText">Main Text: </p><p class="secondaryBlockText">Secondary Text</p>
+    </div>
+    <div class="summaryBlockTextContainer twoColumnsGrid">
+      <p class="mainBlockText">Main Text: </p><p class="secondaryBlockText">Secondary Text</p>
+    </div>
+    <div class="summaryBlockTextContainer twoColumnsGrid">
+      <p class="mainBlockText">Main Text: </p><p class="secondaryBlockText">Secondary Text</p>
+    </div>
+  </div>
 </div>
