@@ -65,6 +65,8 @@ export class Utils {
       return "categories";
     else if (property.toLocaleLowerCase() == "demographic")
       return "targetDemographics";
+    else if (property.toLocaleLowerCase() == "media")
+      return "media";
     else if (property.toLocaleLowerCase() == "othername")
       return "otherNames";
     else if (property.toLocaleLowerCase() == "otherimgurl")
@@ -89,6 +91,10 @@ export class Utils {
           maxWidth = 0.76 * (viewportWidth);
           return maxWidth;
       case 'homeArtifactsExpandedPortrait':
+          viewportWidth = window.innerWidth;
+          maxWidth = 0.76 * (viewportWidth - 170);
+          return maxWidth;
+      case 'favoritesArtifactsExpanded':
           viewportWidth = window.innerWidth;
           maxWidth = 0.76 * (viewportWidth - 170);
           return maxWidth;
