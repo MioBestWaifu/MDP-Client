@@ -21,6 +21,7 @@ export class FavoritesPageModel extends BasePageModel{
             this.allFavorites.push(Object.assign({}, Artifact.testArtifact));
             this.allFavorites[i].categories = ["Harem"];
             this.allFavorites[i].media = "Novel";
+            this.allFavorites[i].releaseDate = new Date(2018,0,1);
         }
         for (let i = 6; i < 9; i++) {
             this.allFavorites.push(Object.assign({}, Artifact.testArtifact));
