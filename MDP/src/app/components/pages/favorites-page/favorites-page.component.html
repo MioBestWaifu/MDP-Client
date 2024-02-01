@@ -3,9 +3,9 @@
       <select (change)="RegroupArtifacts($event)">
         <option *ngFor="let group of pageModel.groups">{{group}}</option>
       </select>
-      <div class="fit" *ngFor="let key of pageModel.groupedArtifacts.keys">
-        <p class="keyLabel">{{key}}</p>
-        <mdp-artifact-list #list [artifacts]="pageModel.groupedArtifacts.Get(key)??[]"></mdp-artifact-list>
+      <div class="fit" *ngFor="let pair of pageModel.groupedArtifacts">
+        <p class="keyLabel">{{pair[0]}}</p>
+        <mdp-artifact-list #list [artifacts]="pair[1]"></mdp-artifact-list>
       </div>
     </div>
     <mdp-ad-list *ngIf="!mediaQuery.portrait"></mdp-ad-list>
