@@ -4,7 +4,7 @@
         <option *ngFor="let group of pageModel.groups">{{group}}</option>
       </select>
       <div class="fit" *ngFor="let key of pageModel.groupedArtifacts.keys">
-        <p>{{key}}</p>
+        <p class="keyLabel">{{key}}</p>
         <mdp-artifact-list #list [artifacts]="pageModel.groupedArtifacts.Get(key)??[]"></mdp-artifact-list>
       </div>
     </div>
