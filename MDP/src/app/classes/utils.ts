@@ -26,8 +26,16 @@ export class Utils {
             group.push(artifact);
           }
         });
-      }
-      else {
+      } else if (key instanceof Date){
+        const year = key.getFullYear().toString();
+        if (!groupedArtifacts.Get(year)) {
+          groupedArtifacts.Add(year, []);
+        }
+        const group = groupedArtifacts.Get(year);
+        if (group !== null) {
+          group.push(artifact);
+        }
+      } else {
         console.warn('Warning: key is not a string');
         return; 
       }
@@ -53,15 +61,15 @@ export class Utils {
   }
 
   static ResolveArtifactProperty(property:string): string {
-    if (property == "category")
+    if (property.toLocaleLowerCase() == "category")
       return "categories";
-    else if (property == "demographic")
+    else if (property.toLocaleLowerCase() == "demographic")
       return "targetDemographics";
-    else if (property == "otherName")
+    else if (property.toLocaleLowerCase() == "othername")
       return "otherNames";
-    else if (property == "otherImgUrl")
+    else if (property.toLocaleLowerCase() == "otherimgurl")
       return "otherImgUrls";
-    else if (property == "year")
+    else if (property.toLocaleLowerCase() == "year")
       return "releaseDate";
     else
       return property;
