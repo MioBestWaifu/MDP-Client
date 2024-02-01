@@ -13,17 +13,17 @@ export class FavoritesPageModel extends BasePageModel{
         this.groups = ["Media","Category","Year"];
         this.allFavorites = [];
         for (let i = 0; i < 3; i++) {
-            this.allFavorites.push(Artifact.testArtifact);
+            this.allFavorites.push(Object.assign({}, Artifact.testArtifact));
             this.allFavorites[i].categories = ["Isekai", "Harem"];
             this.allFavorites[i].media = "Anime";
         }
         for (let i = 3; i < 6; i++) {
-            this.allFavorites.push(Artifact.testArtifact);
+            this.allFavorites.push(Object.assign({}, Artifact.testArtifact));
             this.allFavorites[i].categories = ["Harem"];
             this.allFavorites[i].media = "Novel";
         }
         for (let i = 6; i < 9; i++) {
-            this.allFavorites.push(Artifact.testArtifact);
+            this.allFavorites.push(Object.assign({}, Artifact.testArtifact));
             this.allFavorites[i].categories = ["Romance"];
             this.allFavorites[i].media = "Anime";
         }
