@@ -1,4 +1,5 @@
 import { Dictionary } from "../../classes/dictionary"
+import { Utils } from "../../classes/utils"
 import { Artifact } from "../artifacts/artifact"
 import { BasePageModel } from "./base-page-model"
 
@@ -9,13 +10,23 @@ export class FavoritesPageModel extends BasePageModel{
 
     constructor(){
         super();
-        this.groups = ["Group","Another Group","Yet Another Group"];
+        this.groups = ["Media","Category","Year"];
         this.allFavorites = [];
-        for (let i = 0; i < 12; i++) {
+        for (let i = 0; i < 3; i++) {
             this.allFavorites.push(Artifact.testArtifact);
+            this.allFavorites[i].categories = ["Isekai", "Harem"];
+            this.allFavorites[i].media = "Anime";
         }
-        this.groupedArtifacts = new Dictionary<string,Artifact[]>();
-        this.groupedArtifacts.Add("Subgroup",this.allFavorites);
-        this.groupedArtifacts.Add("Another subgroup",this.allFavorites);
+        for (let i = 3; i < 6; i++) {
+            this.allFavorites.push(Artifact.testArtifact);
+            this.allFavorites[i].categories = ["Harem"];
+            this.allFavorites[i].media = "Novel";
+        }
+        for (let i = 6; i < 9; i++) {
+            this.allFavorites.push(Artifact.testArtifact);
+            this.allFavorites[i].categories = ["Romance"];
+            this.allFavorites[i].media = "Anime";
+        }
+        this.groupedArtifacts = Utils.GroupArtifacts("media", this.allFavorites);
     }
 }

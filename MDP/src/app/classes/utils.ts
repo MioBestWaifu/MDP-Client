@@ -55,12 +55,14 @@ export class Utils {
   static ResolveArtifactProperty(property:string): string {
     if (property == "category")
       return "categories";
-    else if (property == "targetDemographic")
+    else if (property == "demographic")
       return "targetDemographics";
     else if (property == "otherName")
       return "otherNames";
     else if (property == "otherImgUrl")
       return "otherImgUrls";
+    else if (property == "year")
+      return "releaseDate";
     else
       return property;
   }
