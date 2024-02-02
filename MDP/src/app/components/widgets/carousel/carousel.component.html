@@ -1,5 +1,7 @@
-<div id="container" style="position: relative;">
-    <img [src]="links[currentLink].imgUrl" (click)="router.navigate([links[currentLink].redirectTo])">
+<div class="container">
+    <div *ngFor="let link of links" class="imgContainer">
+        <img [src]="link.imgUrl" (click)="router.navigate([link.redirectTo])">
+    </div>
     <i class="material-symbols-outlined icon left" (click)="Back()">chevron_left</i>
     <i class="material-symbols-outlined icon right" (click)="Forward()">chevron_right</i>
 </div>
