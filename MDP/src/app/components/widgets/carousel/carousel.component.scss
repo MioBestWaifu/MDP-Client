@@ -1,14 +1,15 @@
 @import '../../../../variables.scss';
 .container{
-    width: 100%;
-    max-width: 100%;
+    width: 200%;
+    max-width: 200%;
     height: 100%;
     overflow: hidden;
     display: flex;
     flex-wrap: nowrap;
-    position: relative;
+    position: absolute;
+    right: 0;
 }.imgContainer{
-    width: 100%;
+    width: 50%;
     height: 100%;
     background-color: $lightOutlineColor;
     flex-shrink: 0;
@@ -27,7 +28,7 @@
     color: $strongBackgroundColor;
     cursor: pointer;
 } .left{
-    left: 0;
+    left: 50%;
 } .right{
     right: 0;
 }

@@ -13,17 +13,16 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
   styleUrls: ['./carousel.component.scss'],
   animations: [
     trigger('slideLeft', [
-      state('void', style({ transform: 'translateX(100%)' })),
-      state('*', style({ transform: 'translateX(0)' })),
-      transition(':enter', animate('300ms ease-in')),
-      transition(':leave', animate('300ms ease-out'))
+      state('true', style({ transform: 'translateX(100%)' })),
+      state('false', style({ transform: 'translateX(0%)'})),
+      transition("* => true",[animate('100ms')])
     ]),
     trigger('slideRight', [
-      state('void', style({ transform: 'translateX(-100%)' })),
-      state('*', style({ transform: 'translateX(0)' })),
-      transition(':enter', animate('300ms ease-in')),
-      transition(':leave', animate('300ms ease-out'))
-    ])
+      state('slided', style({ transform: 'translateX(-100%)' })),
+      state('still', style({ transform: 'translateX(0%)','color': '#eb8c34' })),
+      transition("* => true",[animate('100ms')]),
+      transition("slided => still",[animate('0ms')])
+    ]),
   ]
 })
 
@@ -33,13 +32,17 @@ export class CarouselComponent extends BaseComponent {
   secondsPassed: number = 0;
   buffer: number = 0;
   animationOngoing: boolean = false;
-  secondsUntilSwitching: number = 5;
+  secondsUntilSwitching: number = 10;
+  slideRight!:boolean[];
+  slideLeft!:boolean[];
   @Input() links!: Link[];
   intervalId: number | undefined;
 
   constructor( mediaQuery: MediaQueryService,common: CommonContainerService, public router:Router, elementRef: ElementRef, renderer: Renderer2
   ) {
     super(mediaQuery, common, elementRef, renderer);
+    this.slideLeft = [false,false,false];
+    this.slideRight = [false,false,false];
   }
 
   override ngOnInit() {
@@ -61,26 +64,101 @@ export class CarouselComponent extends BaseComponent {
 
   SecondPassed() {
     this.secondsPassed++;
+    console.log("Seconds passed: " + this.secondsPassed);
     if (this.secondsPassed >= this.secondsUntilSwitching) {
-      this.Forward();
+      //this.secondsUntilSwitching = this.secondsUntilSwitching + 10;
+      this.Right();
     }
   }
 
-  Back(){
+  Left(){
     if (this.animationOngoing){
       this.buffer--;
       return;
     }
-    this.secondsPassed = 0;
-    this.currentLink = this.currentLink > 0 ? this.currentLink - 1 : this.links.length - 1;
+
+    this.slideLeft[0] = true;
+    this.slideLeft[1] = true;
+
+    this.animationOngoing = true;
+    setTimeout(() => {
+      this.FinishedSliding();
+    }, 200);
   }
 
-  Forward(){
+  Right(){
+
     if (this.animationOngoing){
       this.buffer++;
       return;
     }
-    this.secondsPassed = 0;
-    this.currentLink = this.currentLink < this.links.length - 1 ? this.currentLink + 1 : 0;
+
+    console.log("Right");
+
+    this.slideRight[1] = true;
+    this.slideRight[2] = true;
+
+    this.animationOngoing = true;
+    this.currentLink = 2;
+    setTimeout(() => {
+      this.FinishedSliding();
+    }, 200);
+  }
+
+  FinishedSliding(){
+    console.log("FinishedSliding");
+    console.log(this.slideRight[1]);
+    console.log(this.slideRight[2]);
+    console.log(this.slideLeft[0]);
+    console.log(this.slideLeft[1]);
+    this.animationOngoing = false;
+    if (this.slideRight[1]){
+     /*  this.slideRight[1] = false;
+      this.slideRight[2] = false;
+      this.ReorderLinksRightwards();
+      this.secondsPassed = 0; */
+    } else {
+      /* this.slideLeft[0] = false;
+      this.slideLeft[1] = false;
+      this.ReorderLinksLeftwards();
+      this.secondsPassed = 0; */
+    }
+  }
+
+  FinishedSlidingLeft(i:number){
+    console.log("FinishedSlidingLeft: " + i);
+    if (this.slideLeft[i] == true){
+      console.log("FinishedSlidingLeft: " + i);
+    }
+  }
+
+  FinishedSlidingRight(i:number){
+    if (this.slideRight[i] == true){
+      console.log("FinishedSlidingRight: " + i);
+      this.slideRight[i] = false;
+      this.currentLink--;
+      if (this.currentLink <= 0){
+        this.secondsPassed = 0;
+        this.ReorderLinksRightwards();
+        this.currentLink = 2;
+      }
+    }
+  }
+
+  ReorderLinksLeftwards(){
+    const copy = [...this.links];
+    const lastIndex = copy.length - 1;
+    const lastLink = copy[lastIndex];
+    copy.unshift(lastLink);
+    copy.pop();
+    this.links = copy;
+  }
+
+  ReorderLinksRightwards(){
+    /* const copy = [...this.links];
+    const firstLink = copy[0];
+    copy.push(firstLink);
+    copy.shift();
+    this.links = copy; */
   }
 }
