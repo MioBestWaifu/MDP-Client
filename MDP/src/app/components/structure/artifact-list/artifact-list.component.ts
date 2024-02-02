@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { Artifact } from '../../../models/artifacts/artifact';
 import { BaseComponent } from '../../base/base.component';
 import { Dictionary } from '../../../classes/dictionary';
@@ -8,25 +8,31 @@ import { Dictionary } from '../../../classes/dictionary';
   templateUrl: './artifact-list.component.html',
   styleUrl: './artifact-list.component.scss'
 })
-export class ArtifactListComponent extends BaseComponent{
+export class ArtifactListComponent extends BaseComponent implements OnChanges{
   @Input() vertical:boolean = false;
   @Input() artifacts!:Artifact[];
   artifactRows!:Dictionary<number,Artifact[]>;
   effectiveMargin!:number;
 
+  override ngOnInit(): void {
+      super.ngOnInit();
+      this.common.barToggleEvent.subscribe(event => {
+        this.RecalculateRows(1);
+      });
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    this.RecalculateRows(1);
+  }
+
   RecalculateRows(availaibleWidth: number) {
-    console.log("Recalculating rows");
+    availaibleWidth = this.elementRef.nativeElement.clientWidth;
+    console.log("Recalculating rows " + availaibleWidth);
+
     let rowItems = 1;
     while (rowItems * 150 <= availaibleWidth - 380) {
       rowItems++;
     }
-    /* console.log("Row items: " + rowItems);
-
-    console.log("Availaible width: " + availaibleWidth);
-    console.log("Row items: " + rowItems);
-    this.effectiveMargin = (Math.floor(availaibleWidth) - rowItems * 150)/(rowItems+1);
-    console.log("Effective margin: " + this.effectiveMargin);
-    this.effectiveMargin = Math.floor(this.effectiveMargin); */
 
     this.artifactRows = new Dictionary<number, Artifact[]>();
     let index = 0;

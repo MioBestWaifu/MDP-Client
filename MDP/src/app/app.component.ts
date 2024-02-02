@@ -43,6 +43,10 @@ export class AppComponent extends BaseComponent{
       this.start = "170px";
       this.end = "auto";
     }
+  }
+
+  LateralBarAnimationFinished(){
     this.common.EmitToggleBar(this.expandLateralBar);
   }
+
 }
