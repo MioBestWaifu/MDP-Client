@@ -13,49 +13,12 @@ export class FavoritesPageComponent extends BasePageComponent implements AfterVi
   public pageModel: FavoritesPageModel = new FavoritesPageModel();
   @ViewChildren('list') artifactLists!: QueryList<ArtifactListComponent>;
 
-  override ngOnInit() {
-    super.ngOnInit();
-    /* this.connection.LoadPage(this.connection.favorites).subscribe(result => {
-      this.pageModel = result as FavoritesPageModel;
-    }); */
-    this.common.barToggleEvent.subscribe(event => {
-      console.log('Toggle bar event received in Home Page');
-      let x:number;
-      if (this.mediaQuery.portrait){
-        if (event){
-          x = Utils.GetContextualMaxWidth("homeArtifactsExpandedPortrait")
-        } else {
-          x = Utils.GetContextualMaxWidth("homeArtifactsCollapsedPortrait")
-        }
-      } else {
-        if (event){
-          x = Utils.GetContextualMaxWidth("homeArtifactsExpanded")
-        } else {
-          x = Utils.GetContextualMaxWidth("homeArtifactsCollapsed")
-        }
-      }
-
-      this.artifactLists.forEach(artifactList => {
-        artifactList.RecalculateRows(x);
-      });
-
-    });
-  }
-
   RegroupArtifacts(event: Event) {
     const groupByValue = (event.target as HTMLInputElement).value;
     this.pageModel.groupedArtifacts = Utils.GroupArtifacts(groupByValue, this.pageModel.allFavorites ?? []);
-    setTimeout(() => {
-      this.artifactLists.forEach(artifactList => {
-        artifactList.RecalculateRows(Utils.GetContextualMaxWidth("favoritesArtifactsExpanded"));
-      });
-    });
   }
 
   ngAfterViewInit(){
-    this.artifactLists.forEach(artifactList => {
-      artifactList.RecalculateRows(Utils.GetContextualMaxWidth("favoritesArtifactsExpanded"));
-    });
   }
 
   ngAfterViewChecked(): void {

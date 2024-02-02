@@ -17,17 +17,17 @@ export class ArtifactListComponent extends BaseComponent implements OnChanges{
   override ngOnInit(): void {
       super.ngOnInit();
       this.common.barToggleEvent.subscribe(event => {
-        this.RecalculateRows(1);
+        this.RecalculateRows();
       });
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    this.RecalculateRows(1);
+    this.RecalculateRows();
   }
 
-  RecalculateRows(availaibleWidth: number) {
-    availaibleWidth = this.elementRef.nativeElement.clientWidth;
-    console.log("Recalculating rows " + availaibleWidth);
+  RecalculateRows() {
+    let availaibleWidth:number = this.elementRef.nativeElement.clientWidth;
+    /* console.log("Recalculating rows " + availaibleWidth); */
 
     let rowItems = 1;
     while (rowItems * 150 <= availaibleWidth - 380) {
