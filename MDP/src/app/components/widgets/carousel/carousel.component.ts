@@ -13,14 +13,15 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
   styleUrls: ['./carousel.component.scss'],
   animations: [
     trigger('slideLeft', [
-      state('true', style({ transform: 'translateX(100%)' })),
-      state('false', style({ transform: 'translateX(0%)'})),
-      transition("* => true",[animate('100ms')])
+      state('slided', style({ transform: 'translateX(100%)' })),
+      state('still', style({ transform: 'translateX(0%)'})),
+      transition("* => slided",[animate('300ms')]),
+      transition("slided => still",[animate('0ms')])
     ]),
     trigger('slideRight', [
       state('slided', style({ transform: 'translateX(-100%)' })),
       state('still', style({ transform: 'translateX(0%)','color': '#eb8c34' })),
-      transition("* => true",[animate('100ms')]),
+      transition("* => slided",[animate('300ms')]),
       transition("slided => still",[animate('0ms')])
     ]),
   ]
@@ -28,11 +29,11 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 
 export class CarouselComponent extends BaseComponent {
   @Input() aspectRatio: string = "23/10";
-  currentLink: number = 0;
+  ongoingAnimationsNumber: number = 0;
   secondsPassed: number = 0;
   buffer: number = 0;
   animationOngoing: boolean = false;
-  secondsUntilSwitching: number = 10;
+  secondsUntilSwitching: number = 5;
   slideRight!:boolean[];
   slideLeft!:boolean[];
   @Input() links!: Link[];
@@ -77,70 +78,64 @@ export class CarouselComponent extends BaseComponent {
       return;
     }
 
+    this.secondsPassed = 0;
     this.slideLeft[0] = true;
     this.slideLeft[1] = true;
 
     this.animationOngoing = true;
-    setTimeout(() => {
-      this.FinishedSliding();
-    }, 200);
+
+    /* if(this.buffer < 0){
+      this.buffer++;
+    } */
   }
 
   Right(){
-
     if (this.animationOngoing){
       this.buffer++;
       return;
     }
 
+    this.secondsPassed = 0;
     console.log("Right");
 
     this.slideRight[1] = true;
     this.slideRight[2] = true;
 
     this.animationOngoing = true;
-    this.currentLink = 2;
-    setTimeout(() => {
-      this.FinishedSliding();
-    }, 200);
-  }
-
-  FinishedSliding(){
-    console.log("FinishedSliding");
-    console.log(this.slideRight[1]);
-    console.log(this.slideRight[2]);
-    console.log(this.slideLeft[0]);
-    console.log(this.slideLeft[1]);
-    this.animationOngoing = false;
-    if (this.slideRight[1]){
-     /*  this.slideRight[1] = false;
-      this.slideRight[2] = false;
-      this.ReorderLinksRightwards();
-      this.secondsPassed = 0; */
-    } else {
-      /* this.slideLeft[0] = false;
-      this.slideLeft[1] = false;
-      this.ReorderLinksLeftwards();
-      this.secondsPassed = 0; */
-    }
+    this.ongoingAnimationsNumber = 2;
+    /* if(this.buffer > 0){
+      this.buffer--;
+    } */
   }
 
   FinishedSlidingLeft(i:number){
-    console.log("FinishedSlidingLeft: " + i);
     if (this.slideLeft[i] == true){
       console.log("FinishedSlidingLeft: " + i);
+      this.ongoingAnimationsNumber--;
+      if (this.ongoingAnimationsNumber <= 0){
+        this.ReorderLinksLeftwards();
+        this.slideLeft[0] = false;
+        this.slideLeft[1] = false;
+        this.animationOngoing = false;
+        /* if(this.buffer < 0){
+          this.Left();
+        } */
+      }
     }
   }
 
   FinishedSlidingRight(i:number){
     if (this.slideRight[i] == true){
       console.log("FinishedSlidingRight: " + i);
-      this.slideRight[i] = false;
-      this.currentLink--;
-      if (this.currentLink <= 0){
-        this.secondsPassed = 0;
+      this.ongoingAnimationsNumber--;
+      if (this.ongoingAnimationsNumber <= 0){
         this.ReorderLinksRightwards();
-        this.currentLink = 2;
+        this.slideRight[1] = false;
+        this.slideRight[2] = false;
+        this.animationOngoing = false;
+        /* if(this.buffer > 0){
+          this.Right();
+        } */
       }
     }
   }
@@ -155,10 +150,10 @@ export class CarouselComponent extends BaseComponent {
   }
 
   ReorderLinksRightwards(){
-    /* const copy = [...this.links];
+    const copy = [...this.links];
     const firstLink = copy[0];
     copy.push(firstLink);
     copy.shift();
-    this.links = copy; */
+    this.links = copy;
   }
 }
