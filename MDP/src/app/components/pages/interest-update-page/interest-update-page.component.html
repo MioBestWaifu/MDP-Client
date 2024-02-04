@@ -1,9 +1,10 @@
 <div [ngClass]="mediaQuery.portrait ? 'portraitContentWrapper' : 'contentWrapper'">
     <div id="main" class="verticalFlex">
-      <div *ngFor="let pair of pageModel.interestDictionary">
-        <mdp-vertical-folder [label]=pair[0] maxHeight="auto">
+      <div *ngFor="let key of pageModel.interestDictionary.keys">
+        <p>{{key}}</p>
+        <mdp-vertical-folder maxHeight="auto">
           <div class="interestList">
-            <mdp-interest-card *ngFor="let interest of pair[1]" [interest]="interest"></mdp-interest-card>
+            <mdp-interest-card *ngFor="let interest of pageModel.interestDictionary.Get(key)"></mdp-interest-card>
           </div>
         </mdp-vertical-folder>
       </div>
