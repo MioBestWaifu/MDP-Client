@@ -7,6 +7,7 @@ export class InterestUpdatePageModel extends BasePageModel{
 
     constructor(){
         super()
+        this.interestDictionary = new Dictionary<string,Interest[]>()
         const interestArray:Interest[] = []
         for (let i = 0; i < 10; i++) {
             interestArray.push(Interest.testInterest)
