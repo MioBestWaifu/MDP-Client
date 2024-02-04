@@ -34,6 +34,11 @@ export class VerticalFolderComponent extends BaseComponent{
   lessIcon = "expand_less"
   currentIcon: string = this.expanded ? this.lessIcon : this.moreIcon;
 
+  override ngOnInit() {
+    super.ngOnInit();
+    console.log('VerticalFolderComponent.ngOnInit()');
+  }
+
   Toggle() {
     this.expanded = !this.expanded;
     this.currentIcon = this.expanded ? this.lessIcon : this.moreIcon;

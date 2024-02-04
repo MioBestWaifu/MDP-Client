@@ -10,7 +10,17 @@ import { BasePageComponent } from '../base-page/base-page.component';
   styleUrl: './interest-update-page.component.scss'
 })
 export class InterestUpdatePageComponent extends BasePageComponent{
-  pageModel:InterestUpdatePageModel = new InterestUpdatePageModel();
+  private _pageModel: InterestUpdatePageModel = new InterestUpdatePageModel();
+
+  get pageModel(): InterestUpdatePageModel {
+    return this._pageModel;
+  }
+
+  set pageModel(value: InterestUpdatePageModel) {
+    console.log('pageModel is being set:', value);
+    console.trace(); // This will log a stack trace, showing where the setter was called from
+    this._pageModel = value;
+  }
 
   override ngOnInit() {
     super.ngOnInit();

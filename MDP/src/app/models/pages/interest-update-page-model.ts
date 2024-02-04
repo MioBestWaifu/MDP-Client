@@ -3,7 +3,17 @@ import { Interest } from "../interest";
 import { BasePageModel } from "./base-page-model";
 
 export class InterestUpdatePageModel extends BasePageModel{
-    interestDictionary!:Dictionary<string,Interest[]>
+    private _interestDictionary!: Dictionary<string,Interest[]>;
+
+    get interestDictionary(): Dictionary<string,Interest[]> {
+        return this._interestDictionary;
+    }
+
+    set interestDictionary(value: Dictionary<string,Interest[]>) {
+        console.log('interestDictionary is being set:', value);
+        console.trace(); // This will log a stack trace, showing where the setter was called from
+        this._interestDictionary = value;
+    }
 
     constructor(){
         super()
