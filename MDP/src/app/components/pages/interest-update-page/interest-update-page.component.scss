@@ -1,7 +1,9 @@
 .interestList{
     display: flex;
     justify-content: start;
+    flex-wrap: wrap;
 } mdp-interest-card{
     margin-left: 12px;
-    height: 150px;
+    height: 145px;
+    width: 120px;
 }
