@@ -32,7 +32,7 @@ Base URL = api.yancosta.online/mdp/
         int. response: [HomePageModel](/Docs/src/app/models/pages/HomePageModel.md)
     - interestSetup 
         - *get*
-        esponse: [InterestSetupPageModel]
+        response: [InterestSetupPageModel]
     - interestUpdate 
         - *get*
         response: [InterestUpdatePageModel](/Docs/src/app/models/pages/InterestUpdatePageModel.md)
