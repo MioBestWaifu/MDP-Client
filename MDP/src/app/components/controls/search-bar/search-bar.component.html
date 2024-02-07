@@ -1,8 +1,5 @@
 <!-- <input class="searchBar" [(ngModel)]="query" (keydown.enter)="Search()"> -->
 <div class="searchBar" [(ngModel)]="query" (keydown.enter)="Search()">
-    <div>
-        <input type="text">
-    </div>
-
-<i class="material-symbols-outlined icon">search</i>
+    <input type="text">
+    <i class="material-symbols-outlined icon" (click)="Search()">search</i>
 </div>
