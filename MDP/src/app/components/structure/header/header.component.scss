@@ -2,8 +2,14 @@
 #container{
     display:flex;
     justify-content: space-between;
+    align-items: center;
     background-color: $strongMainColor;
     height: 100%;
 } i {
     cursor: pointer;
+}
+
+mdp-search-bar{
+    width: 50%;
+    height: 50%;
 }
