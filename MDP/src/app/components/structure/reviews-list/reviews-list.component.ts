@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { BaseComponent } from '../../base/base.component';
-import { Interaction } from '../../../models/interaction';
+import { Review } from '../../../models/review';
 
 @Component({
   selector: 'mdp-reviews-list',
@@ -9,5 +9,5 @@ import { Interaction } from '../../../models/interaction';
 })
 export class ReviewsListComponent extends BaseComponent{
   @Input() vertical:boolean = false
-  @Input() reviews!:Interaction[]
+  @Input() reviews!:Review[]
 }

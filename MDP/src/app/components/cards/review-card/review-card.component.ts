@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Interaction } from '../../../models/interaction';
+import { Review } from '../../../models/review';
 
 @Component({
   selector: 'mdp-review-card',
@@ -7,5 +7,5 @@ import { Interaction } from '../../../models/interaction';
   styleUrls: ['../card.scss','./review-card.component.scss']
 })
 export class ReviewCardComponent {
-  @Input() review:Interaction = new Interaction();
+  @Input() review:Review = new Review();
 }
