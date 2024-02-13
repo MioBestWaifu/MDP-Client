@@ -15,3 +15,4 @@
 - A recalculação de rows do ArtifactList tá ignorando se é portrait, verificar isso dps
 - Temos um ExpressionChangedAfterItHasBeenCheckedError por mudar artifactRows em ngAfterViewInit no HomePageComponent. Não parece estar dando problema, mas fica atento a isso.
 - Muitas mudanças não estão sendo documentadas. Atualizar a documentação.
+- Deve haver um redirect de /work para /media para comportar alguns comportamentos do servidor, para isso /work deve perguntar ao servidor qual é a midia e redirecionar para lá.
