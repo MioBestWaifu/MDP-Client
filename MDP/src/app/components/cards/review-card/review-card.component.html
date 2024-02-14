@@ -1,6 +1,6 @@
 <div class="wrapper verticalFlex">
   <div id="topBlock" class="flex">
-    <img class="roundedImage" [src]="review.user.mainImgUrl">
+    <img class="roundedImage" [src]="review.user.mainImgUrl" alt="assets/imgs/users/defaultcard.png">
     <mdp-rate-widget class="cardTopText" [rate]="review.rating!!"></mdp-rate-widget>
   </div>
     <p class="cardBlockText">{{ review.comment }}</p>
