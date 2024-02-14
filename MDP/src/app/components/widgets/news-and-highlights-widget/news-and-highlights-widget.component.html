@@ -1,7 +1,7 @@
 <div id="main">
   <div class="newsBlock" *ngFor="let link of links; let i = index">
       <a [routerLink]="link.redirectTo">
-        <img [ngClass]="{'leftImg':i%2==0,'rightImg':i%2!=0}" [src]="link.imgUrl" alt="assets/imgs/news/defaultmainsmall.png">
+        <img [ngClass]="{'leftImg':i%2==0,'rightImg':i%2!=0}" [src]="link.imgUrl" alt="assets/imgs/defaultmain.png">
         <p class="newsTitle">{{link.mainLabel}}</p>
       </a>
       <p class="textBlock">{{link.secondaryLabel}}</p>
