@@ -4,12 +4,13 @@ import { Observable } from 'rxjs';
 import { Dictionary } from '../classes/dictionary';
 import { Utils } from '../classes/utils';
 import { BasePageModel } from '../models/pages/base-page-model';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PageLoadingService {
-  private baseURL = "https://api.yancosta.online/mdp/";
+  private baseURL = environment.baseURL;
   private pages = "pages/";
   public community = this.baseURL + this.pages + "community";
   public company = this.baseURL + this.pages + "company";
