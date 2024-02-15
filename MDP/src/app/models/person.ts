@@ -3,8 +3,8 @@ export class Person {
     shortName!:string;
     fullName!:string;
     nicknames:string[] | undefined;
-    cardImgUrl!:string;
-    mainImgUrl!:string;
+    cardImgUrl:string | undefined;
+    mainImgUrl:string | undefined;
     otherImgUrls:string[] | undefined;
     country!:string;
     roles!:string[];

@@ -3,8 +3,8 @@ export class User {
     email:string | undefined;
     password:string | undefined;
     nickname!:string;
-    cardImgUrl!:string;
-    mainImgUrl!:string;
+    cardImgUrl:string | undefined;
+    mainImgUrl:string | undefined;
     otherImgUrls:string[] | undefined;
     country!:string;
     description:string | undefined;

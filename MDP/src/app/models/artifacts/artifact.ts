@@ -10,7 +10,7 @@ export class Artifact {
     targetDemographics!: string[];
     ageRating!: string;
     cardImgUrl: string | undefined;
-    mainImgUrl!: string;
+    mainImgUrl: string  | undefined;
     otherImgUrls: string[] | undefined;
     mainParticipantRole!: string;
     mainParticipant!: string;

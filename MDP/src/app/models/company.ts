@@ -2,8 +2,8 @@ export class Company {
     id!:number;
     shortName!:string;
     fullName!:string;
-    cardImgUrl!:string;
-    mainImgUrl!:string;
+    cardImgUrl:string  | undefined;
+    mainImgUrl:string  | undefined;
     otherImgUrls:string[] | undefined;
     country!:string;
     role!:string;
