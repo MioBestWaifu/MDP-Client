@@ -8,7 +8,11 @@ import { Subject } from 'rxjs';
 })
 export class CommonContainerService {
   user!: User;
-  token!:Token;
+  token:Token = {
+    content: "token",
+    expiration: new Date("2029-01-01")
+  
+  };
   // Create a new Subject
   private barToggleSubject = new Subject<boolean>();
   // Expose the observable$ part of the subject (read-only)
