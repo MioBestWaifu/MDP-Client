@@ -4,7 +4,7 @@
         <img [src]="link.imgUrl??'assets/imgs/defaultmain.png'">
       </a>
       <div>
-        <p class="mainBlockText">{{link.mainLabel}}</p>
+        <p class="mainBlockText" [routerLink]="link.redirectTo">{{link.mainLabel}} </p>
         <p class="secondaryBlockText">{{link.secondaryLabel}}</p>
       </div>
     </div>
