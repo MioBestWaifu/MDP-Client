@@ -1,9 +1,22 @@
 <div id="main">
-    @for (row of artifactRows; track row[0]){
+    <div id="l">
+        <h1>LANÇAMENTOS</h1>
+        @for (row of artifactRows; track row[0]){
         <div class="innerFlex" [class.lastInnerFlex]="$last">
             @for (artifact of row[1]; track artifact.id){
-                <mdp-artifact-card [artifact]="artifact"></mdp-artifact-card>
+            <mdp-artifact-card [artifact]="artifact"></mdp-artifact-card>
             }
         </div>
-    }
+        }
+    </div>
+    <div id="m">
+        <h1>MELHORES DA SEMANA</h1>
+        @for (row of artifactRows; track row[0]){
+        <div class="innerFlex" [class.lastInnerFlex]="$last">
+            @for (artifact of row[1]; track artifact.id){
+            <mdp-artifact-card [artifact]="artifact"></mdp-artifact-card>
+            }
+        </div>
+        }
+    </div>
 </div>
