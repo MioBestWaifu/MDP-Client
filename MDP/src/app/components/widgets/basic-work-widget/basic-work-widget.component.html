@@ -1,5 +1,5 @@
 <div class="summaryGrid">
-    <img id="mainImage" [src]="work.mainImgUrl" alt="assets/imgs/defaultmain.png">
+    <img id="mainImage" [src]="work.mainImgUrl??'assets/imgs/defaultmain.png'">
     <div id="title" class="titleText centerInternalText">{{work.fullName}}</div> 
     <div id="rateArea">
         <mdp-rate-widget [rate]="work.averageRating" class="rateWidget"></mdp-rate-widget>

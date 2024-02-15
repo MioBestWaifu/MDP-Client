@@ -1,4 +1,4 @@
 <div class="wrapper">
-    <img [src]="interest.link.imgUrl" alt="assets/imgs/defaultcard.png">
+    <img [src]="interest.link.imgUrl??'assets/imgs/defaultcard.png'">
     <p class="cardMainText">{{ interest.link.mainLabel }}</p>
 </div>

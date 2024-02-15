@@ -1,7 +1,7 @@
 <div class="flexbox">
     <div *ngFor="let link of links" class="flexbox" [ngClass]="(mediaQuery.portrait || forceSmallBlock) ? 'smallBlock' : 'block'">
       <a [routerLink]="link.redirectTo">
-        <img [src]="link.imgUrl" alt="assets/imgs/defaultmain.png">
+        <img [src]="link.imgUrl??'assets/imgs/defaultmain.png'">
       </a>
       <div>
         <p class="mainBlockText">{{link.mainLabel}}</p>

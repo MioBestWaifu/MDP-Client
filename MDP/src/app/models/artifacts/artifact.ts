@@ -9,7 +9,7 @@ export class Artifact {
     categories!: string[];
     targetDemographics!: string[];
     ageRating!: string;
-    cardImgUrl!: string;
+    cardImgUrl: string | undefined;
     mainImgUrl!: string;
     otherImgUrls: string[] | undefined;
     mainParticipantRole!: string;
@@ -23,16 +23,16 @@ export class Artifact {
         fullName: 'Artifact Full Name',
         otherNames: ['Artifact Other Name 1', ' Artifact Other Name 2'],
         description: 'This is a  artifact',
-        media:  'Anime',
+        media: 'Anime',
         categories: ['Category 1', 'Category 2'],
         targetDemographics: ['Demographic 1', 'Demographic 2'],
         ageRating: ' Age Rating',
-        cardImgUrl: 'assets/imgs/ArtifactCard.png',
         mainImgUrl: 'assets/imgs/ArtifactMain.png',
         otherImgUrls: ['assets/imgs/ArtifactOther1.png', 'assets/imgs/ArtifactOther2.png'],
         mainParticipantRole: 'Role',
         mainParticipant: 'Participant',
         averageRating: 4.5,
-        releaseDate: new Date(2020, 0, 1)
+        releaseDate: new Date(2020, 0, 1),
+        cardImgUrl: undefined
     }
 }

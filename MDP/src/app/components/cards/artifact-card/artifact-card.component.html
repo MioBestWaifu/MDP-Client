@@ -1,7 +1,7 @@
 <div id="main" class="collapsableGrid" [@expandCollapse]="expanded ? 'expanded' : 'collapsed'" (mouseenter)="Expand()" (mouseleave)=" Collapse()">
     <div id="collapsedBlock">
     <a [routerLink]="['/', artifact.media.toLowerCase(), artifact.id]">
-      <img [src]="artifact.cardImgUrl" alt="assets/imgs/defaultcard.png">
+      <img [src]="artifact.cardImgUrl??'assets/imgs/defaultcard.png'">
     </a>
       <p class="cardMainText artifactMainText">{{ artifact.shortName }}</p>
     </div>

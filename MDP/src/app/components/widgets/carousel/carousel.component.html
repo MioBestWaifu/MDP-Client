@@ -2,17 +2,17 @@
     <div class="imgContainer"
     [@slideLeft]="slideLeft[0]? 'slided':'still'"
     (@slideLeft.done)="FinishedSlidingLeft(0)">
-        <img [src]="links[0].imgUrl" alt="assets/imgs/defaultnews.png" (click)="router.navigate([links[0].redirectTo])">
+        <img [src]="links[0].imgUrl??'assets/imgs/defaultnews.png'" (click)="router.navigate([links[0].redirectTo])">
     </div>
     <div class="imgContainer"
     [@slideLeft]="slideLeft[1]? 'slided':'still'" [@slideRight]="slideRight[1]? 'slided':'still'"
     (@slideLeft.done)="FinishedSlidingLeft(1)" (@slideRight.done)="FinishedSlidingRight(1)">
-        <img [src]="links[1].imgUrl" alt="assets/imgs/defaultnews.png" (click)="router.navigate([links[1].redirectTo])">
+        <img [src]="links[1].imgUrl??'assets/imgs/defaultnews.png'" (click)="router.navigate([links[1].redirectTo])">
     </div>
     <div class="imgContainer"
     [@slideRight]="slideRight[2]? 'slided':'still'"
     (@slideRight.done)="FinishedSlidingRight(2)">
-        <img [src]="links[2].imgUrl" alt="assets/imgs/defaultnews.png" (click)="router.navigate([links[2].redirectTo])">
+        <img [src]="links[2].imgUrl??'assets/imgs/defaultnews.png'" (click)="router.navigate([links[2].redirectTo])">
     </div>
     <i class="material-symbols-outlined icon left" (click)="Left()">chevron_left</i>
     <i class="material-symbols-outlined icon right" (click)="Right()">chevron_right</i>

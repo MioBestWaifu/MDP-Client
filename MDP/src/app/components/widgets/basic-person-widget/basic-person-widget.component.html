@@ -1,5 +1,5 @@
 <div class="summaryGrid">
-  <img id="mainImage" [src]="person.mainImgUrl" alt="assets/imgs/defaultmain.png">
+  <img id="mainImage" [src]="person.mainImgUrl??'assets/imgs/defaultmain.png'">
   <div id="title" class="titleText centerInternalText">{{person.fullName}}</div> 
   <div id="rateArea">
       <mdp-rate-widget [rate]="person.averageRating" class="rateWidget"></mdp-rate-widget>
