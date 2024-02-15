@@ -25,6 +25,7 @@ export class SearchBarComponent extends BaseComponent {
   }
 
   override ngOnInit(): void {
+    super.ngOnInit();
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         this.inputValue = '';
