@@ -22,8 +22,8 @@ export class SearchPageComponent extends BasePageComponent {
     this.query = queryDictionary.Get('query')??'';
     console.log(queryDictionary);
     console.log(this.query);
-    /* this.connection.LoadPageWithParams(this.connection.search, queryDictionaty).subscribe(result => {
+    this.connection.LoadPageWithParams(this.connection.search, queryDictionary).subscribe(result => {
       this.pageModel = result as SearchPageModel;
-    }); */
+    });
   }
 }

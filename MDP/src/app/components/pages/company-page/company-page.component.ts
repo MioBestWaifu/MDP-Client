@@ -18,8 +18,8 @@ export class CompanyPageComponent extends BasePageComponent{
     if (id) {
       requestUrl += `?id=${id}`;
     }
-    /* this.connection.LoadPage(requestUrl).subscribe((result: BasePageModel) => {
+    this.connection.LoadPage(requestUrl).subscribe((result: BasePageModel) => {
       this.pageModel = result as CompanyPageModel;
-    }); */
+    });
   }
 }

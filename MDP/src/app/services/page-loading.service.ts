@@ -22,7 +22,7 @@ export class PageLoadingService {
   public search = this.baseURL + this.pages + "search";
   public sign = this.baseURL + this.pages + "sign";
   public user = this.baseURL + this.pages + "user";
-  private work = this.baseURL + this.pages + "work/";
+  public work = this.baseURL + this.pages + "work/";
   public anime = this.work + "anime";
   public book = this.work + "book";
   public game = this.work + "game";

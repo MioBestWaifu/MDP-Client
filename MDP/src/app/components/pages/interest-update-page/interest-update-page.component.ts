@@ -14,8 +14,8 @@ export class InterestUpdatePageComponent extends BasePageComponent{
 
   override ngOnInit() {
     super.ngOnInit();
-    /* this.connection.LoadPage(this.connection.interestUpdate).subscribe(result => {
+    this.connection.LoadPage(this.connection.interestUpdate).subscribe(result => {
       this.pageModel = result as InterestUpdatePageModel;
-    }); */
+    });
   }
 }
