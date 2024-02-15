@@ -8,7 +8,7 @@ export class UserPageModel extends BasePageModel{
 
     constructor(){
         super()
-        this.user = User.testUser
-        this.interactions = []
+        /* this.user = User.testUser
+        this.interactions = [] */
     }
 }

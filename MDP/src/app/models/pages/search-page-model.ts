@@ -6,9 +6,9 @@ export class SearchPageModel extends BasePageModel{
 
     constructor(){
         super()
-        this.artifacts = []
+        /* this.artifacts = []
         for (let i = 0; i < 10; i++) {
             this.artifacts.push(Artifact.testArtifact)
-        }
+        } */
     }
 }

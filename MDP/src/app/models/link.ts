@@ -3,7 +3,7 @@ import { Company } from "./company"
 import { Person } from "./person"
 
 export class Link {
-    imgUrl!:string
+    imgUrl:string | undefined
     mainLabel!: string
     secondaryLabel: string | undefined
     redirectTo!: string

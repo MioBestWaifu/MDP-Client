@@ -1,5 +1,5 @@
 <div class="summaryGrid">
-    <img id="mainImage" [src]="company.mainImgUrl">
+    <img id="mainImage" [src]="company.mainImgUrl??'assets/imgs/defaultmain.png'">
     <div id="title" class="titleText centerInternalText">{{company.fullName}}</div> 
     <div id="rateArea">
         <mdp-rate-widget [rate]="company.averageRating" class="rateWidget"></mdp-rate-widget>

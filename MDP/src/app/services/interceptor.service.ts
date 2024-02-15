@@ -9,7 +9,7 @@ export class AuthInterceptorService implements HttpInterceptor {
   constructor(private authenticatorService: AuthenticatorService, private common:CommonContainerService) {}
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    if (this.common.token == undefined || this.common.token.expiration > Date.now()) {
+    if (this.common.token == undefined || this.common.token.expiration > new Date()) {
       this.authenticatorService.Authenticate().subscribe(token => {
         this.common.token = token;
       });

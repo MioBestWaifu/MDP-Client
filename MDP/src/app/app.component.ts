@@ -1,6 +1,7 @@
 import { trigger, state, style, transition, animate } from "@angular/animations";
 import { Component, OnInit } from "@angular/core";
 import { BaseComponent } from "./components/base/base.component";
+import { environment } from "../environments/environment";
 
 @Component({
   selector: 'mdp-root',
@@ -27,6 +28,7 @@ export class AppComponent extends BaseComponent{
 
   override ngOnInit() {
     super.ngOnInit();
+    //console.log(environment.baseURL);
     this.mediaQuery.QueryMedia();
     if (this.mediaQuery.portrait) {
       this.expandLateralBar = false;

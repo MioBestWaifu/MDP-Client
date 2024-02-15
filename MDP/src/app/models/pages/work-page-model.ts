@@ -13,7 +13,7 @@ export class WorkPageModel extends BasePageModel{
 
     constructor(){
         super();
-        this.work = Artifact.testArtifact;
+        /* this.work = Artifact.testArtifact;
         this.reviews = [];
         this.participants = [];
         this.relatedWorks = [];
@@ -39,7 +39,7 @@ export class WorkPageModel extends BasePageModel{
 
         for (let i = 0; i < 7; i++) {
             this.fractions.push(Link.testFraction);
-        }
+        } */
 
     }
 }
