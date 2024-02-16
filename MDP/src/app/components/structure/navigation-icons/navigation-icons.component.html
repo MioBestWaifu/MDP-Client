@@ -1,3 +1,7 @@
 <div id="container">
-    <a routerLink="/sign" class="button">Sign</a>
+    @if (mediaQuery.portrait){
+        <p>deu certo</p>
+    } @else {
+        <a routerLink="/sign" class="button">Sign</a>
+    }
 </div>

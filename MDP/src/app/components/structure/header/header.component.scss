@@ -13,6 +13,13 @@
 }
 
 mdp-search-bar{
+    display: flex;
+    align-items: center;
+    background-color: black;
     width: 50%;
-    height: 50%;
+    height: 100%;
+}
+
+mdp-navigation-icons{
+    width: 10%;
 }
