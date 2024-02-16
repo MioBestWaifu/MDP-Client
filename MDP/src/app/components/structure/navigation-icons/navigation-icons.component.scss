@@ -15,7 +15,11 @@ i {
   width: 100%;
   display: inline-flex;
   justify-content: flex-end;
-  background-color: chartreuse;
+  // background-color: chartreuse;
+}
+
+#container a {
+  text-decoration: none;
 }
 
 $color: rgb(51, 34, 146);
