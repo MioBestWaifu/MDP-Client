@@ -9,6 +9,6 @@ import { BaseComponent } from '../../base/base.component';
   styleUrl: './login-forms.component.scss'
 })
 export class LoginFormsComponent extends BaseComponent{
-  emailValue: string = '';
-  passwordValue: string = '';
+  public emailValue: string = '';
+  public passwordValue: string = '';
 }
