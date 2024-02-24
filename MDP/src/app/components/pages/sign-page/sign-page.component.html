@@ -1,4 +1,7 @@
 <div id="main">
-    <mdp-login-forms></mdp-login-forms>
-    <!-- <mdp-register-forms></mdp-register-forms> -->
+    @if(formLogin){
+    <mdp-login-forms (changeFormRegister)="onChangeFormRegister()"></mdp-login-forms>
+    } @else{
+    <mdp-register-forms (changeFormLogin)="onChangeFormLogin()"></mdp-register-forms>
+    }
 </div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output ,EventEmitter} from '@angular/core';
 import { BaseComponent } from '../../base/base.component';
 
 @Component({
@@ -11,4 +11,13 @@ import { BaseComponent } from '../../base/base.component';
 export class LoginFormsComponent extends BaseComponent{
   public emailValue: string = '';
   public passwordValue: string = '';
+
+  @Output() changeFormRegister: EventEmitter<any> = new EventEmitter();
+
+  handleLoginClick(){
+    //pegar os inputs e checar
+  }
+  handleRegisterClick(){
+    this.changeFormRegister.emit();
+  }
 }
