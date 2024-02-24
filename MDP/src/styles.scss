@@ -1,6 +1,6 @@
 @import './variables.scss';
 
-.flex{
+.flex {
   display: flex;
 }
 
@@ -65,40 +65,57 @@
   vertical-align: middle;
 }
 
-p, i, label, div {
+p,
+i,
+label,
+div {
   font-family: $standardFont;
   font-size: $mediumFontSize;
   color: $mediumOutlineColor;
   margin: 0;
 }
 
-i{
+i {
   user-select: none;
 }
 
 input {
+  height: 100%;
+  width: 100%;
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
   // Styles for input elements go here
 }
 
-.bold{
+.bold {
   font-weight: bold;
 }
 
-.inline{
+.inline {
   display: inline;
 }
+
 // Os elementos cujo tamanho PRECISA ser definido no componente
-mdp-artifact-list,mdp-artifact-card, mdp-interest-card, mdp-review-card, mdp-vertical-folder, 
-mdp-horizontal-folder, mdp-rate-control, mdp-search-bar, mdp-search-filter,
-mdp-navigation-icons, mdp-navigation-bar{
+mdp-artifact-list,
+mdp-artifact-card,
+mdp-interest-card,
+mdp-review-card,
+mdp-vertical-folder,
+mdp-horizontal-folder,
+mdp-rate-control,
+mdp-search-bar,
+mdp-search-filter,
+mdp-navigation-icons,
+mdp-navigation-bar {
   display: block;
 }
 
-.highlightText{
+.highlightText {
   color: $strongMainColor;
   font-size: $mediumFontSize;
 }
 
-body{
+body {
   margin: 0;
 }
