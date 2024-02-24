@@ -8,6 +8,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrl: './register-forms.component.scss'
 })
 export class RegisterFormsComponent {
+  public usernameValue: string = '';
   public emailValue: string = '';
   public passwordValue: string = '';
   public passwordConfirmedValue: string = '';

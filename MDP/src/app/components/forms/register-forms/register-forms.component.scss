@@ -1,46 +1,46 @@
 #login {
     background-color: crimson;
-    width: 100%;
+    max-width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    padding: 30px;
+    border: 5px solid;
+    border-color: rgb(68, 0, 255);
+    border-radius: 25px;
 }
 
 h2 {
     margin: 0;
 }
 
-#email{
+#email, #username{
     width: 50%;
-    background-color: rgb(255, 0, 157);
+    // background-color: rgb(255, 0, 157);
 }
 #password {
     width: 50%;
-    background-color: rgb(255, 217, 3);
+    // background-color: rgb(255, 217, 3);
     display: flex;
+    // flex-wrap: wrap;
     flex-direction: column;
     gap: 30px;
 }
 
-#email-box,
-#password-box {
+.box {
     display: flex;
     align-items: center;
     width: 75%;
     height: 30px;
     padding: 0 5px 0 5px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-radius: 20px;
     background-color: aliceblue;
+    overflow: hidden;
+    border: 3px solid;
+    border-color: aqua;
 }
 
-#email-box div {
-    width: 100%;
-}
-
-#password-box div {
+.box div {
     width: 100%;
 }
 
@@ -50,7 +50,7 @@ h2 {
     gap: 25px;
     width: 100%;
     min-height: 0;
-    background-color: rgb(86, 4, 238);
+    // background-color: rgb(86, 4, 238);
 }
 
 button {

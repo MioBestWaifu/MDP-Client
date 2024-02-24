@@ -1,23 +1,35 @@
 <div id="login">
+    <div id="username">
+        <h2>Username</h2>
+        <div class="box">
+            <div>
+                <input type="text" [(ngModel)]="usernameValue">
+            </div>
+        </div>
+    </div>
     <div id="email">
         <h2>Email</h2>
-        <div id="email-box">
+        <div class="box">
             <div>
                 <input type="text" [(ngModel)]="emailValue">
             </div>
         </div>
     </div>
     <div id="password">
-        <h2>Password</h2>
-        <div id="password-box">
-            <div>
-                <input type="password" [(ngModel)]="passwordValue">
+        <div>
+            <h2>Password</h2>
+            <div class="box">
+                <div>
+                    <input type="password" [(ngModel)]="passwordValue">
+                </div>
             </div>
         </div>
-        <h2>Confirme Password</h2>
-        <div id="password-box">
-            <div>
-                <input type="password" [(ngModel)]="passwordConfirmedValue">
+        <div>
+            <h2>Confirme Password</h2>
+            <div class="box">
+                <div>
+                    <input type="password" [(ngModel)]="passwordConfirmedValue">
+                </div>
             </div>
         </div>
     </div>
