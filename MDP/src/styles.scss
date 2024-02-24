@@ -81,11 +81,13 @@ i {
 
 input {
   // Styles for input elements go here
-  // height: 100%;
-  // width: 100%;
+  height: 100%;
+  width: 100%;
   box-shadow: 0 0 0 0;
+  box-sizing: border-box;
   border: 0 none;
   outline: 0;
+  background-color: aliceblue;
 }
 
 .bold {
