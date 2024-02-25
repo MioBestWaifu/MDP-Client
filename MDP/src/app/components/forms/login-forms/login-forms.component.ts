@@ -21,12 +21,11 @@ export class LoginFormsComponent extends BaseComponent {
     this.passwordValue;
     /*If no data matches the finding, it shows in the app that there was an error in the login. ->(noDataMatches)
     if(){
-      this.invalidCredentials = true;
-    }*/
+      
+    }*/this.invalidCredentials = true;
   }
   handleRegisterClick() {
     this.changeFormRegister.emit();
-
   }
 
   // invalidCredentials(){

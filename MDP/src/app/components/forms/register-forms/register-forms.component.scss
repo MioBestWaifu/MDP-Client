@@ -1,4 +1,4 @@
-#login {
+#register{
     background-color: rgb(241, 215, 221);
     max-width: 100%;
     display: flex;
@@ -65,4 +65,9 @@ button {
 p{
     width: 100%;
     cursor: pointer;
+}
+
+.box-red {
+    border: 3px solid;
+    border-color: red;
 }

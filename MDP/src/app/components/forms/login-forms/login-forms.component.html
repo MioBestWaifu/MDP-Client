@@ -1,4 +1,5 @@
 <div id="login">
+        <p *ngIf="invalidCredentials">Invalid credentials!</p>
     <div id="email">
         <h2>Email</h2>
         <div [ngClass]="invalidCredentials? 'box-red box':'box'">
