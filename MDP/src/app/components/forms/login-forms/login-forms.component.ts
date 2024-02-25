@@ -16,10 +16,13 @@ export class LoginFormsComponent extends BaseComponent {
   @Output() changeFormRegister: EventEmitter<any> = new EventEmitter();
 
   handleLoginClick() {
-    //pegar os inputs e checar
-
-    this.invalidCredentials = true;
-
+    //checar os imputs
+    this.emailValue;
+    this.passwordValue;
+    /*If no data matches the finding, it shows in the app that there was an error in the login. ->(noDataMatches)
+    if(){
+      this.invalidCredentials = true;
+    }*/
   }
   handleRegisterClick() {
     this.changeFormRegister.emit();
