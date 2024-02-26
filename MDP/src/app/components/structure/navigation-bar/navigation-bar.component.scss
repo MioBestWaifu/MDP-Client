@@ -15,14 +15,12 @@
 
     :hover {
         background-color: $lightMainColor;
+        border-radius: 15px;
         cursor: pointer;
     }
-
+    padding-top: 15px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-
-    padding-top: 20px;
 }
 
 i {
@@ -38,4 +36,11 @@ i {
 p {
     font-size: $largeFontSize;
     color: $strongBackgroundColor;
+}
+
+a {
+    display: flex;
+    align-items: center;
+    padding: 10px 0 10px 0;
+    text-decoration: none;
 }
