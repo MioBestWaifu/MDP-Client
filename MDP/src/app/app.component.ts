@@ -22,7 +22,7 @@ import { BaseComponent } from "./components/base/base.component";
 })
 export class AppComponent extends BaseComponent{
   expandLateralBar: boolean = true;
-  start: string = "170px";
+  start: string = "250px";
   end: string = "auto";
 
   override ngOnInit() {
@@ -40,7 +40,7 @@ export class AppComponent extends BaseComponent{
       this.start = "auto";
       this.end = "0px";
     } else {
-      this.start = "170px";
+      this.start = "250px";
       this.end = "auto";
     }
   }

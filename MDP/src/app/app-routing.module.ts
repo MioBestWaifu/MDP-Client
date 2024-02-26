@@ -11,6 +11,11 @@ import { PersonPageComponent } from './components/pages/person-page/person-page.
 import { SearchPageComponent } from './components/pages/search-page/search-page.component';
 import { SignPageComponent } from './components/pages/sign-page/sign-page.component';
 import { UserPageComponent } from './components/pages/user-page/user-page.component';
+import { AnimePageComponent } from './components/pages/artifacts/anime-page/anime-page.component';
+import { BookPageComponent } from './components/pages/artifacts/book-page/book-page.component';
+import { GamePageComponent } from './components/pages/artifacts/game-page/game-page.component';
+import { MangaPageComponent } from './components/pages/artifacts/manga-page/manga-page.component';
+import { MusicPageComponent } from './components/pages/artifacts/music-page/music-page.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -23,12 +28,18 @@ const routes: Routes = [
   { path: 'person/:id', component: PersonPageComponent },
   { path: 'search', component: SearchPageComponent },
   { path: 'user/:id', component: UserPageComponent },
-  { path: 'anime/:id', component: WorkPageComponent },
-  { path: 'book/:id', component: WorkPageComponent },
-  { path: 'game/:id', component: WorkPageComponent },
-  { path: 'music/:id', component: WorkPageComponent },
-  { path: 'manga/:id', component: WorkPageComponent },
-  { path: 'sign', component: SignPageComponent }
+  // { path: 'anime/:id', component: WorkPageComponent },
+  // { path: 'book/:id', component: WorkPageComponent },
+  // { path: 'game/:id', component: WorkPageComponent },
+  // { path: 'music/:id', component: WorkPageComponent },
+  // { path: 'manga/:id', component: WorkPageComponent },
+  { path: 'sign', component: SignPageComponent },
+  { path: 'anime', component: AnimePageComponent },
+  { path: 'book', component: BookPageComponent },
+  { path: 'game', component: GamePageComponent },
+  { path: 'manga', component: MangaPageComponent },
+  { path: 'music', component: MusicPageComponent }
+
 ];
 
 @NgModule({
