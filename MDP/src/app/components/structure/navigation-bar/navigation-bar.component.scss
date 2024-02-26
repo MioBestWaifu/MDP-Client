@@ -1,29 +1,41 @@
 @import '../../../../variables.scss';
-#container{
+
+#container {
     height: 100%;
     width: 100%;
     overflow: hidden;
 }
 
-.navBlock{
+.navBlock {
     background-color: $mediumMainColor;
     border-bottom-width: 1px;
     border-color: $strongBackgroundColor;
     width: 100%;
     flex: 1;
-    :hover{
+
+    :hover {
         background-color: $lightMainColor;
         cursor: pointer;
     }
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    padding-top: 20px;
 }
 
-i{
+i {
     display: flex;
+    align-items: center;
     font-size: $largeFontSize;
     color: $strongBackgroundColor;
+    gap: 15px;
+    font-size: 35px;
+    padding-left: 1vw;
 }
 
-p{
+p {
     font-size: $largeFontSize;
     color: $strongBackgroundColor;
 }
