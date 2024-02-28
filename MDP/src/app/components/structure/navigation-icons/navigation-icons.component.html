@@ -1,7 +1,15 @@
 <div id="container">
+    @if(changeTheme){
+    <i style="font-size: 35px; color: azure;" class="material-symbols-outlined icon"
+        (click)="switchTheme()">light_mode</i>
+    } @else{
+    <i style="font-size: 35px; color: azure;" class="material-symbols-outlined icon"
+        (click)="switchTheme()">dark_mode</i>
+    }
     @if (mediaQuery.portrait){
-       <a routerLink="/sign"><i style="font-size: 35px; color: azure;" class="material-symbols-outlined icon"> account_circle</i></a>
+    <a routerLink="/sign"><i style="font-size: 35px; color: azure;" class="material-symbols-outlined icon">
+            account_circle</i></a>
     } @else {
-        <a routerLink="/sign" class="button">Sign</a>
+    <a routerLink="/sign" class="button">Sign</a>
     }
 </div>
