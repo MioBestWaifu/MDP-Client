@@ -2,6 +2,7 @@ mdp-header {
     z-index: 99;
     grid-column: 1 / 3;
     grid-row: 1;
+    height: 60px;
 }
 
 .route {
@@ -16,7 +17,6 @@ mdp-navigation-bar {
     z-index: 98;
     grid-column: 1;
     grid-row: 2;
-    width: 100%;
 }
 
 div {
