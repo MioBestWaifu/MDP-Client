@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { BaseComponent } from '../../base/base.component';
 
 @Component({
@@ -8,6 +8,7 @@ import { BaseComponent } from '../../base/base.component';
 })
 export class NavigationIconsComponent extends BaseComponent {
   public changeTheme: boolean = true;
+  // @Output() changeCollor: EventEmitter<> = new EventEmitter();
 
   switchTheme() {
     this.changeTheme = !this.changeTheme;
