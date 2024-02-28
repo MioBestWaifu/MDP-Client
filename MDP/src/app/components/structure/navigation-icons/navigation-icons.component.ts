@@ -8,9 +8,10 @@ import { BaseComponent } from '../../base/base.component';
 })
 export class NavigationIconsComponent extends BaseComponent {
   public changeTheme: boolean = true;
-  // @Output() changeCollor: EventEmitter<> = new EventEmitter();
+  @Output() changeColors: EventEmitter<any> = new EventEmitter();
 
   switchTheme() {
+    this.changeColors.emit();
     this.changeTheme = !this.changeTheme;
   }
 }
