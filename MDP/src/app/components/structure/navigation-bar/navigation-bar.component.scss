@@ -23,6 +23,10 @@
         cursor: pointer;
     }
 }
+a :hover {
+    // background-color: $mediumMainColor;
+    // background-color: black;
+}
 
 i {
     display: flex;
@@ -66,4 +70,14 @@ a {
 
 #container :hover {//não esta funcionando...
     overflow-y: visible;
+}
+
+.subArea i{
+    gap: 15px;
+    font-size: 25px;
+    padding-left: 50px;
+
+}
+.subArea p{
+    font-size: 15px;
 }
