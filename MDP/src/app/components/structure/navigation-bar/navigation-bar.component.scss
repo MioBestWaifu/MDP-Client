@@ -16,16 +16,14 @@
     padding-top: 15px;
     display: flex;
     flex-direction: column;
+}
 
+mdp-vertical-folder {
     :hover {
         background-color: $lightMainColor;
         border-radius: 15px;
         cursor: pointer;
     }
-}
-a :hover {
-    // background-color: $mediumMainColor;
-    // background-color: black;
 }
 
 i {
@@ -68,16 +66,18 @@ a {
 //     }
 // }
 
-#container :hover {//não esta funcionando...
+#container :hover {
+    //não esta funcionando...
     overflow-y: visible;
 }
 
-.subArea i{
+.subArea i {
     gap: 15px;
     font-size: 25px;
     padding-left: 50px;
 
 }
-.subArea p{
+
+.subArea p {
     font-size: 15px;
 }
