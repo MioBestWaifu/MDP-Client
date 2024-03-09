@@ -52,10 +52,13 @@
 
 <div id="rateArea">
   <!-- <mdp-rate-widget [rate]="work.averageRating" class="rateWidget"></mdp-rate-widget> -->
-  <!-- <mdp-rate-control (rated)="RateChanged($event)"></mdp-rate-control> -->
-  <p>Rate it:</p>
-  <br>
+  <button mat-flat-button color="accent" (click)="openRateDialog()">Rate it</button>
+  <!-- MatDialogModule -->
   <div id="addFavorite">
-    <p>Add toFavorites</p>
+    <button mat-flat-button color="primary">Add to favorites</button>
   </div>
+</div>
+
+<div class="rateDialog">
+    <!-- <mdp-rate-control (rated)="RateChanged($event)"></mdp-rate-control> -->
 </div>

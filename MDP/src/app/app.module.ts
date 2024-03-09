@@ -55,7 +55,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { CompanyPageComponent } from './components/pages/company-page/company-page.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatButtonModule } from '@angular/material/button';
+import { RateDialogComponent } from './components/dialogs/rate-dialog/rate-dialog.component';
+import { MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -107,7 +110,8 @@ import { HttpClientModule } from '@angular/common/http';
     WorkRelationsComponent,
     BasePageComponent,
     FullLogoComponent,
-    SmallLogoComponent
+    SmallLogoComponent,
+    RateDialogComponent
   ],
   imports: [
     CommonModule,
@@ -116,7 +120,10 @@ import { HttpClientModule } from '@angular/common/http';
     LayoutModule,
     FormsModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSlideToggleModule,
+    MatButtonModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
