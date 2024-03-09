@@ -1,29 +1,83 @@
 @import '../../../../variables.scss';
-#container{
-    height: 100%;
+
+#container {
+    height: calc(100vh - 60px);
     width: 100%;
-    overflow: hidden;
+    overflow: auto;
+    overflow-y: hidden;
 }
 
-.navBlock{
+.navBlock {
     background-color: $mediumMainColor;
     border-bottom-width: 1px;
     border-color: $strongBackgroundColor;
     width: 100%;
     flex: 1;
-    :hover{
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+mdp-vertical-folder {
+    :hover {
         background-color: $lightMainColor;
+        border-radius: 15px;
         cursor: pointer;
     }
 }
 
-i{
+i {
     display: flex;
+    align-items: center;
+    font-size: $largeFontSize;
+    color: $strongBackgroundColor;
+    gap: 15px;
+    font-size: 35px;
+    padding-left: 1vw;
+}
+
+p {
     font-size: $largeFontSize;
     color: $strongBackgroundColor;
 }
 
-p{
-    font-size: $largeFontSize;
-    color: $strongBackgroundColor;
+a {
+    display: flex;
+    align-items: center;
+    padding: 10px 0 10px 0;
+    text-decoration: none;
+}
+
+//PAra uma barra personalizada
+// :hover {
+//     overflow-y: visible;
+
+//     ::-webkit-scrollbar {
+//         width: 6px;
+//     }
+
+//     ::-webkit-scrollbar-thumb {
+//         background: rgb(202, 204, 202);
+//         border-radius: 10px;
+//     }
+
+//     ::-webkit-scrollbar-track {
+//         background-color: $mediumMainColor
+//     }
+// }
+
+#container :hover {
+    //não esta funcionando...
+    overflow-y: visible;
+}
+
+.subArea i {
+    gap: 15px;
+    font-size: 25px;
+    padding-left: 50px;
+
+}
+
+.subArea p {
+    font-size: 15px;
 }

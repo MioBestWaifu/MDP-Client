@@ -1,5 +1,16 @@
 <div id="container" class="verticalFlex">
-    <div class="navBlock">
-        <i class="material-symbols-outlined icon">star<p>Page</p></i>
-    </div>
+  <div class="navBlock">
+    <mdp-vertical-folder label="Shows" maxHeight="auto">
+      <a routerLink="/anime"><i class="material-symbols-outlined icon">book_2<p>Anime</p></i></a>
+    </mdp-vertical-folder>
+    <mdp-vertical-folder label="Literature" maxHeight="auto">
+      <a routerLink="/book"><i class="material-symbols-outlined icon">book_2<p>Book</p></i></a>
+      <a routerLink="/manga"><i class="material-symbols-outlined icon">book_2<p>Mangá</p></i></a>
+    </mdp-vertical-folder>
+    <mdp-vertical-folder label="Others" maxHeight="auto">
+      <a routerLink="/game"><i class="material-symbols-outlined icon">sports_esports<p>Games</p></i></a>
+      <a routerLink="/music"><i class="material-symbols-outlined icon">music_note<p>Music</p></i></a>
+      <a routerLink="/community"><i class="material-symbols-outlined icon">groups<p>Community</p></i></a>
+    </mdp-vertical-folder>
+  </div>
 </div>
