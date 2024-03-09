@@ -1,20 +1,31 @@
+@import '../../../../variables.scss';
+
 #main {
     width: 95%;
     margin: 0 auto;
     align-items: center;
-    background-color: rgb(43, 42, 42);
-} mdp-artifact-list {
+    // background-color: rgb(43, 42, 42);
+    background-color: $darkThemeBackgroundColor;
+}
+
+mdp-artifact-list {
     width: 100%;
     margin-top: 25px;
-} mdp-carousel {
+}
+
+mdp-carousel {
     margin-top: 25px;
     width: 45vw;
     position: relative;
     overflow: hidden;
-} mdp-search-bar{
+}
+
+mdp-search-bar {
     margin-top: 25px;
     width: 50%;
-}   mdp-ad-list{
+}
+
+mdp-ad-list {
     margin-right: 30px;
     border-radius: 20px;
     background-color: rgb(85, 3, 67);

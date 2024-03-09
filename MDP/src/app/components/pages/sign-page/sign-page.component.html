@@ -1,4 +1,7 @@
-<p>sign-page works!</p>
-<div class="main">
-
+<div id="main">
+    @if(formLogin){
+    <mdp-login-forms (changeFormRegister)="onChangeFormRegister()"></mdp-login-forms>
+    } @else{
+    <mdp-register-forms (changeFormLogin)="onChangeFormLogin()"></mdp-register-forms>
+    }
 </div>

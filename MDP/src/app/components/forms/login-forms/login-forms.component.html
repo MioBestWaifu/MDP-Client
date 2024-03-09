@@ -1,1 +1,23 @@
-<p>login-forms works!</p>
+<div id="login">
+        <p *ngIf="invalidCredentials">Invalid credentials!</p>
+    <div id="email">
+        <h2>Email</h2>
+        <div [ngClass]="invalidCredentials? 'box-red box':'box'">
+            <div>
+                <input type="text" [(ngModel)]="emailValue">
+            </div>
+        </div>
+    </div>
+    <div id="password">
+        <h2>Password</h2>
+        <div [ngClass]="invalidCredentials? 'box-red box':'box'">
+            <div>
+                <input type="password" [(ngModel)]="passwordValue">
+            </div>
+        </div>
+    </div>
+    <p (click)="handleRegisterClick()">You don't have a registration?Register now.</p>
+    <div id="buttons-sign">
+        <button (click)="handleLoginClick()">Login</button>
+    </div>
+</div>

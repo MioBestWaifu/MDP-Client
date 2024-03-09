@@ -9,5 +9,5 @@ import { BaseComponent } from '../../base/base.component';
   styleUrl: './search-filter.component.scss'
 })
 export class SearchFilterComponent extends BaseComponent {
-  canShow: boolean = true;
+  canShow: boolean = false;
 }
