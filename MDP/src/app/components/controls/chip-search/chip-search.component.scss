@@ -1,0 +1,19 @@
+#key-words{
+    width: 100%;
+    min-height: 150px;
+    margin-top: 25px;
+    gap: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    // background-color: aliceblue ;
+}
+
+#key-words div{
+    max-height: 25px;
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    color: azure;  
+    background-color: blueviolet;
+}

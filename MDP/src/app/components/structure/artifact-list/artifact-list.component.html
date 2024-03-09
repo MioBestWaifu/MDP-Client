@@ -1,6 +1,6 @@
 <div id="main">
     <div id="l">
-        <h1>LANÇAMENTOS</h1>
+        <h1>RELEASES</h1>
         @for (row of artifactRows; track row[0]){
         <div class="innerFlex" [class.lastInnerFlex]="$last">
             @for (artifact of row[1]; track artifact.id){
@@ -10,7 +10,7 @@
         }
     </div>
     <div id="m">
-        <h1>MELHORES DA SEMANA</h1>
+        <h1>MOST POPULAR</h1>
         @for (row of artifactRows; track row[0]){
         <div class="innerFlex" [class.lastInnerFlex]="$last">
             @for (artifact of row[1]; track artifact.id){

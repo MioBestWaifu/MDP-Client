@@ -27,7 +27,8 @@ const routes: Routes = [
   { path: 'book/:id', component: WorkPageComponent },
   { path: 'game/:id', component: WorkPageComponent },
   { path: 'music/:id', component: WorkPageComponent },
-  { path: 'manga/:id', component: WorkPageComponent }
+  { path: 'manga/:id', component: WorkPageComponent },
+  { path: 'sign', component: SignPageComponent }
 ];
 
 @NgModule({

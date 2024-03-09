@@ -5,11 +5,21 @@
     align-items: center;
     background-color: $strongMainColor;
     height: 100%;
+    padding-left: 1%;
+    padding-right: 1%;
+    box-shadow: 0px 0px 8px 0px #555555;
 } i {
     cursor: pointer;
 }
 
 mdp-search-bar{
+    display: flex;
+    align-items: center;
+    // background-color: black;
     width: 50%;
-    height: 50%;
+    height: 100%;
+}
+
+mdp-navigation-icons{
+    width: 10%;
 }

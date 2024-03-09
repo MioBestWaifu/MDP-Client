@@ -1,6 +1,34 @@
 @import '../../../../variables.scss';
-div{
+
+#title,
+#list-trending-artefact,
+#card-total {
+    gap: 5px;
+}
+
+#title,
+#card-total {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+#list-trending-artefact {
+    display: grid;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+#card-total {
+    border-radius: 20px;
+    background-color: rgba(253, 246, 206, 0.911);
+}
+
+#description {
     width: 100%;
     height: 100%;
-    background-color: $lightSecondaryColor;
+}
+
+#description h2 {
+    margin-top: 0;
 }
