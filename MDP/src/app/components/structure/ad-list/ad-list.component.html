@@ -2,73 +2,135 @@
     <h1>TRENDING TOPIC</h1><i style="font-size: 35px; color: rgb(0, 73, 73);"
         class="material-symbols-outlined icon">trending_up</i>
 </div>
-
 <div id="list-trending-artefact">
     <div id="card-total">
         <div>
             <h2>#1</h2>
         </div>
-        <img src="assets/imgs/ArtifactCard.png" alt="">
+        <a [routerLink]="['/', artifact.media.toLowerCase(), artifact.id]">
+            <img [src]="artifact.cardImgUrl">
+        </a>
         <div id="description">
-            <h2>Anime</h2>
-            <p>Campo 1</p>
-            <p>Campo 2</p>
-            <p>Campo 3</p>
-            <p>Campo 4</p>
+            <h2 class="cardTopText">{{ artifact.media }}</h2>
+            <div class="textBlock basicMargin">
+                <p class="cardBlockText bold">{{ artifact.mainParticipantRole }}: </p>
+                <p class="cardBlockText">{{ artifact.mainParticipant }}</p>
+            </div>
+            <div class="textBlock basicMargin">
+                <p class="cardBlockText bold">Categories: </p>
+                <p *ngFor="let cat of artifact.categories; let i = index" class="cardBlockText">{{cat}}{{i <
+                        artifact.categories.length - 1 ? ', ' : '' }}</p>
+            </div>
+            <div class="textBlock basicMargin">
+                <p class="cardBlockText bold">Demographics: </p>
+                <p *ngFor="let dem of artifact.targetDemographics; let i = index" class="cardBlockText">{{dem}}{{i <
+                        artifact.targetDemographics.length - 1 ? ', ' : '' }}</p>
+            </div>
+            <mdp-rate-widget class="basicMargin artifactRate" [rate]="artifact.averageRating"></mdp-rate-widget>
         </div>
     </div>
     <div id="card-total">
         <div>
             <h2>#2</h2>
         </div>
-        <img src="assets/imgs/ArtifactCard.png" alt="">
+        <a [routerLink]="['/', artifact.media.toLowerCase(), artifact.id]">
+            <img [src]="artifact.cardImgUrl">
+        </a>
         <div id="description">
-            <h2>Anime</h2>
-            <p>Campo 1</p>
-            <p>Campo 2</p>
-            <p>Campo 3</p>
-            <p>Campo 4</p>
+            <h2 class="cardTopText">{{ artifact.media }}</h2>
+            <div class="textBlock basicMargin">
+                <p class="cardBlockText bold">{{ artifact.mainParticipantRole }}: </p>
+                <p class="cardBlockText">{{ artifact.mainParticipant }}</p>
+            </div>
+            <div class="textBlock basicMargin">
+                <p class="cardBlockText bold">Categories: </p>
+                <p *ngFor="let cat of artifact.categories; let i = index" class="cardBlockText">{{cat}}{{i <
+                        artifact.categories.length - 1 ? ', ' : '' }}</p>
+            </div>
+            <div class="textBlock basicMargin">
+                <p class="cardBlockText bold">Demographics: </p>
+                <p *ngFor="let dem of artifact.targetDemographics; let i = index" class="cardBlockText">{{dem}}{{i <
+                        artifact.targetDemographics.length - 1 ? ', ' : '' }}</p>
+            </div>
+            <mdp-rate-widget class="basicMargin artifactRate" [rate]="artifact.averageRating"></mdp-rate-widget>
         </div>
     </div>
     <div id="card-total">
         <div>
             <h2>#3</h2>
         </div>
-
-        <img src="assets/imgs/ArtifactCard.png" alt="">
-
+        <a [routerLink]="['/', artifact.media.toLowerCase(), artifact.id]">
+            <img [src]="artifact.cardImgUrl">
+        </a>
         <div id="description">
-            <h2>Anime</h2>
-            <p>Campo 1</p>
-            <p>Campo 2</p>
-            <p>Campo 3</p>
-            <p>Campo 4</p>
+            <h2 class="cardTopText">{{ artifact.media }}</h2>
+            <div class="textBlock basicMargin">
+                <p class="cardBlockText bold">{{ artifact.mainParticipantRole }}: </p>
+                <p class="cardBlockText">{{ artifact.mainParticipant }}</p>
+            </div>
+            <div class="textBlock basicMargin">
+                <p class="cardBlockText bold">Categories: </p>
+                <p *ngFor="let cat of artifact.categories; let i = index" class="cardBlockText">{{cat}}{{i <
+                        artifact.categories.length - 1 ? ', ' : '' }}</p>
+            </div>
+            <div class="textBlock basicMargin">
+                <p class="cardBlockText bold">Demographics: </p>
+                <p *ngFor="let dem of artifact.targetDemographics; let i = index" class="cardBlockText">{{dem}}{{i <
+                        artifact.targetDemographics.length - 1 ? ', ' : '' }}</p>
+            </div>
+            <mdp-rate-widget class="basicMargin artifactRate" [rate]="artifact.averageRating"></mdp-rate-widget>
         </div>
     </div>
     <div id="card-total">
         <div>
             <h2>#4</h2>
         </div>
-        <img src="assets/imgs/ArtifactCard.png" alt="">
+        <a [routerLink]="['/', artifact.media.toLowerCase(), artifact.id]">
+            <img [src]="artifact.cardImgUrl">
+        </a>
         <div id="description">
-            <h2>Anime</h2>
-            <p>Campo 1</p>
-            <p>Campo 2</p>
-            <p>Campo 3</p>
-            <p>Campo 4</p>
+            <h2 class="cardTopText">{{ artifact.media }}</h2>
+            <div class="textBlock basicMargin">
+                <p class="cardBlockText bold">{{ artifact.mainParticipantRole }}: </p>
+                <p class="cardBlockText">{{ artifact.mainParticipant }}</p>
+            </div>
+            <div class="textBlock basicMargin">
+                <p class="cardBlockText bold">Categories: </p>
+                <p *ngFor="let cat of artifact.categories; let i = index" class="cardBlockText">{{cat}}{{i <
+                        artifact.categories.length - 1 ? ', ' : '' }}</p>
+            </div>
+            <div class="textBlock basicMargin">
+                <p class="cardBlockText bold">Demographics: </p>
+                <p *ngFor="let dem of artifact.targetDemographics; let i = index" class="cardBlockText">{{dem}}{{i <
+                        artifact.targetDemographics.length - 1 ? ', ' : '' }}</p>
+            </div>
+            <mdp-rate-widget class="basicMargin artifactRate" [rate]="artifact.averageRating"></mdp-rate-widget>
         </div>
     </div>
     <div id="card-total">
         <div>
             <h2>#5</h2>
         </div>
-        <img src="assets/imgs/ArtifactCard.png" alt="">
+        <a [routerLink]="['/', artifact.media.toLowerCase(), artifact.id]">
+            <img [src]="artifact.cardImgUrl">
+        </a>
         <div id="description">
-            <h2>Anime</h2>
-            <p>Campo 1</p>
-            <p>Campo 2</p>
-            <p>Campo 3</p>
-            <p>Campo 4</p>
+            <h2 class="cardTopText">{{ artifact.media }}</h2>
+            <div class="textBlock basicMargin">
+                <p class="cardBlockText bold">{{ artifact.mainParticipantRole }}: </p>
+                <p class="cardBlockText">{{ artifact.mainParticipant }}</p>
+            </div>
+            <div class="textBlock basicMargin">
+                <p class="cardBlockText bold">Categories: </p>
+                <p *ngFor="let cat of artifact.categories; let i = index" class="cardBlockText">{{cat}}{{i <
+                        artifact.categories.length - 1 ? ', ' : '' }}</p>
+            </div>
+            <div class="textBlock basicMargin">
+                <p class="cardBlockText bold">Demographics: </p>
+                <p *ngFor="let dem of artifact.targetDemographics; let i = index" class="cardBlockText">{{dem}}{{i <
+                        artifact.targetDemographics.length - 1 ? ', ' : '' }}</p>
+            </div>
+            <mdp-rate-widget class="basicMargin artifactRate" [rate]="artifact.averageRating"></mdp-rate-widget>
         </div>
     </div>
 </div>
