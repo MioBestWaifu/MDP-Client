@@ -17,7 +17,7 @@ export class BasicWorkWidgetComponent extends BaseComponent {
   constructor(mediaQuery: MediaQueryService,common: CommonContainerService, 
     public connection: InteractionService, elementRef: ElementRef, renderer: Renderer2, private dialog: MatDialog
   ) {
-    super(mediaQuery, common,elementRef, renderer);
+    super(mediaQuery, common, elementRef, renderer);
   }
 
   RateChanged(newRate: number) {
@@ -25,7 +25,7 @@ export class BasicWorkWidgetComponent extends BaseComponent {
   }
   openRateDialog() {
     const dialogRef = this.dialog.open(RateDialogComponent, {
-      width: '250px',
+      width: '450px',
       height: '300px',
     });
 

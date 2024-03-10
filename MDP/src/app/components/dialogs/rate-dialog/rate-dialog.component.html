@@ -1,7 +1,23 @@
-<h2 mat-dialog-title>Rate it:</h2>
-<!-- <mdp-rate-control (rated)="RateChanged($event)"></mdp-rate-control> -->
-<p>comment here:</p>
-<input type="text">
+<h2 mat-dialog-title>Hi</h2>
+<mat-dialog-content>
+  <!-- <p>What's your favorite animal?</p> -->
+
+  <!-- <mat-form-field>
+    <mat-label>Commentary</mat-label> -->
+    <!-- <input matInput [(ngModel)]="data.commentary"> -->
+    <!-- <input matInput>
+  </mat-form-field> -->
+
+  <mdp-rate-control (rated)="RateChanged($event)"></mdp-rate-control>
+<br>
+  <mat-form-field>
+    <mat-label>Leave a comment</mat-label>
+    <textarea matInput></textarea>
+  </mat-form-field>
+
+</mat-dialog-content>
 <mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">Done</button>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <!-- <button mat-button [mat-dialog-close]="data.commentary" cdkFocusInitial>Done</button> -->
+  <button mat-button [mat-dialog-close]="" cdkFocusInitial>Done</button>
 </mat-dialog-actions>
