@@ -11,14 +11,14 @@ import { Artifact } from '../../../models/artifacts/artifact';
   templateUrl: './rate-dialog.component.html',
   styleUrl: './rate-dialog.component.scss'
 })
-export class RateDialogComponent extends BaseComponent{
+export class RateDialogComponent extends BaseComponent {
   @Input() work: Artifact = new Artifact();
   connection: any;
-
-  constructor(mediaQuery: MediaQueryService,common: CommonContainerService,
+  
+  constructor(mediaQuery: MediaQueryService, common: CommonContainerService,
     public dialogRef: MatDialogRef<RateDialogComponent>, connection: InteractionService, elementRef: ElementRef, renderer: Renderer2
   ) {
-    super(mediaQuery, common,elementRef, renderer);
+    super(mediaQuery, common, elementRef, renderer);
   }
   RateChanged(newRate: number) {
     this.connection.Rate(this.connection.rateUser, newRate, this.work.id);
