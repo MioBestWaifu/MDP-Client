@@ -52,7 +52,7 @@ import { UserWidgetComponent } from './components/widgets/user-widget/user-widge
 import { FullLogoComponent } from './components/full-logo/full-logo.component';
 import { SmallLogoComponent } from './components/small-logo/small-logo.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CompanyPageComponent } from './components/pages/company-page/company-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
@@ -62,6 +62,12 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatIconModule } from '@angular/material/icon';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { JsonPipe } from '@angular/common';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -130,6 +136,13 @@ import { MatSelectModule } from '@angular/material/select';
     MatInputModule,
     MatFormFieldModule,
     MatSelectModule,
+    MatStepperModule,
+    ReactiveFormsModule,
+    MatIconModule,
+    MatExpansionModule,
+    MatCheckboxModule,
+    JsonPipe,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

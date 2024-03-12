@@ -14,7 +14,7 @@ import { Artifact } from '../../../models/artifacts/artifact';
 export class RateDialogComponent extends BaseComponent {
   @Input() work: Artifact = new Artifact();
   connection: any;
-  
+
   constructor(mediaQuery: MediaQueryService, common: CommonContainerService,
     public dialogRef: MatDialogRef<RateDialogComponent>, connection: InteractionService, elementRef: ElementRef, renderer: Renderer2
   ) {
@@ -25,6 +25,6 @@ export class RateDialogComponent extends BaseComponent {
   }
 
   onNoClick(): void {
-    this.dialogRef.close();
+    this.dialogRef.close();   
   }
 }

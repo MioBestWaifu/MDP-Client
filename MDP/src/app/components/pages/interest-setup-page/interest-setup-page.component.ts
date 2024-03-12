@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './interest-setup-page.component.scss'
 })
 export class InterestSetupPageComponent {
-
+  panelOpenState = false;
 }
