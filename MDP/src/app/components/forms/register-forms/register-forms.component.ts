@@ -35,9 +35,9 @@ export class RegisterFormsComponent {
   firstFormGroup = this._formBuilder.group({
     firstCtrl: ['', Validators.required],
   });
-  secondFormGroup = this._formBuilder.group({
-    secondCtrl: ['', Validators.required],
-  });
+  // secondFormGroup = this._formBuilder.group({
+  //   secondCtrl: ['', Validators.required],
+  // });
   isLinear = true;
   constructor(private _formBuilder: FormBuilder) {}
 }

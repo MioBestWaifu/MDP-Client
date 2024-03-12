@@ -31,8 +31,8 @@
             </div>
         </form>
     </mat-step>
-    <mat-step [stepControl]="secondFormGroup" label="Set your preferences">
-        <form [formGroup]="secondFormGroup">
+    <mat-step  label="Set your preferences">
+        <form >
             <mdp-interest-setup-page></mdp-interest-setup-page>
             <div>
                 <button mat-button matStepperPrevious>Back</button>
@@ -42,10 +42,12 @@
     </mat-step>
     <mat-step>
         <ng-template matStepLabel>Done</ng-template>
-        <p>You are now done.</p>
+        <p>You can now access the contents.</p>
+        <br>
         <div>
             <button mat-button matStepperPrevious>Back</button>
-            <button mat-button (click)="stepper.reset()">Reset</button>
+            <!-- <button mat-button (click)="stepper.reset()">Reset</button> -->
+            <button routerLink="/home" mat-stroked-button color="primary">Ir</button>
         </div>
     </mat-step>
 </mat-stepper>
