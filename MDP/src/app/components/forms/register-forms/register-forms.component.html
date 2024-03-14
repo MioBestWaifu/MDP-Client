@@ -4,15 +4,15 @@
             <ng-template matStepLabel>Fill out your credentials</ng-template>
             <p><mat-form-field>
                     <mat-label>Username</mat-label>
-                    <input matInput placeholder="" formControlName="firstCtrl" required>
+                    <input matInput placeholder="" formControlName="username" required>
                 </mat-form-field></p>
             <p><mat-form-field>
                     <mat-label>Email</mat-label>
-                    <input matInput placeholder="" formControlName="firstCtrl" required>
+                    <input matInput placeholder="" formControlName="email" required>
                 </mat-form-field></p>
             <p><mat-form-field>
                     <mat-label>Enter your password</mat-label>
-                    <input matInput [type]="hide ? 'password' : 'text'">
+                    <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
                     <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
                         [attr.aria-pressed]="hide">
                         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
@@ -20,7 +20,7 @@
                 </mat-form-field></p>
             <p><mat-form-field>
                     <mat-label>Confirm your password</mat-label>
-                    <input matInput [type]="hide ? 'password' : 'text'">
+                    <input matInput [type]="hide ? 'password' : 'text'" formControlName="confirmedPassword">
                     <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
                         [attr.aria-pressed]="hide">
                         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>

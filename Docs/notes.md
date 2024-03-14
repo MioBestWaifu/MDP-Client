@@ -15,3 +15,4 @@
 - A recalculação de rows do ArtifactList tá ignorando se é portrait, verificar isso dps
 - Temos um ExpressionChangedAfterItHasBeenCheckedError por mudar artifactRows em ngAfterViewInit no HomePageComponent. Não parece estar dando problema, mas fica atento a isso.
 - Muitas mudanças não estão sendo documentadas. Atualizar a documentação.
+- No InterestedSetupPageComponente, colocar um for onde irá criar checkbox e preenche-los com as categorias de cada artefato

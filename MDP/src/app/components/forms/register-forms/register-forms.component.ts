@@ -9,7 +9,7 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrl: './register-forms.component.scss'
 })
 export class RegisterFormsComponent {
-   @Output() changeFormLogin: EventEmitter<any> = new EventEmitter();
+   @Output() changeFormLogin: EventEmitter<void> = new EventEmitter();
    hide = true;
   // public usernameValue: string = '';
   // public emailValue: string = '';
@@ -33,7 +33,12 @@ export class RegisterFormsComponent {
   // }
 
   firstFormGroup = this._formBuilder.group({
-    firstCtrl: ['', Validators.required],
+    username: ['',Validators.required],
+    email: ['',Validators.required],
+    password: ['',Validators.required],
+    confirmedPassword: ['',Validators.required]
+    
+    
   });
   // secondFormGroup = this._formBuilder.group({
   //   secondCtrl: ['', Validators.required],
