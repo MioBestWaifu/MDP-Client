@@ -6,6 +6,11 @@ import { MediaQueryService } from "../../../services/media-query.service";
 import { BaseComponent } from "../../base/base.component";
 import { MatDialog } from "@angular/material/dialog";
 import { RateDialogComponent } from "../../dialogs/rate-dialog/rate-dialog.component";
+import {
+  MatSnackBar,
+  MatSnackBarHorizontalPosition,
+  MatSnackBarVerticalPosition,
+} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'mdp-basic-work-widget',
@@ -14,8 +19,11 @@ import { RateDialogComponent } from "../../dialogs/rate-dialog/rate-dialog.compo
 })
 export class BasicWorkWidgetComponent extends BaseComponent {
   @Input() work: Artifact = new Artifact();
+  horizontalPosition: MatSnackBarHorizontalPosition = 'center';
+  verticalPosition: MatSnackBarVerticalPosition = 'top';
+  
   constructor(mediaQuery: MediaQueryService,common: CommonContainerService, 
-    public connection: InteractionService, elementRef: ElementRef, renderer: Renderer2, private dialog: MatDialog
+    public connection: InteractionService, elementRef: ElementRef, renderer: Renderer2, private dialog: MatDialog, private _snackBar: MatSnackBar
   ) {
     super(mediaQuery, common, elementRef, renderer);
   }
@@ -23,6 +31,7 @@ export class BasicWorkWidgetComponent extends BaseComponent {
   RateChanged(newRate: number) {
     this.connection.Rate(this.connection.rateUser, newRate, this.work.id);
   }
+
   openRateDialog() {
     const dialogRef = this.dialog.open(RateDialogComponent, {
       width: '450px',
@@ -32,6 +41,13 @@ export class BasicWorkWidgetComponent extends BaseComponent {
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
 
+    });
+  }
+
+  openSnackBar() {
+    this._snackBar.open('Added to favorites', 'Close', {
+      horizontalPosition: this.horizontalPosition,
+      verticalPosition: this.verticalPosition,
     });
   }
 }
