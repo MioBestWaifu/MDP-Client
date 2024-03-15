@@ -1,62 +1,15 @@
 <mat-accordion>
-    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+    <!-- Deixar dinamico para cada midia -->
+    <mat-expansion-panel>
         <mat-expansion-panel-header>
             <mat-panel-title>
-                <mat-checkbox>Anime</mat-checkbox>
+                <mat-checkbox checked="{{midiaChecked}}">{{artifactMedia}}</mat-checkbox>
             </mat-panel-title>
-            <mat-panel-description>
-                Currently I am {{panelOpenState ? 'open' : 'closed'}}
-            </mat-panel-description>
+            <mat-panel-description>Do you like this media?</mat-panel-description>
         </mat-expansion-panel-header>
-        <!-- Colocar um for onde irá criar e preencher esses checkbox com as categroias de cada artefato  -->
-        <p><mat-checkbox>Category 1</mat-checkbox></p>   
-        <p><mat-checkbox>Category 2</mat-checkbox></p> 
-        <p><mat-checkbox>Category 3</mat-checkbox></p> 
-        <p><mat-checkbox>Category 4</mat-checkbox></p>     
-    </mat-expansion-panel>
-    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-        <mat-expansion-panel-header>
-            <mat-panel-title>
-                <mat-checkbox>Book</mat-checkbox>
-            </mat-panel-title>
-            <mat-panel-description>
-                Currently I am {{panelOpenState ? 'open' : 'closed'}}
-            </mat-panel-description>
-        </mat-expansion-panel-header>
-        <p>I'm visible because I am open</p>       
-    </mat-expansion-panel>
-    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-        <mat-expansion-panel-header>
-            <mat-panel-title>
-                <mat-checkbox>Mangá</mat-checkbox>
-            </mat-panel-title>
-            <mat-panel-description>
-                Currently I am {{panelOpenState ? 'open' : 'closed'}}
-            </mat-panel-description>
-        </mat-expansion-panel-header>
-        <p>I'm visible because I am open</p>       
-    </mat-expansion-panel>
-    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-        <mat-expansion-panel-header>
-            <mat-panel-title>
-                <mat-checkbox>Games</mat-checkbox>
-            </mat-panel-title>
-            <mat-panel-description>
-                Currently I am {{panelOpenState ? 'open' : 'closed'}}
-            </mat-panel-description>
-        </mat-expansion-panel-header>
-        <p>I'm visible because I am open</p>       
-    </mat-expansion-panel>
-    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-        <mat-expansion-panel-header>
-            <mat-panel-title>
-                <mat-checkbox>Music</mat-checkbox>
-            </mat-panel-title>
-            <mat-panel-description>
-                Currently I am {{panelOpenState ? 'open' : 'closed'}}
-            </mat-panel-description>
-        </mat-expansion-panel-header>
-        <p>I'm visible because I am open</p>       
+        <!-- Ao clicar no checkbox inferiores, o tipo de midia deverá ficar clicado, mas o contrario não-->
+        <li *ngFor="let cat of artifactCategories"><mat-checkbox checked="{{categoryChecked}}" (click)="changeCheckbox()">{{cat}}</mat-checkbox></li>
     </mat-expansion-panel>
     <br>
 </mat-accordion>
+

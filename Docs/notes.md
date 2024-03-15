@@ -16,3 +16,4 @@
 - Temos um ExpressionChangedAfterItHasBeenCheckedError por mudar artifactRows em ngAfterViewInit no HomePageComponent. Não parece estar dando problema, mas fica atento a isso.
 - Muitas mudanças não estão sendo documentadas. Atualizar a documentação.
 - No InterestedSetupPageComponente, colocar um for onde irá criar checkbox e preenche-los com as categorias de cada artefato
+- no InterestedSetupPageComponente, deixar os titulos do checkboxs(tipo de midia) dinamicos
