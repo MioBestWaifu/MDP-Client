@@ -3,12 +3,12 @@
     <mat-expansion-panel>
         <mat-expansion-panel-header>
             <mat-panel-title>
-                <mat-checkbox checked="{{midiaChecked}}">{{artifactMedia}}</mat-checkbox>
+                <mat-checkbox [checked]="allComplete">{{artifactMedia}}</mat-checkbox>
             </mat-panel-title>
             <mat-panel-description>Do you like this media?</mat-panel-description>
         </mat-expansion-panel-header>
         <!-- Ao clicar no checkbox inferiores, o tipo de midia deverá ficar clicado, mas o contrario não-->
-        <li *ngFor="let cat of artifactCategories"><mat-checkbox checked="{{categoryChecked}}" (click)="changeCheckbox()">{{cat}}</mat-checkbox></li>
+        <p *ngFor="let cat of artifactCategories"><mat-checkbox (change)="setAll($event.checked)">{{cat}}</mat-checkbox></p>
     </mat-expansion-panel>
     <br>
 </mat-accordion>

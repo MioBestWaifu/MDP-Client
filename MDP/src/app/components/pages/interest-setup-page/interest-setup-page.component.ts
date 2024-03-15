@@ -12,13 +12,11 @@ export class InterestSetupPageComponent {
   @Input() artifactMedia: string = Artifact.testArtifact.media;
   @Input() midiaChecked: boolean = false;
   @Input() categoryChecked: boolean = false;
-
-  // Um for para isso abaixo
-  catCheckBox= [
-    {value: this.artifactCategories[1], completed: false}
-  ]
-
-  changeCheckbox() {
-    console.log(this.catCheckBox);
+  allComplete: boolean = false;
+  setAll(completed: boolean){
+    if(completed == false){
+      this.allComplete =true;
+    }
+    this.allComplete = completed;
   }
 }
