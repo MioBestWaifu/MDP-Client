@@ -1,41 +1,53 @@
-<div id="register">
-    <p *ngIf="passwordsDiffer">The passwords are different!</p>
-    <div id="username">
-        <h2>Username</h2>
-        <div class="box">
+<mat-stepper [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Fill out your credentials</ng-template>
+            <p><mat-form-field>
+                    <mat-label>Username</mat-label>
+                    <input matInput placeholder="" formControlName="username" required>
+                </mat-form-field></p>
+            <p><mat-form-field>
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="" formControlName="email" required>
+                </mat-form-field></p>
+            <p><mat-form-field>
+                    <mat-label>Enter your password</mat-label>
+                    <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                        [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                </mat-form-field></p>
+            <p><mat-form-field>
+                    <mat-label>Confirm your password</mat-label>
+                    <input matInput [type]="hide ? 'password' : 'text'" formControlName="confirmedPassword">
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                        [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                </mat-form-field></p>
             <div>
-                <input type="text" [(ngModel)]="usernameValue">
+                <button mat-button matStepperNext>Next</button>
             </div>
-        </div>
-    </div>
-    <div id="email">
-        <h2>Email</h2>
-        <div class="box">
+        </form>
+    </mat-step>
+    <mat-step  label="Set your preferences">
+        <form >
+            <mdp-interest-setup-page></mdp-interest-setup-page>
             <div>
-                <input type="text" [(ngModel)]="emailValue">
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button matStepperNext>Next</button>             
             </div>
-        </div>
-    </div>
-    <div id="password">
+        </form>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Done</ng-template>
+        <p>You can now access the contents.</p>
+        <br>
         <div>
-            <h2>Password</h2>
-            <div [ngClass]="passwordsDiffer? 'box-red box':'box'">
-                <div>
-                    <input type="password" [(ngModel)]="passwordValue">
-                </div>
-            </div>
+            <button mat-button matStepperPrevious>Back</button>
+            <!-- <button mat-button (click)="stepper.reset()">Reset</button> -->
+            <button routerLink="/home" mat-stroked-button color="primary">Ir</button>
         </div>
-        <div>
-            <h2>Confirme Password</h2>
-            <div [ngClass]="passwordsDiffer? 'box-red box':'box'">
-                <div>
-                    <input type="password" [(ngModel)]="passwordConfirmedValue">
-                </div>
-            </div>
-        </div>
-    </div>
-    <p (click)="handleLoginClick()">Do you already have registration? Log in now.</p>
-    <div id="buttons-sign">
-        <button (click)="handleRegisterClick()">Register</button>
-    </div>
-</div>
+    </mat-step>
+</mat-stepper>

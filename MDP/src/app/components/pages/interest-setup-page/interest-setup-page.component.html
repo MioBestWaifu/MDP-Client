@@ -1,1 +1,15 @@
-<p>interest-setup-page works!</p>
+<mat-accordion>
+    <!-- Deixar dinamico para cada midia -->
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <mat-checkbox [checked]="allComplete">{{artifactMedia}}</mat-checkbox>
+            </mat-panel-title>
+            <mat-panel-description>Do you like this media?</mat-panel-description>
+        </mat-expansion-panel-header>
+        <!-- Ao clicar no checkbox inferiores, o tipo de midia deverá ficar clicado, mas o contrario não-->
+        <p *ngFor="let cat of artifactCategories"><mat-checkbox (change)="setAll($event.checked)">{{cat}}</mat-checkbox></p>
+    </mat-expansion-panel>
+    <br>
+</mat-accordion>
+

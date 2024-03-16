@@ -1,14 +1,17 @@
-#main{
+#main {
     display: flex;
     justify-content: center;
-    width: 50%;
-    height: 100%;
-    margin: 0 auto;
-    align-items: center;
+    margin: 50px auto;
+    // align-items: center;
     // background-color: darkgoldenrod;
 }
 
-mdp-login-forms{
- width: 100%;
- height: 50%;
+mdp-login-forms {
+    width: 50%;
+    height: 50%;
+}
+
+mdp-register-forms {
+    width: 80%;
+    height: 50%;
 }

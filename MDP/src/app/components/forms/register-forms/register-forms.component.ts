@@ -1,6 +1,6 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { BaseComponent } from '../../base/base.component';
-
+import { FormBuilder, Validators } from '@angular/forms';
 @Component({
   selector: 'mdp-register-forms',
 
@@ -8,27 +8,22 @@ import { BaseComponent } from '../../base/base.component';
   templateUrl: './register-forms.component.html',
   styleUrl: './register-forms.component.scss'
 })
-export class RegisterFormsComponent extends BaseComponent {
-  public usernameValue: string = '';
-  public emailValue: string = '';
-  public passwordValue: string = '';
-  public passwordConfirmedValue: string = '';
-  public passwordsDiffer: boolean = false;
+export class RegisterFormsComponent {
+   @Output() changeFormLogin: EventEmitter<void> = new EventEmitter();
+   hide = true;
 
-  @Output() changeFormLogin: EventEmitter<any> = new EventEmitter();
-
-  handleRegisterClick() {
-    if (this.passwordValue == this.passwordConfirmedValue) {
-      this.usernameValue;
-      this.emailValue;
-      this.passwordValue;
-
-      this.passwordsDiffer = false;
-    } else {
-      this.passwordsDiffer = true;
-    }
-  }
-  handleLoginClick() {
-    this.changeFormLogin.emit();
-  }
+  firstFormGroup = this._formBuilder.group({
+    username: ['',Validators.required],
+    email: ['',Validators.required],
+    password: ['',Validators.required],
+    confirmedPassword: ['',Validators.required]
+    
+    
+  });
+  // secondFormGroup = this._formBuilder.group({
+  //   secondCtrl: ['', Validators.required],
+  // });
+  isLinear = true;
+  constructor(private _formBuilder: FormBuilder) {}
 }
+
