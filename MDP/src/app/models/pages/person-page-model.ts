@@ -9,7 +9,7 @@ export class PersonPageModel extends BasePageModel{
 
     constructor(){
         super()
-        this.person = Person.testPerson
+        /* this.person = Person.testPerson
         this.artifactParticipations = []
         this.companyAffiliations = []
 
@@ -19,6 +19,6 @@ export class PersonPageModel extends BasePageModel{
 
         for (let i = 0; i < 3; i++) {
             this.companyAffiliations.push(Link.testCompanyAffiliation)
-        }
+        } */
     }
 }

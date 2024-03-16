@@ -10,7 +10,7 @@ export class FavoritesPageModel extends BasePageModel{
 
     constructor(){
         super();
-        this.groups = ["Media","Category","Year"];
+        /* this.groups = ["Media","Category","Year"];
         this.allFavorites = [];
         for (let i = 0; i < 3; i++) {
             this.allFavorites.push(Object.assign({}, Artifact.testArtifact));
@@ -28,6 +28,6 @@ export class FavoritesPageModel extends BasePageModel{
             this.allFavorites[i].categories = ["Romance"];
             this.allFavorites[i].media = "Anime";
         }
-        this.groupedArtifacts = Utils.GroupArtifacts("media", this.allFavorites);
+        this.groupedArtifacts = Utils.GroupArtifacts("media", this.allFavorites); */
     }
 }

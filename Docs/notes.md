@@ -15,5 +15,9 @@
 - A recalculação de rows do ArtifactList tá ignorando se é portrait, verificar isso dps
 - Temos um ExpressionChangedAfterItHasBeenCheckedError por mudar artifactRows em ngAfterViewInit no HomePageComponent. Não parece estar dando problema, mas fica atento a isso.
 - Muitas mudanças não estão sendo documentadas. Atualizar a documentação.
+
 - No InterestedSetupPageComponente, colocar um for onde irá criar checkbox e preenche-los com as categorias de cada artefato
 - no InterestedSetupPageComponente, deixar os titulos do checkboxs(tipo de midia) dinamicos
+
+- Deve haver um redirect de /work para /media para comportar alguns comportamentos do servidor, para isso /work deve perguntar ao servidor qual é a midia e redirecionar para lá.
+

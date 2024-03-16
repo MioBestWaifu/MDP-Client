@@ -3,12 +3,13 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { CommonContainerService } from './common-container.service';
 import { Token } from '../classes/token';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticatorService {
-  private readonly URL = "https://api.yancosta.online/mdp/auth";
+  private readonly URL = environment.baseURL+"/auth";
 
   constructor(private common: CommonContainerService, private http: HttpClient) { }
 

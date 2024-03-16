@@ -1,11 +1,11 @@
 import { Artifact } from "../artifacts/artifact"
-import { Interaction } from "../interaction";
+import { Review } from "../review";
 import { Link } from "../link"
 import { BasePageModel } from "./base-page-model"
 
 export class WorkPageModel extends BasePageModel{
     work!:Artifact;
-    reviews!:Interaction[];
+    reviews!:Review[];
     participants:Link[] | undefined;
     relatedWorks:Link[] | undefined;
     newsAndHighlights:Link[] | undefined;
@@ -13,7 +13,7 @@ export class WorkPageModel extends BasePageModel{
 
     constructor(){
         super();
-        this.work = Artifact.testArtifact;
+        /* this.work = Artifact.testArtifact;
         this.reviews = [];
         this.participants = [];
         this.relatedWorks = [];
@@ -21,7 +21,7 @@ export class WorkPageModel extends BasePageModel{
         this.fractions = [];
 
         for (let i = 0; i < 7; i++) {
-            this.reviews.push(Interaction.testReview);
+            this.reviews.push(Review.testReview);
         }
 
         this.participants.push(Link.testCompanyAffiliation);
@@ -39,7 +39,7 @@ export class WorkPageModel extends BasePageModel{
 
         for (let i = 0; i < 7; i++) {
             this.fractions.push(Link.testFraction);
-        }
+        } */
 
     }
 }

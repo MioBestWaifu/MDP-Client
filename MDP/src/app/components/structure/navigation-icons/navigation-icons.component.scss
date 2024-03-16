@@ -15,6 +15,8 @@ i {
   width: 100%;
   display: inline-flex;
   justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
   // background-color: chartreuse;
 }
 
@@ -70,4 +72,16 @@ $color: rgb(51, 34, 146);
       width: 100%;
     }
   }
+}
+
+#button-theme div{
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #0000005b;
+}
+#button-theme :hover{
+ background-color: #032992;
+ cursor: pointer;
 }

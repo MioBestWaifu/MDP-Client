@@ -51,6 +51,7 @@ import { WorkRelationsComponent } from './components/widgets/work-relations/work
 import { UserWidgetComponent } from './components/widgets/user-widget/user-widget.component';
 import { FullLogoComponent } from './components/full-logo/full-logo.component';
 import { SmallLogoComponent } from './components/small-logo/small-logo.component';
+import { ChipSearchComponent } from './components/controls/chip-search/chip-search.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CompanyPageComponent } from './components/pages/company-page/company-page.component';
@@ -120,7 +121,11 @@ import { MatRadioModule } from '@angular/material/radio';
     BasePageComponent,
     FullLogoComponent,
     SmallLogoComponent,
+
     RateDialogComponent
+
+    ChipSearchComponent 
+
   ],
   imports: [
     CommonModule,

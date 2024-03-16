@@ -65,7 +65,7 @@ export class CarouselComponent extends BaseComponent {
 
   SecondPassed() {
     this.secondsPassed++;
-    console.log("Seconds passed: " + this.secondsPassed);
+    /* console.log("Seconds passed: " + this.secondsPassed); */
     if (this.secondsPassed >= this.secondsUntilSwitching) {
       //this.secondsUntilSwitching = this.secondsUntilSwitching + 10;
       this.Right();
@@ -96,7 +96,7 @@ export class CarouselComponent extends BaseComponent {
     }
 
     this.secondsPassed = 0;
-    console.log("Right");
+    /* console.log("Right"); */
 
     this.slideRight[1] = true;
     this.slideRight[2] = true;

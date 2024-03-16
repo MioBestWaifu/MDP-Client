@@ -8,7 +8,7 @@ export class HomePageModel extends BasePageModel{
 
     constructor(){
         super()
-        this.artifacts = []
+        /* this.artifacts = []
 
         for (let i = 0; i < 15; i++) {
             this.artifacts.push(Artifact.testArtifact)
@@ -16,6 +16,6 @@ export class HomePageModel extends BasePageModel{
         this.newsAndHighlights = []
         this.newsAndHighlights.push(Link.testCarouselItem0)
         this.newsAndHighlights.push(Link.testCarouselItem1)
-        this.newsAndHighlights.push(Link.testCarouselItem2)
+        this.newsAndHighlights.push(Link.testCarouselItem2) */
     }
 }
