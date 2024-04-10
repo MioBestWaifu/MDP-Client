@@ -122,7 +122,7 @@ import { MatRadioModule } from '@angular/material/radio';
     FullLogoComponent,
     SmallLogoComponent,
 
-    RateDialogComponent
+    RateDialogComponent,
 
     ChipSearchComponent 
 
