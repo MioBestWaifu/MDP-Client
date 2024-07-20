@@ -31,4 +31,7 @@ export class LoginFormsComponent extends BaseComponent {
   // invalidCredentials(){
 
   // }
+  onSubmit() {
+
+  }
 }
