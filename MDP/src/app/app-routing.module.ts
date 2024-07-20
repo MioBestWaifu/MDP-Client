@@ -34,7 +34,7 @@ const routes: Routes = [
   { path: 'game/:id', component: WorkPageComponent },
   { path: 'music/:id', component: WorkPageComponent },
   { path: 'manga/:id', component: WorkPageComponent },
-  { path: 'sign', component: SignPageComponent },
+  { path: 'signin', component: SignPageComponent },
   { path: 'signup', component: SignupPageComponent },
   { path: 'anime', component: AnimePageComponent },
   { path: 'book', component: BookPageComponent },

@@ -1,4 +1,4 @@
-<div id="container">
+<!-- <div id="container">
     <div style="display: flex; align-items: center; width: 10%;">
         <i style="font-size: 35px; color: azure;" class="material-symbols-outlined icon" (click)="ToggleLateralBar()">menu</i>
         @if (mediaQuery.portrait){
@@ -9,4 +9,23 @@
     </div>
     <mdp-search-bar></mdp-search-bar>
     <mdp-navigation-icons></mdp-navigation-icons>
-  </div>
+  </div> -->
+
+
+
+  <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+        <a routerLink="/browse" class="navbar-brand">
+            <mdp-full-logo></mdp-full-logo>
+        </a>
+        <!-- <div *ngIf="!isAuthenticated"> -->
+            <form class="d-flex" role="auth">
+                <button type="button" routerLink="/signin" class="btn btn-outline-secondary me-2">Sign in</button>
+                <button type="button" routerLink="/signup" class="btn btn-secondary">Sign up</button>
+            </form>
+        <!-- </div> -->
+        <!-- <div *ngIf="isAuthenticated">
+            <app-profile-photo-dropdown />
+        </div> -->
+    </div>
+</nav>
