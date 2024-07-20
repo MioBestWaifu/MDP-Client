@@ -69,6 +69,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { JsonPipe } from '@angular/common';
 import { MatRadioModule } from '@angular/material/radio';
+import { SignupPageComponent } from './components/pages/signup-page/signup-page.component';
 
 @NgModule({
   declarations: [
@@ -121,6 +122,7 @@ import { MatRadioModule } from '@angular/material/radio';
     BasePageComponent,
     FullLogoComponent,
     SmallLogoComponent,
+    SignupPageComponent,
 
     RateDialogComponent,
 

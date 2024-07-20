@@ -1,4 +1,4 @@
-<mat-stepper [linear]="isLinear" #stepper>
+<!-- <mat-stepper [linear]="isLinear" #stepper>
     <mat-step [stepControl]="firstFormGroup">
         <form [formGroup]="firstFormGroup">
             <ng-template matStepLabel>Fill out your credentials</ng-template>
@@ -45,9 +45,35 @@
         <p>You can now access the contents.</p>
         <br>
         <div>
-            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperPrevious>Back</button> -->
             <!-- <button mat-button (click)="stepper.reset()">Reset</button> -->
-            <button routerLink="/home" mat-stroked-button color="primary">Ir</button>
+            <!-- <button routerLink="/home" mat-stroked-button color="primary">Ir</button>
         </div>
     </mat-step>
-</mat-stepper>
+</mat-stepper> -->
+<form>
+    <div class="mb-3">
+        <label for="exampleInputUsername" class="form-label">Username</label>
+        <input type="text" class="form-control" id="exampleInputUsername">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword2" class="form-label">Confirm password</label>
+        <input type="password" class="form-control" id="exampleInputPassword2">
+    </div>
+    <div class="mb-4">
+        <label for="exampleInputDate" class="form-label">Put your age</label>
+        <input type="date" class="form-control" id="exampleInputDate">
+    </div>
+    <div class="d-grid">
+      <button type="submit" class="btn btn-primary">Create account</button>  
+    </div> 
+</form>
