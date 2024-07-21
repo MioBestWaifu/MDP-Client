@@ -20,29 +20,28 @@
 
 <!-- (@slideLeft.done) = "FinishedSliding()" (@slideRight.done) = "FinishedSliding()" -->
 
-<div id="carouselExampleIndicators" class="carousel slide pt-3">
+<div id="carouselExampleIndicators" class="carousel slide" style="background-color: black;">
     <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button *ngFor="let link of links; let i = index" type="button" data-bs-target="#carouselExampleIndicators"
+            [attr.data-bs-slide-to]="i"
+            [class.active]="i === 0"
+            [attr.aria-current]="i === 0 ? 'true': null"
+            [attr.aria-label]="'Slide ' + (i + 1)">
+        </button>
     </div>
     <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="https://th.bing.com/th/id/R.72767aaeaa54d70c18129ed0b2da4aa9?rik=UQH7S4tZcBVtXQ&riu=http%3a%2f%2fstatic.zerochan.net%2fSuzumiya.Haruhi.full.861431.jpg&ehk=at5LnzOIIilysX1mnEeGdLFIhbdySc3%2b8PuFdOrixuU%3d&risl=&pid=ImgRaw&r=0" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="https://wallpapercave.com/wp/wp9345819.jpg" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="https://cdn.wallpapersafari.com/0/85/bcpSo3.jpg" class="d-block w-100" alt="...">
-      </div>
+        <div *ngFor="let link of links; let i = index" [attr.class]="'carousel-item' + (i === 0 ? 'active': null)">  
+           <img [src]="links[i].imgUrl??'assets/imgs/defaultnews.png'" (click)="router.navigate([links[i].redirectTo])" class="d-block w-100" alt="...">
+        </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
     </button>
-  </div>
+</div>
