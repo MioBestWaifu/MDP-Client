@@ -70,6 +70,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { JsonPipe } from '@angular/common';
 import { MatRadioModule } from '@angular/material/radio';
 import { SignupPageComponent } from './components/pages/signup-page/signup-page.component';
+import { StarListComponent } from './components/structure/star-list/star-list.component';
+import { GenreListComponent } from './components/structure/genre-list/genre-list.component';
 
 @NgModule({
   declarations: [
@@ -123,7 +125,8 @@ import { SignupPageComponent } from './components/pages/signup-page/signup-page.
     FullLogoComponent,
     SmallLogoComponent,
     SignupPageComponent,
-
+    StarListComponent,
+    GenreListComponent,
     RateDialogComponent,
 
     ChipSearchComponent 

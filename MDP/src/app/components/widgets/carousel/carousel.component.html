@@ -30,7 +30,7 @@
         </button>
     </div>
     <div class="carousel-inner">
-        <div *ngFor="let link of links; let i = index" [attr.class]="'carousel-item' + (i === 0 ? 'active': null)">  
+        <div *ngFor="let link of links; let i = index" [attr.class]="'carousel-item ' + (i === 0 ? 'active': null)">  
            <img [src]="links[i].imgUrl??'assets/imgs/defaultnews.png'" (click)="router.navigate([links[i].redirectTo])" class="d-block w-100" alt="...">
         </div>
     </div>

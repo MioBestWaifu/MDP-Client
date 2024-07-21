@@ -34,4 +34,10 @@ export class BasicWorkWidgetComponent extends BaseComponent {
 
     });
   }
+  
+  isCollapsed: boolean = true;
+
+  toggleText() {
+    this.isCollapsed = !this.isCollapsed;
+  }
 }
