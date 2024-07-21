@@ -20,7 +20,7 @@
 
 <!-- (@slideLeft.done) = "FinishedSliding()" (@slideRight.done) = "FinishedSliding()" -->
 
-<div id="carouselExampleIndicators" class="carousel slide" style="background-color: black;">
+<div id="carouselExampleIndicators" class="carousel slide">
     <div class="carousel-indicators">
         <button *ngFor="let link of links; let i = index" type="button" data-bs-target="#carouselExampleIndicators"
             [attr.data-bs-slide-to]="i"
