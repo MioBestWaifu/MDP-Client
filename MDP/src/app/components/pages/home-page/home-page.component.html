@@ -1,8 +1,16 @@
-<div [ngClass]="mediaQuery.portrait ? 'portraitContentWrapper' : 'contentWrapper'">
+<!-- <div [ngClass]="mediaQuery.portrait ? 'portraitContentWrapper' : 'contentWrapper'">
     <div id="main" class="verticalFlex">
-      <mdp-carousel [links]="pageModel.newsAndHighlights"></mdp-carousel>
+      
       <mdp-chip-search></mdp-chip-search>
       <mdp-artifact-list #list [artifacts]="pageModel.artifacts"></mdp-artifact-list>
     </div>
     <mdp-ad-list *ngIf="!mediaQuery.portrait"></mdp-ad-list>
+</div> -->
+<div class="container">
+  <section>
+    <mdp-carousel [links]="pageModel.newsAndHighlights"></mdp-carousel>  
+  </section>
+  <section>
+    <mdp-artifact-list #list [artifacts]="pageModel.artifacts"></mdp-artifact-list>
+  </section>
 </div>
