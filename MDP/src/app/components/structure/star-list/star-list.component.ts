@@ -2,7 +2,7 @@ import { NgFor, NgIf } from '@angular/common';
 import { Component, Input, OnChanges } from '@angular/core';
 
 @Component({
-  selector: 'app-star-list',
+  selector: 'mdp-star-list',
   templateUrl: './star-list.component.html',
   styleUrl: './star-list.component.scss'
 })
