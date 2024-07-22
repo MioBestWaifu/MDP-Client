@@ -47,7 +47,7 @@
                       <small class="text-body-secondary">{{ author }}, </small>
                   } -->
               </div>
-              <!-- <app-genre-list [genres]="work.categories" /> -->
+              <app-genre-list [categories]="work.categories" />
               <p [class.collapsed]="isCollapsed" class="card-text mt-3 mb-0" style="text-align: justify;">
                   {{ work.description }}
               </p>

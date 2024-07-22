@@ -1,3 +1,2 @@
-@for (genre of genres; track $index) {
-    <span class="badge rounded-pill text-bg-secondary me-1">{{ genre }}</span>
-}
+
+<span *ngFor="let category of categories" class="badge rounded-pill text-bg-secondary me-1">{{ category.name }}</span>
