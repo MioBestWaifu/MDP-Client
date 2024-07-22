@@ -1,13 +1,8 @@
 import { NgFor, NgIf } from '@angular/common';
 import { Component, Input, OnChanges } from '@angular/core';
-import { StarComponent } from '../../shared/icons/stars/star/star.component';
-import { FillStarComponent } from '../../shared/icons/stars/fill-star/fill-star.component';
-import { HalfFillStarComponent } from '../../shared/icons/stars/half-fill-star/half-fill-star.component';
 
 @Component({
   selector: 'app-star-list',
-  standalone: true,
-  imports: [NgFor, NgIf, StarComponent, FillStarComponent, HalfFillStarComponent],
   templateUrl: './star-list.component.html',
   styleUrl: './star-list.component.scss'
 })
@@ -17,7 +12,7 @@ export class StarListComponent implements OnChanges {
   
   ngOnChanges() {
     this.stars = [];
-    let rate = this.value;
+    let rate = this.value / 2;
 
     for (let i = 0; i < 5; i++) {
       if (rate >= 1) {

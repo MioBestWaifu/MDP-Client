@@ -72,6 +72,9 @@ import { MatRadioModule } from '@angular/material/radio';
 import { SignupPageComponent } from './components/pages/signup-page/signup-page.component';
 import { StarListComponent } from './components/structure/star-list/star-list.component';
 import { GenreListComponent } from './components/structure/genre-list/genre-list.component';
+import { StarComponent } from './components/icons/stars/star/star.component';
+import { FillStarComponent } from './components/icons/stars/fill-star/fill-star.component';
+import { HalfFillStarComponent } from './components/icons/stars/half-fill-star/half-fill-star.component';
 
 @NgModule({
   declarations: [
@@ -126,6 +129,9 @@ import { GenreListComponent } from './components/structure/genre-list/genre-list
     SmallLogoComponent,
     SignupPageComponent,
     StarListComponent,
+    StarComponent, 
+    FillStarComponent, 
+    HalfFillStarComponent,
     GenreListComponent,
     RateDialogComponent,
 

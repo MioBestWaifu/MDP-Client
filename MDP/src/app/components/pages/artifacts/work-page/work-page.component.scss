@@ -1,18 +1,23 @@
-@import '../../../../../variables.scss';
-#main {
-    width: 95%;
-    margin: 0 auto;
-    // background-color: rgb(43, 42, 42);
-    background-color: $darkThemeBackgroundColor;
-}
-mdp-basic-work-widget{
-    // width: 100%;
-    // height: $summaryWidgetHeight;
-    // background-color: aqua;
+// @import '../../../../../variables.scss';
+// #main {
+//     width: 95%;
+//     margin: 0 auto;
+//     // background-color: rgb(43, 42, 42);
+//     background-color: $darkThemeBackgroundColor;
+// }
+
+// mdp-vertical-folder{
+//     // font-size: $largeFontSize;
+//     margin-top: 150px;
+//     background-color: darkblue;
+// }
+// mdp-basic-work-widget{
+//     // width: 100%;
+//     // height: $summaryWidgetHeight;
+//     background-color: aqua;
+//     // display: flex;
+//     margin-top: 500px;
+// }
+.container{
     margin-top: 80px;
-    // display: flex;
-} mdp-vertical-folder{
-    font-size: $largeFontSize;
-    margin-top: 15px;
-    background-color: darkblue;
 }
