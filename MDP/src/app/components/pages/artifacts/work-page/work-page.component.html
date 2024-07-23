@@ -20,25 +20,25 @@
     <mdp-reviews-list [vertical]="true" *ngIf="!mediaQuery.portrait" [reviews]="pageModel.reviews"></mdp-reviews-list>
 </div> -->
 <div class="container">
-        <mdp-basic-work-widget [work]="pageModel.work"></mdp-basic-work-widget>
+        <mdp-basic-work-widget [work]="pageModel.work" />
         <div class="accordion" id="accordionWorkPage">
             <div class="accordion-item">
-                <mdp-news-and-highlights-widget target="One" [links]="pageModel.newsAndHighlights??[]"></mdp-news-and-highlights-widget>
+                <mdp-news-and-highlights-widget target="One" [links]="pageModel.newsAndHighlights??[]" />
             </div>
             <div class="accordion-item">
-                <mdp-link-list-widget *ngIf="showFractions" target="Two" [label]="'Fractions Label'" [links]="pageModel.fractions??[]"></mdp-link-list-widget>
+                <mdp-link-list-widget *ngIf="showFractions" target="Two" [label]="'Fractions Label'" [links]="pageModel.fractions??[]" />
             </div>
             <div class="accordion-item">
-                <mdp-link-list-widget target="Three" [label]="'Participants'" [links]="pageModel.participants??[]"></mdp-link-list-widget>
+                <mdp-link-list-widget target="Three" [label]="'Participants'" [links]="pageModel.participants??[]" />
             </div>
             <div class="accordion-item">
-                <mdp-link-list-widget target="Four" [label]="'Related'" [links]="pageModel.relatedWorks??[]"></mdp-link-list-widget>
+                <mdp-link-list-widget target="Four" [label]="'Related'" [links]="pageModel.relatedWorks??[]" />
             </div>
         </div>
-        <mdp-reviews-list [reviews]="pageModel.reviews"></mdp-reviews-list>  
+        <mdp-reviews-list [reviews]="pageModel.reviews" />  
 </div>
 <!-- <mdp-reviews-list *ngIf="mediaQuery.portrait" [reviews]="pageModel.reviews"></mdp-reviews-list>
-        <mdp-reviews-list [vertical]="true" *ngIf="!mediaQuery.portrait" [reviews]="pageModel.reviews"></mdp-reviews-list> -->
+<mdp-reviews-list [vertical]="true" *ngIf="!mediaQuery.portrait" [reviews]="pageModel.reviews"></mdp-reviews-list> -->
 
 
 
