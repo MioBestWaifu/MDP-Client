@@ -21,6 +21,7 @@ export class SearchBarComponent extends BaseComponent {
   }
 
   Search() {
+    //This shit does not work
     this.router.navigate(['/search'], { queryParams: { query: this.query } });
   }
 
