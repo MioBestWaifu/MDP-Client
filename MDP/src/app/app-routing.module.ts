@@ -16,6 +16,7 @@ import { BookPageComponent } from './components/pages/artifacts/book-page/book-p
 import { GamePageComponent } from './components/pages/artifacts/game-page/game-page.component';
 import { MangaPageComponent } from './components/pages/artifacts/manga-page/manga-page.component';
 import { MusicPageComponent } from './components/pages/artifacts/music-page/music-page.component';
+import { SignupPageComponent } from './components/pages/signup-page/signup-page.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -33,7 +34,8 @@ const routes: Routes = [
   { path: 'game/:id', component: WorkPageComponent },
   { path: 'music/:id', component: WorkPageComponent },
   { path: 'manga/:id', component: WorkPageComponent },
-  { path: 'sign', component: SignPageComponent },
+  { path: 'signin', component: SignPageComponent },
+  { path: 'signup', component: SignupPageComponent },
   { path: 'anime', component: AnimePageComponent },
   { path: 'book', component: BookPageComponent },
   { path: 'game', component: GamePageComponent },

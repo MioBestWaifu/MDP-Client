@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
     <div class="imgContainer"
     [@slideLeft]="slideLeft[0]? 'slided':'still'"
     (@slideLeft.done)="FinishedSlidingLeft(0)">
@@ -16,6 +16,32 @@
     </div>
     <i class="material-symbols-outlined icon left" (click)="Left()">chevron_left</i>
     <i class="material-symbols-outlined icon right" (click)="Right()">chevron_right</i>
-</div>
+</div> -->
 
 <!-- (@slideLeft.done) = "FinishedSliding()" (@slideRight.done) = "FinishedSliding()" -->
+
+<div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+        <button *ngFor="let link of links; let i = index" type="button" data-bs-target="#carouselExampleIndicators"
+            [attr.data-bs-slide-to]="i"
+            [class.active]="i === 0"
+            [attr.aria-current]="i === 0 ? 'true': null"
+            [attr.aria-label]="'Slide ' + (i + 1)">
+        </button>
+    </div>
+    <div class="carousel-inner">
+        <div *ngFor="let link of links; let i = index" [attr.class]="'carousel-item ' + (i === 0 ? 'active': null)">  
+           <img [src]="links[i].imgUrl??'assets/imgs/defaultnews.png'" (click)="router.navigate([links[i].redirectTo])" class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>

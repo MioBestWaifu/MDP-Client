@@ -7,6 +7,7 @@ import { Link } from '../../../models/link';
   templateUrl: './news-and-highlights-widget.component.html',
   styleUrl: './news-and-highlights-widget.component.scss'
 })
-export class NewsAndHighlightsWidgetComponent  extends BaseComponent{
+export class NewsAndHighlightsWidgetComponent extends BaseComponent{
   @Input() links!: Link[];
+  @Input() target = '';
 }

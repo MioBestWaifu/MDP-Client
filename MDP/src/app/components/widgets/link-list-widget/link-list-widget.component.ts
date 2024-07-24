@@ -10,4 +10,6 @@ import { BaseComponent } from '../../base/base.component';
 export class LinkListWidgetComponent extends BaseComponent{
   @Input() links!: Link[];
   @Input() forceSmallBlock = false;
+  @Input() label = '';
+  @Input() target = '';
 }

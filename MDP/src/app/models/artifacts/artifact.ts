@@ -1,3 +1,5 @@
+import { Accessory } from "./accessory";
+
 export class Artifact {
     [key: string]: any;
     id!: number;
@@ -6,7 +8,7 @@ export class Artifact {
     otherNames: string[] | undefined;
     description: string | undefined;
     media!: string;
-    categories!: string[];
+    categories!: Accessory[];
     targetDemographics!: string[];
     ageRating!: string;
     cardImgUrl: string | undefined;
@@ -24,7 +26,7 @@ export class Artifact {
         otherNames: ['Artifact Other Name 1', ' Artifact Other Name 2'],
         description: 'This is a  artifact',
         media: 'Anime',
-        categories: ['Category 1', 'Category 2'],
+        categories: [],
         targetDemographics: ['Demographic 1', 'Demographic 2'],
         ageRating: ' Age Rating',
         mainImgUrl: 'assets/imgs/ArtifactMain.png',

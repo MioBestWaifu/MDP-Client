@@ -24,6 +24,7 @@ export class WorkPageComponent extends BasePageComponent{
       }
       this.connection.LoadPage(requestUrl).subscribe((result: BasePageModel) => {
           this.pageModel = result as WorkPageModel;
+          console.log(this.pageModel.work.categories);
       });
   }
 }
