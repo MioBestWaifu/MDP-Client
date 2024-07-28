@@ -8,22 +8,22 @@ import { Dictionary } from '../../../classes/dictionary';
   templateUrl: './artifact-list.component.html',
   styleUrl: './artifact-list.component.scss'
 })
-export class ArtifactListComponent extends BaseComponent implements OnChanges{
+export class ArtifactListComponent extends BaseComponent{
   // @Input() vertical:boolean = false;
   @Input() artifacts!:Artifact[];
   // artifactRows!:Dictionary<number,Artifact[]>;
   // effectiveMargin!:number;
 
-  override ngOnInit(): void {
-      super.ngOnInit();
+  // override ngOnInit(): void {
+  //     super.ngOnInit();
       // this.common.barToggleEvent.subscribe(event => {
       //   this.RecalculateRows();
       // });
-  }
+  // }
 
-  ngOnChanges(changes: SimpleChanges): void {
+  // ngOnChanges(changes: SimpleChanges): void {
     // this.RecalculateRows();
-  }
+  // }
 
   // RecalculateRows() {
   //   let availaibleWidth:number = this.elementRef.nativeElement.clientWidth;

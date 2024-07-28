@@ -10,7 +10,7 @@ import { Accessory } from '../../../models/artifacts/accessory';
 export class InterestSetupPageComponent {
   panelOpenState = true;
   @Input() artifactCategories: Accessory[] = Artifact.testArtifact.categories;
-  @Input() artifactMedia: string = Artifact.testArtifact.media;
+  // @Input() artifactMedia: string = Artifact.testArtifact.media;
   @Input() midiaChecked: boolean = false;
   @Input() categoryChecked: boolean = false;
   allComplete: boolean = false;

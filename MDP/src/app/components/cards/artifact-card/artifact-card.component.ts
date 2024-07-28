@@ -1,4 +1,4 @@
-import { Component, Input} from '@angular/core';
+import { Component, Input, OnInit} from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { Artifact } from '../../../models/artifacts/artifact';
 import { BaseComponent } from '../../base/base.component';
@@ -22,7 +22,7 @@ import { BaseComponent } from '../../base/base.component';
   // ]
 })
 
-export class ArtifactCardComponent extends BaseComponent {
+export class ArtifactCardComponent extends BaseComponent{
   @Input() artifact: Artifact = new Artifact();
   // expanded: boolean = false;
   // lastToggle: number = 0;

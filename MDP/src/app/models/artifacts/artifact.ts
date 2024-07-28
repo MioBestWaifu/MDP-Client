@@ -7,7 +7,7 @@ export class Artifact {
     fullName!: string;
     otherNames: string[] | undefined;
     description: string | undefined;
-    media!: string;
+    media!: Accessory;
     categories!: Accessory[];
     targetDemographics!: string[];
     ageRating!: string;
@@ -25,7 +25,11 @@ export class Artifact {
         fullName: 'Artifact Full Name',
         otherNames: ['Artifact Other Name 1', ' Artifact Other Name 2'],
         description: 'This is a  artifact',
-        media: 'Anime',
+        media: {
+            id: 0,
+            name: "Media 1",
+            type: 0
+          },
         categories: [],
         targetDemographics: ['Demographic 1', 'Demographic 2'],
         ageRating: ' Age Rating',

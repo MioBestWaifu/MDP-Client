@@ -22,18 +22,18 @@
       <p class="cardBlockText basicMargin">{{ artifact.description | slice:0:100 }}</p> 
     </div>
 </div> -->
-<div class="card border-1" style="width: 100%;">
-  <a [routerLink]="['/', artifact.media, artifact.id]">
-      <img [src]="artifact.cardImgUrl" class="card-img-top" alt="..." style="width: 150px; height: 200px;">
+<div class="card border-1" style="width: 150px; min-height: 265px;">
+  <a [routerLink]="['/', artifact.media.name.toLowerCase(), artifact.id]">
+      <img [src]="artifact.cardImgUrl??'assets/imgs/defaultcard.png'" class="card-img-top" alt="..." style="width: 100%; min-height: 200px;">
   </a>
   <div class="card-body p-2">
-      <a [routerLink]="['/', artifact.media.toLowerCase , artifact.id]" style="text-decoration: none; color: inherit;">
+      <a [routerLink]="['/', artifact.media.name.toLowerCase(), artifact.id]" style="text-decoration: none; color: inherit;">
           <h6 class="card-title" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{
-              artifact.shortName }}</h6>
+              artifact.fullName }}</h6>
       </a>
       <div class="d-flex justify-content-between" style="font-size: 14px;">
-              <span>{{ artifact.media}}</span>
-          <span>{{ artifact.averageRating }}/5</span>
+              <span>{{ artifact.media.name}}</span>
+          <span>{{ artifact.averageRating }}/10</span>
       </div>
   </div>
 </div>
