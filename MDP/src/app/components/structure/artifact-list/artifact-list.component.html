@@ -1,4 +1,4 @@
-<div id="main">
+<!-- <div id="main">
     <div id="l">
         <h1>RELEASES</h1>
         @for (row of artifactRows; track row[0]){
@@ -9,14 +9,10 @@
         </div>
         }
     </div>
-    <div id="m">
-        <h1>MOST POPULAR</h1>
-        @for (row of artifactRows; track row[0]){
-        <div class="innerFlex" [class.lastInnerFlex]="$last">
-            @for (artifact of row[1]; track artifact.id){
-            <mdp-artifact-card [artifact]="artifact"></mdp-artifact-card>
-            }
-        </div>
-        }
-    </div>
-</div>
+</div> -->
+
+<ul class="list-group d-flex flex-row flex-wrap border-0">
+    <li class="list-group-item border-0 pe-1" *ngFor="let artifact of artifacts; let index = index">
+        <mdp-artifact-card [artifact]="artifact"/>
+    </li>
+</ul>
