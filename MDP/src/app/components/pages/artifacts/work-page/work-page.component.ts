@@ -6,7 +6,6 @@ import { BasePageModel } from '../../../../models/pages/base-page-model';
 @Component({
   selector: 'mdp-work-page',
   
-  
   templateUrl: './work-page.component.html',
   styleUrl: './work-page.component.scss'
 })
