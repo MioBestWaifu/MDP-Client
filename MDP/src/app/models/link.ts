@@ -1,5 +1,5 @@
 import { Artifact } from "./artifacts/artifact"
-import { Company } from "./company"
+import { Company } from "./companies/company"
 import { Person } from "./person"
 
 export class Link {
