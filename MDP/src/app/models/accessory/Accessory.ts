@@ -1,6 +1,6 @@
 import { Name } from "../name";
 
-export class Accessory {
+export abstract class Accessory {
     id!:number;
     name!:Name;
 }

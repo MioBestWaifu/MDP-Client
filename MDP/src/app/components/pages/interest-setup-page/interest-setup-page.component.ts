@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Artifact } from '../../../models/artifacts/artifact';
-import { Accessory } from '../../../models/artifacts/accessory';
+import { Category } from '../../../models/accessory/category';
 
 @Component({
   selector: 'mdp-interest-setup-page',
@@ -9,8 +8,7 @@ import { Accessory } from '../../../models/artifacts/accessory';
 })
 export class InterestSetupPageComponent {
   panelOpenState = true;
-  @Input() artifactCategories: Accessory[] = Artifact.testArtifact.categories;
-  // @Input() artifactMedia: string = Artifact.testArtifact.media;
+  @Input() artifactCategories!: Category[];
   @Input() midiaChecked: boolean = false;
   @Input() categoryChecked: boolean = false;
   allComplete: boolean = false;

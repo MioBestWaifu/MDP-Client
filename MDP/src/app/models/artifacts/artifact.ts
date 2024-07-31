@@ -6,6 +6,8 @@ import { Name } from "../name";
 import { Image } from "../image";
 
 export class Artifact {
+  [key: string]: any;
+  
   id!: number;
   shortName!: Name;
   fullName!: Name;

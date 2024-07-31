@@ -16,12 +16,13 @@
 <div [id]="'panelsStayOpen-collapse' + target" class="accordion-collapse collapse">
   <div class="accordion-body">
     <div id="main">
-  <div class="newsBlock" *ngFor="let link of links; let i = index">
-      <a [routerLink]="link.redirectTo">
-        <img [ngClass]="{'leftImg':i%2==0,'rightImg':i%2!=0}" [src]="link.imgUrl??'assets/imgs/defaultmain.png'">
-        <p class="newsTitle">{{link.mainLabel}}</p>
+  <div class="newsBlock" *ngFor="let item of news; let i = index">
+    <!--Redirect da ta a removido por ainda não haver NewsPage. Quando houver, redirecionar baseado no Id-->
+      <a>
+        <img [ngClass]="{'leftImg':i%2==0,'rightImg':i%2!=0}" [src]="item.images[0].url">
+        <p class="newsTitle">{{item.title}}</p>
       </a>
-      <p class="textBlock">{{link.secondaryLabel}}</p>
+      <p class="textBlock">{{item.content}}</p>
   </div>
 </div>
   </div>
