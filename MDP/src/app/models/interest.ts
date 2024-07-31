@@ -1,4 +1,4 @@
-import { Demographic } from "./accessory/Demographic";
+import { Demographic } from "./accessory/demographic";
 import { Link } from "./link"
 
 export class Interest {
