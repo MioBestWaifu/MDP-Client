@@ -1,33 +1,9 @@
-<!-- <div id="main" class="collapsableGrid" [@expandCollapse]="expanded ? 'expanded' : 'collapsed'" (mouseenter)="Expand()" (mouseleave)=" Collapse()">
-    <div id="collapsedBlock">
-    <a [routerLink]="['/', artifact.media.toLowerCase, artifact.id]">
-      <img [src]="artifact.cardImgUrl??'assets/imgs/defaultcard.png'">
-    </a>
-      <p class="cardMainText artifactMainText">{{ artifact.shortName }}</p>
-    </div>
-    <div *ngIf="expanded" id="expandedBlock">
-      <p class="cardTopText">{{ artifact.media }}</p>
-      <div class="textBlock basicMargin">
-        <p class="cardBlockText bold">{{ artifact.mainParticipantRole }}: </p><p class="cardBlockText">{{ artifact.mainParticipant }}</p>
-      </div> 
-      <div class="textBlock basicMargin">
-        <p class="cardBlockText bold">Categories: </p>
-        <p *ngFor="let cat of artifact.categories; let i = index" class="cardBlockText">{{cat}}{{i < artifact.categories.length - 1 ? ', ' : ''}}</p>
-      </div>
-      <div class="textBlock basicMargin">
-        <p class="cardBlockText bold">Demographics: </p> 
-        <p *ngFor="let dem of artifact.targetDemographics; let i = index" class="cardBlockText">{{dem}}{{i < artifact.targetDemographics.length - 1 ? ', ' : ''}}</p>
-      </div>
-      <mdp-rate-widget class="basicMargin artifactRate" [rate]="artifact.averageRating"></mdp-rate-widget>
-      <p class="cardBlockText basicMargin">{{ artifact.description | slice:0:100 }}</p> 
-    </div>
-</div> -->
 <div class="card border-1" style="width: 150px; min-height: 265px;">
-  <a [routerLink]="['/', artifact.media.name.toLowerCase(), artifact.id]">
-      <img [src]="artifact.cardImgUrl??'assets/imgs/defaultcard.png'" class="card-img-top" alt="..." style="width: 100%; min-height: 200px;">
+  <a [routerLink]="['/', artifact.media.name.literal.toLowerCase()]">
+      <img [src]="artifact.cardImage.url" class="card-img-top" alt="..." style="width: 100%; min-height: 200px;">
   </a>
   <div class="card-body p-2">
-      <a [routerLink]="['/', artifact.media.name.toLowerCase(), artifact.id]" style="text-decoration: none; color: inherit;">
+      <a [routerLink]="['/', artifact.media.name.literal.toLowerCase(), artifact.id]" style="text-decoration: none; color: inherit;">
           <h6 class="card-title" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{
               artifact.fullName }}</h6>
       </a>
