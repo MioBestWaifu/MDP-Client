@@ -9,5 +9,5 @@ import { BaseComponent } from '../../base/base.component';
 })
 
 export class AdListComponent extends BaseComponent {
-  @Input() artifact: Artifact = Artifact.testArtifact;
+  @Input() artifact!: Artifact;
 }

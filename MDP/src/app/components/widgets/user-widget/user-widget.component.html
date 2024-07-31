@@ -1,6 +1,6 @@
 <div class="summaryGrid">
-  <img id="mainImage" [src]="user.mainImgUrl??'assets/imgs/defaultmain.png'">
-  <div id="title" class="titleText centerInternalText">{{user.nickname}}</div>
+  <img id="mainImage" [src]="user.mainImage?.url">
+  <div id="title" class="titleText centerInternalText">{{user.nickname.literal}}</div>
   <div id="miscInfo">
     <div class="summaryBlockTextContainer twoColumnsGrid">
       <p class="mainBlockText">Main Text: </p><p class="secondaryBlockText">Secondary Text</p>

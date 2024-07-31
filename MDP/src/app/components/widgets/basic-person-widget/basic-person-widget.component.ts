@@ -1,5 +1,5 @@
 import { Component, ElementRef, Input, Renderer2 } from "@angular/core";
-import { Person } from "../../../models/person";
+import { Person } from "../../../models/persons/person";
 import { CommonContainerService } from "../../../services/common-container.service";
 import { InteractionService } from "../../../services/interaction.service";
 import { MediaQueryService } from "../../../services/media-query.service";

@@ -1,28 +1,6 @@
-<!-- <div class="container">
-    <div class="imgContainer"
-    [@slideLeft]="slideLeft[0]? 'slided':'still'"
-    (@slideLeft.done)="FinishedSlidingLeft(0)">
-        <img [src]="links[0].imgUrl??'assets/imgs/defaultnews.png'" (click)="router.navigate([links[0].redirectTo])">
-    </div>
-    <div class="imgContainer"
-    [@slideLeft]="slideLeft[1]? 'slided':'still'" [@slideRight]="slideRight[1]? 'slided':'still'"
-    (@slideLeft.done)="FinishedSlidingLeft(1)" (@slideRight.done)="FinishedSlidingRight(1)">
-        <img [src]="links[1].imgUrl??'assets/imgs/defaultnews.png'" (click)="router.navigate([links[1].redirectTo])">
-    </div>
-    <div class="imgContainer"
-    [@slideRight]="slideRight[2]? 'slided':'still'"
-    (@slideRight.done)="FinishedSlidingRight(2)">
-        <img [src]="links[2].imgUrl??'assets/imgs/defaultnews.png'" (click)="router.navigate([links[2].redirectTo])">
-    </div>
-    <i class="material-symbols-outlined icon left" (click)="Left()">chevron_left</i>
-    <i class="material-symbols-outlined icon right" (click)="Right()">chevron_right</i>
-</div> -->
-
-<!-- (@slideLeft.done) = "FinishedSliding()" (@slideRight.done) = "FinishedSliding()" -->
-
 <div id="carouselExampleIndicators" class="carousel slide">
     <div class="carousel-indicators">
-        <button *ngFor="let link of links; let i = index" type="button" data-bs-target="#carouselExampleIndicators"
+        <button *ngFor="let item of news; let i = index" type="button" data-bs-target="#carouselExampleIndicators"
             [attr.data-bs-slide-to]="i"
             [class.active]="i === 0"
             [attr.aria-current]="i === 0 ? 'true': null"
@@ -30,8 +8,9 @@
         </button>
     </div>
     <div class="carousel-inner">
-        <div *ngFor="let link of links; let i = index" [attr.class]="'carousel-item ' + (i === 0 ? 'active': null)">  
-           <img [src]="links[i].imgUrl??'assets/imgs/defaultnews.png'" (click)="router.navigate([links[i].redirectTo])" class="d-block w-100" alt="...">
+        <div *ngFor="let item of news; let i = index" [attr.class]="'carousel-item ' + (i === 0 ? 'active': null)">  
+            <!--Click removido porque não existe página de noticia. Quando existir, redirecionar com base no id da News-->
+           <img [src]="item.images[0].url" class="d-block w-100" alt="...">
         </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"

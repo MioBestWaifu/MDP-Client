@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Accessory } from '../../../models/artifacts/accessory';
+import { Category } from '../../../models/accessory/category';
 
 @Component({
   selector: 'mdp-genre-list',
@@ -7,5 +7,5 @@ import { Accessory } from '../../../models/artifacts/accessory';
   styleUrl: './genre-list.component.scss'
 })
 export class GenreListComponent {
-  @Input() categories: Accessory[] = [];
+  @Input() categories: Category[] = [];
 }

@@ -1,44 +1,25 @@
-import { Accessory } from "./accessory";
+import { AgeRating } from "../accessory/age-rating";
+import { Category } from "../accessory/category";
+import { Demographic } from "../accessory/demographic";
+import { Media } from "../accessory/media";
+import { Name } from "../name";
+import { Image } from "../image";
 
 export class Artifact {
-    [key: string]: any;
-    id!: number;
-    shortName!: string;
-    fullName!: string;
-    otherNames: string[] | undefined;
-    description: string | undefined;
-    media!: Accessory;
-    categories!: Accessory[];
-    targetDemographics!: string[];
-    ageRating!: string;
-    cardImgUrl: string | undefined;
-    mainImgUrl: string  | undefined;
-    otherImgUrls: string[] | undefined;
-    mainParticipantRole!: string;
-    mainParticipant!: string;
-    averageRating!: number;
-    releaseDate: Date | undefined;
-
-    static readonly testArtifact:Artifact = {
-        id: 1,
-        shortName: 'Artifact',
-        fullName: 'Artifact Full Name',
-        otherNames: ['Artifact Other Name 1', ' Artifact Other Name 2'],
-        description: 'This is a  artifact',
-        media: {
-            id: 0,
-            name: "Media 1",
-            type: 0
-          },
-        categories: [],
-        targetDemographics: ['Demographic 1', 'Demographic 2'],
-        ageRating: ' Age Rating',
-        mainImgUrl: 'assets/imgs/ArtifactMain.png',
-        otherImgUrls: ['assets/imgs/ArtifactOther1.png', 'assets/imgs/ArtifactOther2.png'],
-        mainParticipantRole: 'Role',
-        mainParticipant: 'Participant',
-        averageRating: 4.5,
-        releaseDate: new Date(2020, 0, 1),
-        cardImgUrl: undefined
-    }
+  [key: string]: any;
+  
+  id!: number;
+  shortName!: Name;
+  fullName!: Name;
+  otherNames?: Name[];
+  description?: string;
+  media!: Media;
+  categories!: Category[];
+  targetDemographics?: Demographic[];
+  ageRating?: AgeRating;
+  cardImage!: Image;
+  mainImage!: Image;
+  otherImages?: Image[];
+  averageRating!: number;
+  releaseDate?: Date;
 }
