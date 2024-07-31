@@ -9,4 +9,5 @@ export class WorkPageModel extends BasePageModel {
   newsAndHighlights: News[] = [];
   participantPersons: PersonParticipation[] = [];
   participantCompanies: CompanyParticipation[] = [];
+  //Reviews temporariamente removidas
 }

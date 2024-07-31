@@ -2,10 +2,12 @@
     <div id="main" class="verticalFlex">
       <mdp-basic-company-widget [company]="pageModel.company"></mdp-basic-company-widget>
       <mdp-vertical-folder label="Worked in:" maxHeight="auto">
-        <mdp-link-list-widget [links]="pageModel.artifactParticipations??[]"></mdp-link-list-widget>
+        <!--Essas(s) propriedades estão pendentes de decisão do que fazer com o Link-->
+        <mdp-link-list-widget></mdp-link-list-widget>
       </mdp-vertical-folder>
       <mdp-vertical-folder label="Affiliates:" maxHeight="auto">
-        <mdp-link-list-widget [links]="pageModel.affiliates??[]"></mdp-link-list-widget>
+        <!--Essas(s) propriedades estão pendentes de decisão do que fazer com o Link-->
+        <mdp-link-list-widget></mdp-link-list-widget>
       </mdp-vertical-folder>
     </div>
     <mdp-ad-list *ngIf="!mediaQuery.portrait"></mdp-ad-list>

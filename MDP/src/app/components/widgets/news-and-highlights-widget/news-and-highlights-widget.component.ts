@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { BaseComponent } from '../../base/base.component';
 import { Link } from '../../../models/link';
+import { News } from '../../../models/information/news';
 
 @Component({
   selector: 'mdp-news-and-highlights-widget',
@@ -8,6 +9,6 @@ import { Link } from '../../../models/link';
   styleUrl: './news-and-highlights-widget.component.scss'
 })
 export class NewsAndHighlightsWidgetComponent extends BaseComponent{
-  @Input() links!: Link[];
+  @Input() news!: News[];
   @Input() target = '';
 }
