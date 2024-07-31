@@ -19,9 +19,9 @@
     </div>
     <mdp-reviews-list [vertical]="true" *ngIf="!mediaQuery.portrait" [reviews]="pageModel.reviews"></mdp-reviews-list>
 </div> -->
-<div class="container">
+<div class="container pt-3">
         <mdp-basic-work-widget [work]="pageModel.work" />
-        <div class="accordion" id="accordionWorkPage">
+        <div class="accordion pt-3" id="accordionWorkPage">
             <div class="accordion-item">
                 <mdp-news-and-highlights-widget target="One" [links]="pageModel.newsAndHighlights??[]" />
             </div>

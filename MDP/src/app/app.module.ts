@@ -76,6 +76,7 @@ import { StarComponent } from './components/icons/stars/star/star.component';
 import { FillStarComponent } from './components/icons/stars/fill-star/fill-star.component';
 import { HalfFillStarComponent } from './components/icons/stars/half-fill-star/half-fill-star.component';
 import { WorkRateDropdownComponent } from "./components/structure/work-rate-dropdown/work-rate-dropdown.component";
+import { BadgeListComponent } from "./components/structure/badge-list/badge-list.component";
 
 @NgModule({
   declarations: [
@@ -160,7 +161,8 @@ import { WorkRateDropdownComponent } from "./components/structure/work-rate-drop
     MatCheckboxModule,
     JsonPipe,
     MatRadioModule,
-    WorkRateDropdownComponent
+    WorkRateDropdownComponent,
+    BadgeListComponent
 ],
   providers: [],
   bootstrap: [AppComponent]

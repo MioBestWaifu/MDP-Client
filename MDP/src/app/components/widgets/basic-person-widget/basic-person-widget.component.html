@@ -1,4 +1,4 @@
-<div class="summaryGrid">
+<!-- <div class="summaryGrid">
   <img id="mainImage" [src]="person.mainImgUrl??'assets/imgs/defaultmain.png'">
   <div id="title" class="titleText centerInternalText">{{person.fullName}}</div> 
   <div id="rateArea">
@@ -18,5 +18,42 @@
         <div class="summaryBlockTextContainer twoColumnsGrid">
           <p class="mainBlockText">Main Text: </p><p class="secondaryBlockText">Secondary Text</p>
         </div>
+  </div>
+</div>
+ -->
+
+<div class="card border-0">
+  <div class="row g-0 d-flex justify-content-center">
+    <div class="col-md" style="max-width: 270px;">
+      <img [src]="person.mainImgUrl??'assets/imgs/defaultmain.png'" class="img-fluid rounded mainImage" alt="..."
+        style="width: 270px; height: 270px;">
+    </div>
+    <div class="col-md px-3">
+      <div class="card-body">
+        <h1 class="card-title">{{ person.fullName }}</h1>
+        <!-- <mdp-badge-list [itens]="person.nicknames" /> -->
+        <!-- <p [class.collapsed]="isCollapsed" class="card-text mt-3"> -->
+        <p>{{ person.description }}</p>
+        <p>{{ person.birthday }}</p>
+        <p>{{ person.country }}</p>
+        <p>{{ person.gender }}</p>
+        <p>{{ person.roles }}</p>
+        <p>{{ person.nicknames }}</p>
+
+        <!-- </p> -->
+        <!-- <p (click)="toggleText()" class="mt-0"
+                  style="text-decoration: underline; color:#0000FF; cursor: pointer;">{{
+                  isCollapsed ? 'more' : 'less' }}</p> -->
+        <div class="d-flex mt-3">
+          <mdp-star-list [value]="person.averageRating" />
+          <h4 class="ms-2">{{ person.averageRating }}/10</h4>
+          <mdp-work-rate-dropdown class="ms-2" />
+        </div>
+        <!-- <div class="mt-3">
+                  <button type="button" class="btn btn-primary me-2">Add to my list</button>
+                  <button type="button" class="btn btn-warning">Add to favorites</button>
+              </div> -->
+      </div>
+    </div>
   </div>
 </div>

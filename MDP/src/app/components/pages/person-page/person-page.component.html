@@ -1,4 +1,4 @@
-<div [ngClass]="mediaQuery.portrait ? 'portraitContentWrapper' : 'contentWrapper'">
+<!-- <div [ngClass]="mediaQuery.portrait ? 'portraitContentWrapper' : 'contentWrapper'">
     <div id="main" class="verticalFlex">
       <mdp-basic-person-widget [person]="pageModel.person"></mdp-basic-person-widget>
       <mdp-vertical-folder label="Worked in: " maxHeight="auto">
@@ -9,4 +9,16 @@
       </mdp-vertical-folder>
     </div>
     <mdp-ad-list *ngIf="!mediaQuery.portrait"></mdp-ad-list>
+</div> -->
+
+<div class="container pt-3">
+  <mdp-basic-person-widget [person]="pageModel.person" />
+  <div class="accordion pt-3" id="accordionPersonPage">
+      <div class="accordion-item">
+          <mdp-link-list-widget target="One" [label]="'Worked in'" [links]="pageModel.artifactParticipations??[]" />
+      </div>
+      <div class="accordion-item">
+          <mdp-link-list-widget target="Two" [label]="'Worked for'" [links]="pageModel.companyAffiliations??[]" />
+      </div>
+  </div>
 </div>

@@ -6,25 +6,26 @@ import { BasePageModel } from '../../../../models/pages/base-page-model';
 @Component({
   selector: 'mdp-work-page',
   
-  
   templateUrl: './work-page.component.html',
   styleUrl: './work-page.component.scss'
 })
 export class WorkPageComponent extends BasePageComponent{
   pageModel:WorkPageModel = new WorkPageModel();
-  fractionsLabel:string = "Fractions";
   showFractions:boolean = false;
-
+  count:number = 0;
+  
   override ngOnInit(): void {
       super.ngOnInit();
       let requestUrl = this.connection.work;
       const id = this.route.snapshot.paramMap.get('id');
       if (id) {
-        requestUrl += `?id=${id}`;
+        requestUrl += `?id=${id}`;   
       }
       this.connection.LoadPage(requestUrl).subscribe((result: BasePageModel) => {
           this.pageModel = result as WorkPageModel;
-          console.log(this.pageModel.work.categories);
+          this.count += 1;
+          console.log(this.count);
+          console.log(this.pageModel.work.fullName);       
       });
   }
 }
