@@ -1,4 +1,4 @@
-import { Person } from "../person";
+import { Person } from "../persons/person";
 import { Company } from "./company";
 
 export class CompanyPerson{
