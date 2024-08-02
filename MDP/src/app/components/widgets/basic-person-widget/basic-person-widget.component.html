@@ -6,13 +6,13 @@
     </div>
     <div class="col-md px-3">
       <div class="card-body">
-        <h1 class="card-title">{{ person.fullName }}</h1>
+        <h1 class="card-title">{{ person.fullName.literal }}</h1>
         <p>{{ person.description }}</p>
-        <p>{{ person.birthday }}</p>
-        <p>{{ person.country }}</p>
-        <p>{{ person.gender }}</p>
-        <p>{{ person.roles }}</p>
-        <p>{{ person.nicknames }}</p>
+        <p>{{ person.birthday | date:"dd/MM/yyyy"}}</p>
+        <p>{{ person.country?.name }}</p>
+        <p>{{ person.gender | genderToString}}</p>
+        <p *ngFor="let role of person.roles">{{ role.name }}</p>
+        <p *ngFor="let nickname of person.nicknames">{{ nickname.literal}}</p>
         <div class="d-flex mt-3">
           <mdp-star-list [value]="person.averageRating" />
           <h4 class="ms-2">{{ person.averageRating }}/10</h4>

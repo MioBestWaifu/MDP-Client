@@ -6,7 +6,7 @@
       <div class="col-md px-3">
           <div class="card-body">
               <h1 class="card-title">{{ work.fullName.literal }}</h1>
-              <mdp-genre-list [categories]="work.categories" />
+              <mdp-genre-list class="d-flex" [categories]="work.categories" />
               <p [class.collapsed]="isCollapsed" class="card-text mt-3">
                   {{ work.description }}
               </p>
