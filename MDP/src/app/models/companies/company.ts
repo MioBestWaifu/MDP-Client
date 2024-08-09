@@ -1,9 +1,10 @@
 import { Country } from "../country";
+import { IEntity } from "../ientity";
 import { Image } from "../image";
 import { Name } from "../name";
 import { Role } from "../role";
 
-export class Company {
+export class Company implements IEntity{
     id!:number;
     shortName!:Name;
     fullName!:Name;

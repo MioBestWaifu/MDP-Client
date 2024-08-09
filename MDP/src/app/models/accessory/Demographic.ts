@@ -1,4 +1,4 @@
-import { Accessory } from "./Accessory";
+import { Accessory } from "./accessory";
 
 export class Demographic extends Accessory {
 
