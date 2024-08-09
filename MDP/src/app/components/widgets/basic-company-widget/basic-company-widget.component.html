@@ -1,22 +1,25 @@
-<div class="summaryGrid">
-    <img id="mainImage" [src]="company.mainImage.url">
-    <div id="title" class="titleText centerInternalText">{{company.fullName}}</div> 
-    <div id="rateArea">
-        <mdp-rate-widget [rate]="company.averageRating" class="rateWidget"></mdp-rate-widget>
-        <mdp-rate-control (rated)="RateChanged($event)"></mdp-rate-control>
+<div class="card border-0">
+<div class="row g-0 d-flex justify-content-center">
+  <div class="col-md" style="max-width: 270px;">
+    <img [src]="company.mainImage.url" class="img-fluid rounded mainImage" alt="..."
+      style="width: 270px; height: 270px;">
+  </div>
+  <div class="col-md px-3">
+    <div class="card-body">
+        <h1 class="card-title">{{ company.fullName.literal }}</h1>
+        <!-- <p [class.collapsed]="isCollapsed" class="card-text mt-3"> -->
+            <p>{{ company.description }}</p>
+          <p>{{company.country.name}}</p>
+          <p>{{company.foundingDate | date:"dd/MM/yyyy"}}</p>
+
+        <!-- </p> -->
+        <div class="d-flex mt-3">
+            <mdp-star-list [value]="company.averageRating" />
+            <h4 class="ms-2">{{ company.averageRating }}/10</h4>
+            <!-- <mdp-work-rate-dropdown class="ms-2" /> -->
+    <!-- <mdp-rate-widget [rate]="company.averageRating" class="ms-2"></mdp-rate-widget> -->
+    <mdp-rate-control class="ms-2" (rated)="RateChanged($event)"></mdp-rate-control>
+        </div>
     </div>
-    <div id="miscInfo">
-        <div class="summaryBlockTextContainer twoColumnsGrid">
-            <p class="mainBlockText">Main Text: </p><p class="secondaryBlockText">Secondary Text</p>
-          </div>
-          <div class="summaryBlockTextContainer twoColumnsGrid">
-            <p class="mainBlockText">Main Text: </p><p class="secondaryBlockText">Secondary Text</p>
-          </div>
-          <div class="summaryBlockTextContainer twoColumnsGrid">
-            <p class="mainBlockText">Main Text: </p><p class="secondaryBlockText">Secondary Text</p>
-          </div>
-          <div class="summaryBlockTextContainer twoColumnsGrid">
-            <p class="mainBlockText">Main Text: </p><p class="secondaryBlockText">Secondary Text</p>
-          </div>
-    </div>
+</div>
 </div>

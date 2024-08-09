@@ -77,6 +77,7 @@ import { FillStarComponent } from './components/icons/stars/fill-star/fill-star.
 import { HalfFillStarComponent } from './components/icons/stars/half-fill-star/half-fill-star.component';
 import { WorkRateDropdownComponent } from "./components/structure/work-rate-dropdown/work-rate-dropdown.component";
 import { BadgeListComponent } from "./components/structure/badge-list/badge-list.component";
+import { GenderToStringPipe } from './classes/gender-to-string.pipe';
 
 @NgModule({
   declarations: [
@@ -137,7 +138,8 @@ import { BadgeListComponent } from "./components/structure/badge-list/badge-list
     GenreListComponent,
     RateDialogComponent,
 
-    ChipSearchComponent 
+    ChipSearchComponent,
+    GenderToStringPipe
 
   ],
   imports: [
@@ -162,7 +164,7 @@ import { BadgeListComponent } from "./components/structure/badge-list/badge-list
     JsonPipe,
     MatRadioModule,
     WorkRateDropdownComponent,
-    BadgeListComponent
+    BadgeListComponent,
 ],
   providers: [],
   bootstrap: [AppComponent]

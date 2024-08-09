@@ -1,14 +1,12 @@
-<div [ngClass]="mediaQuery.portrait ? 'portraitContentWrapper' : 'contentWrapper'">
-    <div id="main" class="verticalFlex">
-      <mdp-basic-company-widget [company]="pageModel.company"></mdp-basic-company-widget>
-      <mdp-vertical-folder label="Worked in:" maxHeight="auto">
-        <!--Essas(s) propriedades estão pendentes de decisão do que fazer com o Link-->
-        <mdp-link-list-widget></mdp-link-list-widget>
-      </mdp-vertical-folder>
-      <mdp-vertical-folder label="Affiliates:" maxHeight="auto">
-        <!--Essas(s) propriedades estão pendentes de decisão do que fazer com o Link-->
-        <mdp-link-list-widget></mdp-link-list-widget>
-      </mdp-vertical-folder>
+<div class="container pt-3">
+  <mdp-basic-company-widget [company]="pageModel.company"></mdp-basic-company-widget>
+  <div class="accordion pt-3" id="accordionCompanyPage">
+    <!--Essas(s) 3 propriedades/componentes estão pendentes de decisão do que fazer com o Link-->
+    <div class="accordion-item">
+        <mdp-link-list-widget target="One" [label]="'Worked in:'"/>
     </div>
-    <mdp-ad-list *ngIf="!mediaQuery.portrait"></mdp-ad-list>
+    <div class="accordion-item">
+        <mdp-link-list-widget target="Two" [label]="'Affiliates:'" />
+    </div>
+</div>
 </div>

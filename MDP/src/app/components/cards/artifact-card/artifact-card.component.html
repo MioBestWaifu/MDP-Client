@@ -1,11 +1,11 @@
 <div class="card border-1" style="width: 150px; min-height: 265px;">
-  <a [routerLink]="['/', artifact.media.name.literal.toLowerCase()]">
+  <a [routerLink]="['/', artifact.media.name.toLowerCase(), artifact.id]">
       <img [src]="artifact.cardImage.url" class="card-img-top" alt="..." style="width: 100%; min-height: 200px;">
   </a>
   <div class="card-body p-2">
-      <a [routerLink]="['/', artifact.media.name.literal.toLowerCase(), artifact.id]" style="text-decoration: none; color: inherit;">
+      <a [routerLink]="['/', artifact.media.name.toLowerCase(), artifact.id]" style="text-decoration: none; color: inherit;">
           <h6 class="card-title" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{
-              artifact.fullName }}</h6>
+              artifact.shortName.literal }}</h6>
       </a>
       <div class="d-flex justify-content-between" style="font-size: 14px;">
               <span>{{ artifact.media.name}}</span>

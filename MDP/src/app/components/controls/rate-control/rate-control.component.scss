@@ -1,6 +1,5 @@
 @import '../../../../variables.scss';
-
-i {
-    color: $strongSecondaryColor;
-    font-size: inherit;
+.dropdown-menu{
+    max-height: 300px;
+    overflow: auto;
 }
