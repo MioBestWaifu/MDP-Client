@@ -25,7 +25,7 @@ export class WorkPageComponent extends BasePageComponent{
           this.pageModel = result as WorkPageModel;
           this.count += 1;
           console.log(this.count);
-          console.log(this.pageModel.work.fullName);       
+          console.log(this.pageModel.work.fullName.literal);       
       });
   }
 }
