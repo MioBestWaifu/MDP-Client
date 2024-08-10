@@ -1,0 +1,17 @@
+<div class="d-flex">
+    @for (item of relations; track (useCompany? item.company!.id : item.person!.id); let index = $index) {
+            <div style="cursor:pointer;" class="row" [routerLink]="determineRoute(index)">
+            <img class="col-6" [src]="useCompany ? item.company!.cardImage.url: item.person!.cardImage.url">
+            <div class="col-6 d-flex flex-column">
+                <p>{{useCompany ? item.company!.shortName.literal : item.person!.shortName.literal}}</p>
+                @if(item.end == null){
+                    <p>Since {{item.start | date:"dd/MM/yyyy"}}</p>
+                } 
+                @else {
+                    <p>From {{item.start | date:"dd/MM/yyyy"}}</p>
+                    <p>To {{item.end | date:"dd/MM/yyyy"}}</p>
+                }
+            </div>
+        </div>
+    }
+</div>

@@ -78,6 +78,7 @@ import { WorkRateDropdownComponent } from "./components/structure/work-rate-drop
 import { BadgeListComponent } from "./components/structure/badge-list/badge-list.component";
 import { GenderToStringPipe } from './classes/gender-to-string.pipe';
 import { ParticipationsListComponent } from './components/widgets/participations-list/participations-list.component';
+import { AffiliatesListComponent } from './components/widgets/affiliates-list/affiliates-list.component';
 
 @NgModule({
   declarations: [
@@ -137,6 +138,7 @@ import { ParticipationsListComponent } from './components/widgets/participations
     GenreListComponent,
     RateDialogComponent,
     ParticipationsListComponent,
+    AffiliatesListComponent,
     ChipSearchComponent,
     GenderToStringPipe
   ],
