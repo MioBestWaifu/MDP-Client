@@ -3,11 +3,11 @@
   <div class="accordion pt-3" id="accordionPersonPage">
       <div class="accordion-item">
         <!--Essas(s) propriedades estão pendentes de decisão do que fazer com o Link-->
-          <mdp-link-list-widget target="One" [label]="'Worked in'" />
+          <mdp-participations-list [useArtifact]=true [participations]="pageModel.participations"></mdp-participations-list>
       </div>
       <div class="accordion-item">
         <!--Essas(s) propriedades estão pendentes de decisão do que fazer com o Link-->
-          <mdp-link-list-widget target="Two" [label]="'Worked for'"/>
+          <!-- <mdp-link-list-widget target="Two" [label]="'Worked for'"/> -->
       </div>
   </div>
 </div>

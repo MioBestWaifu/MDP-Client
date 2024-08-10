@@ -6,14 +6,15 @@
             </div>
             <!--Essas(s) 3 propriedades/componentes estão pendentes de decisão do que fazer com o Link-->
             <div class="accordion-item">
-                <mdp-link-list-widget *ngIf="showFractions" target="Two" [label]="'Fractions Label'"/>
+                <!--Lista de frações vai vir aq-->
             </div>
             <div class="accordion-item">
-                <mdp-link-list-widget target="Three" [label]="'Participants'"/>
+                <mdp-participations-list route="company" [participations]="pageModel.participantCompanies"></mdp-participations-list>
             </div>
             <div class="accordion-item">
-                <mdp-link-list-widget target="Four" [label]="'Related'" />
+                <mdp-participations-list route="person" [participations]="pageModel.participantPersons"></mdp-participations-list>
             </div>
+            <!--Lista de relacionados vai ficar aq-->
         </div>
         <!--Reviews temporariamente removidas-->
         <mdp-reviews-list />  

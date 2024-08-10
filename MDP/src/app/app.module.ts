@@ -43,7 +43,6 @@ import { BasicCompanyWidgetComponent } from './components/widgets/basic-company-
 import { BasicPersonWidgetComponent } from './components/widgets/basic-person-widget/basic-person-widget.component';
 import { BasicWorkWidgetComponent } from './components/widgets/basic-work-widget/basic-work-widget.component';
 import { CarouselComponent } from './components/widgets/carousel/carousel.component';
-import { LinkListWidgetComponent } from './components/widgets/link-list-widget/link-list-widget.component';
 import { NewsAndHighlightsWidgetComponent } from './components/widgets/news-and-highlights-widget/news-and-highlights-widget.component';
 import { RateWidgetComponent } from './components/widgets/rate-widget/rate-widget.component';
 import { UserInteractionWidgetComponent } from './components/widgets/user-interaction-widget/user-interaction-widget.component';
@@ -78,6 +77,7 @@ import { HalfFillStarComponent } from './components/icons/stars/half-fill-star/h
 import { WorkRateDropdownComponent } from "./components/structure/work-rate-dropdown/work-rate-dropdown.component";
 import { BadgeListComponent } from "./components/structure/badge-list/badge-list.component";
 import { GenderToStringPipe } from './classes/gender-to-string.pipe';
+import { ParticipationsListComponent } from './components/widgets/participations-list/participations-list.component';
 
 @NgModule({
   declarations: [
@@ -121,7 +121,6 @@ import { GenderToStringPipe } from './classes/gender-to-string.pipe';
     BasicPersonWidgetComponent,
     BasicWorkWidgetComponent,
     CarouselComponent,
-    LinkListWidgetComponent,
     NewsAndHighlightsWidgetComponent,
     RateWidgetComponent,
     UserInteractionWidgetComponent,
@@ -137,10 +136,9 @@ import { GenderToStringPipe } from './classes/gender-to-string.pipe';
     HalfFillStarComponent,
     GenreListComponent,
     RateDialogComponent,
-
+    ParticipationsListComponent,
     ChipSearchComponent,
     GenderToStringPipe
-
   ],
   imports: [
     CommonModule,
