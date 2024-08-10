@@ -4,8 +4,9 @@ import { Demographic } from "../accessory/demographic";
 import { Media } from "../accessory/media";
 import { Name } from "../name";
 import { Image } from "../image";
+import { IEntity } from "../ientity";
 
-export class Artifact {
+export class Artifact implements IEntity {
   [key: string]: any;
   
   id!: number;

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LinkListWidgetComponent } from './link-list-widget.component';
+import { AffiliatesListComponent } from './affiliates-list.component';
 
-describe('LinkListWidgetComponent', () => {
-  let component: LinkListWidgetComponent;
-  let fixture: ComponentFixture<LinkListWidgetComponent>;
+describe('AffiliatesListComponent', () => {
+  let component: AffiliatesListComponent;
+  let fixture: ComponentFixture<AffiliatesListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LinkListWidgetComponent]
+      imports: [AffiliatesListComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(LinkListWidgetComponent);
+    fixture = TestBed.createComponent(AffiliatesListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { BasePageComponent } from '../../base-page/base-page.component';
 import { WorkPageModel } from '../../../../models/pages/work-page-model';
 import { BasePageModel } from '../../../../models/pages/base-page-model';
+import { ParticipationsListComponent } from '../../../widgets/participations-list/participations-list.component';
 
 @Component({
   selector: 'mdp-work-page',
