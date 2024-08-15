@@ -1,13 +1,33 @@
 <div class="container pt-3">
   <mdp-basic-person-widget [person]="pageModel.person" />
   <div class="accordion pt-3" id="accordionPersonPage">
-      <div class="accordion-item">
-        <!--Essas(s) propriedades estão pendentes de decisão do que fazer com o Link-->
-          <mdp-participations-list [useArtifact]=true [participations]="pageModel.participations"></mdp-participations-list>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          [attr.data-bs-target]="'#One'" aria-expanded="false" [attr.aria-controls]="'One'">
+          Participantions
+        </button>
+      </h2>
+      <div [id]="'One' " class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <mdp-participations-list [useArtifact]=true
+            [participations]="pageModel.participations"></mdp-participations-list>
+        </div>
       </div>
-      <div class="accordion-item">
-        <!--Essas(s) propriedades estão pendentes de decisão do que fazer com o Link-->
-        <mdp-affiliates-list [relations]="pageModel.affiliations" [useCompany]="true"></mdp-affiliates-list>
+
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          [attr.data-bs-target]="'#Two'" aria-expanded="false" [attr.aria-controls]="'Two'">
+          Affiliations
+        </button>
+      </h2>
+      <div [id]="'Two'" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <mdp-affiliates-list [relations]="pageModel.affiliations" [useCompany]="true"></mdp-affiliates-list>
+        </div>
       </div>
+    </div>
   </div>
 </div>

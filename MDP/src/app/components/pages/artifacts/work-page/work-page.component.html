@@ -1,32 +1,47 @@
 <div class="container pt-3">
-        <mdp-basic-work-widget [work]="pageModel.work" />
-        <div class="accordion pt-3" id="accordionWorkPage">
-            <div class="accordion-item">
-                <mdp-news-and-highlights-widget target="One" [news]="pageModel.newsAndHighlights??[]" />
-            </div>
-            <!--Essas(s) 3 propriedades/componentes estão pendentes de decisão do que fazer com o Link-->
-            <div class="accordion-item">
-                <!--Lista de frações vai vir aq-->
-            </div>
-            <div class="accordion-item">
-                <mdp-participations-list route="company" [participations]="pageModel.participantCompanies"></mdp-participations-list>
-            </div>
-            <div class="accordion-item">
-                <mdp-participations-list route="person" [participations]="pageModel.participantPersons"></mdp-participations-list>
-            </div>
-            <!--Lista de relacionados vai ficar aq-->
+    <mdp-basic-work-widget [work]="pageModel.work" />
+    <div class="accordion pt-3" id="accordionWorkPage">
+        <div class="accordion-item">
+            <mdp-news-and-highlights-widget target="One" [news]="pageModel.newsAndHighlights??[]" />
         </div>
-        <!--Reviews temporariamente removidas-->
-        <mdp-reviews-list />  
+        <!--Essas(s) 3 propriedades/componentes estão pendentes de decisão do que fazer com o Link-->
+        <div class="accordion-item">
+            <!--Lista de frações vai vir aq-->
+        </div>
+        <div class="accordion-item">
+            <div target="Two">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    [attr.data-bs-target]="'#Two'" aria-expanded="false"
+                    [attr.aria-controls]="'Two'">
+                    Participant Companies
+                </button>
+            </h2>
+            <div [id]="'Two'" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                    <mdp-participations-list route="company" [participations]="pageModel.participantCompanies"/>  
+                </div>
+            </div>
+            </div>
+            
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    [attr.data-bs-target]="'#Three'" aria-expanded="false"
+                    [attr.aria-controls]="'Three'">
+                    Participant Persons
+                </button>
+            </h2>
+            <div [id]="'Three'" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                    <mdp-participations-list route="person"[participations]="pageModel.participantPersons"/> 
+                </div>
+            </div>
+
+        </div>
+        <!--Lista de relacionados vai ficar aq-->
+    </div>
+    <!--Reviews temporariamente removidas-->
+    <mdp-reviews-list />
 </div>
-
-
-
-
-
-
-
-
-
-
-

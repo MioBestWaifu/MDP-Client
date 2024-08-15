@@ -3,11 +3,32 @@
   <div class="accordion pt-3" id="accordionCompanyPage">
     <!--Essas(s) 3 propriedades/componentes estão pendentes de decisão do que fazer com o Link-->
     <div class="accordion-item">
-        <mdp-participations-list [useArtifact]=true [participations]="pageModel.participations"></mdp-participations-list>
-
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                [attr.data-bs-target]="'#One'" aria-expanded="false"
+                [attr.aria-controls]="'One'">
+                Participantions
+            </button>
+        </h2>
+        <div [id]="'One' " class="accordion-collapse collapse">
+            <div class="accordion-body">
+                <mdp-participations-list [useArtifact]=true [participations]="pageModel.participations"></mdp-participations-list>
+            </div>
+        </div>
     </div>
     <div class="accordion-item">
-        <mdp-affiliates-list [relations]="pageModel.affiliates"></mdp-affiliates-list>
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                [attr.data-bs-target]="'#Two'" aria-expanded="false"
+                [attr.aria-controls]="'Two'">
+                Affiliates
+            </button>
+        </h2>
+        <div [id]="'Two'" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                <mdp-affiliates-list [relations]="pageModel.affiliates"></mdp-affiliates-list>
+            </div>
+        </div>        
     </div>
 </div>
 </div>
