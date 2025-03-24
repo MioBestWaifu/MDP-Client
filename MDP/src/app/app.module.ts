@@ -79,6 +79,8 @@ import { BadgeListComponent } from "./components/structure/badge-list/badge-list
 import { GenderToStringPipe } from './classes/gender-to-string.pipe';
 import { ParticipationsListComponent } from './components/widgets/participations-list/participations-list.component';
 import { AffiliatesListComponent } from './components/widgets/affiliates-list/affiliates-list.component';
+import { WorkCreationComponent } from './components/pages/artifacts/work-creation/work-creation.component';
+import { WorkUpdateComponent } from './components/pages/artifacts/work-update/work-update.component';
 
 @NgModule({
   declarations: [
@@ -140,7 +142,8 @@ import { AffiliatesListComponent } from './components/widgets/affiliates-list/af
     ParticipationsListComponent,
     AffiliatesListComponent,
     ChipSearchComponent,
-    GenderToStringPipe
+    GenderToStringPipe,
+    WorkCreationComponent,
   ],
   imports: [
     CommonModule,

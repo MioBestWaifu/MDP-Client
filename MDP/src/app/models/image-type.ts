@@ -1,5 +1,5 @@
 export enum ImageType{
-    CardImage,
+    CardImage = 1,
     MainImage,
     OtherImage
 }

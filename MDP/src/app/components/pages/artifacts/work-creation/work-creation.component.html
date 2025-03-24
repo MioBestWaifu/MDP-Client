@@ -1,1 +1,67 @@
-<p>work-creation works!</p>
+<div class="container">
+  <div class="d-flex justify-content-around">
+    <!-- Main Image upload section -->
+    <div class="form-group">
+      <div>
+        <label style="display: block;" for="mainImage">Main Image</label>
+        <img *ngIf="mainBase64" [src]="mainBase64" alt="Main Image" class="img-thumbnail mt-2" style="max-height: 200px;">
+      </div>
+      <input type="file" class="form-control mt-2" id="mainImage" (change)="ImageChosen($event, 'main')" accept="image/png, image/jpeg">
+    </div>
+    <!-- Card Image upload section -->
+    <div class="form-group">
+      <div>
+        <label style="display: block;" for="cardImage">Card Image</label>
+        <img *ngIf="cardBase64" [src]="cardBase64" alt="Card Image" class="img-thumbnail mt-2" style="max-height: 200px;">
+      </div>
+      <input type="file" class="form-control mt-2" id="cardImage" (change)="ImageChosen($event, 'card')" accept="image/png, image/jpeg">
+    </div>
+  </div>
+  <form (ngSubmit)="Create()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" [(ngModel)]="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="fullName">Full Name</label>
+      <input type="text" class="form-control" id="fullName" [(ngModel)]="fullName" name="fullName" required>
+    </div>
+    <div class="form-group">
+      <label for="otherNames">Other Names (separate with comma)</label>
+      <input type="text" class="form-control" id="otherNames" [(ngModel)]="otherNames" name="otherNames">
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea class="form-control" id="description" [(ngModel)]="description" name="description"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="media">Media</label>
+      <select class="form-control" id="media" [(ngModel)]="media" name="media" [compareWith]="compareById" required>
+        <option *ngFor="let m of mediaOptions" [ngValue]="m">{{m.name}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="categories">Categories</label>
+      <select multiple class="form-control" id="categories" [(ngModel)]="categories" name="categories" [compareWith]="compareById" required>
+        <option *ngFor="let c of categoryOptions" [ngValue]="c">{{c.name}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="targetDemographics">Target Demographics</label>
+      <select multiple class="form-control" id="targetDemographics" [(ngModel)]="targetDemographics" name="targetDemographics" [compareWith]="compareById">
+        <option *ngFor="let d of demographicOptions" [ngValue]="d">{{d.name}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="ageRating">Age Rating</label>
+      <select class="form-control" id="ageRating" [(ngModel)]="ageRating" name="ageRating" [compareWith]="compareById" required>
+        <option *ngFor="let a of ageRatingOptions" [ngValue]="a">{{a.name}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="releaseDate">Release Date</label>
+      <input type="date" class="form-control" id="releaseDate" [(ngModel)]="releaseDate" name="releaseDate">
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+  </form>
+</div>
