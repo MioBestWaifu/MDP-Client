@@ -19,7 +19,7 @@
   <div class="newsBlock" *ngFor="let item of news; let i = index">
     <!--Redirect da ta a removido por ainda não haver NewsPage. Quando houver, redirecionar baseado no Id-->
       <a>
-        <img [ngClass]="{'leftImg':i%2==0,'rightImg':i%2!=0}" [src]="item.images[0].url">
+        <img [ngClass]="{'leftImg':i%2==0,'rightImg':i%2!=0}" [src]="item.images[0].content">
         <p class="newsTitle">{{item.title}}</p>
       </a>
       <p class="textBlock">{{item.content}}</p>

@@ -10,7 +10,7 @@
     <div class="carousel-inner">
         <div *ngFor="let item of news; let i = index" [attr.class]="'carousel-item ' + (i === 0 ? 'active': null)">  
             <!--Click removido porque não existe página de noticia. Quando existir, redirecionar com base no id da News-->
-           <img [src]="item.images[0].url" class="d-block w-100" alt="...">
+           <img [src]="item.images[0].content" class="d-block w-100" alt="...">
         </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
