@@ -6,6 +6,7 @@ import { Media } from '../models/accessory/media';
 import { Category } from '../models/accessory/category';
 import { Demographic } from '../models/accessory/demographic';
 import { AgeRating } from '../models/accessory/age-rating';
+import { Role } from '../models/role';
 
 @Injectable({
   providedIn: 'root'
@@ -29,5 +30,9 @@ export class AccessoryService {
 
   LoadAllAgeRatings(): Observable<AgeRating[]>{
     return this.http.get<AgeRating[]>(this.baseURL + "age-ratings");
+  }
+
+  LoadAllRoles(): Observable<Role[]>{
+    return this.http.get<Role[]>(this.baseURL + "roles");
   }
 }
