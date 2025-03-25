@@ -81,6 +81,7 @@ import { ParticipationsListComponent } from './components/widgets/participations
 import { AffiliatesListComponent } from './components/widgets/affiliates-list/affiliates-list.component';
 import { WorkCreationComponent } from './components/pages/artifacts/work-creation/work-creation.component';
 import { WorkUpdateComponent } from './components/pages/artifacts/work-update/work-update.component';
+import { WorkManagementComponent } from './components/pages/artifacts/work-management/work-management.component';
 
 @NgModule({
   declarations: [
@@ -144,7 +145,8 @@ import { WorkUpdateComponent } from './components/pages/artifacts/work-update/wo
     ChipSearchComponent,
     GenderToStringPipe,
     WorkCreationComponent,
-    WorkUpdateComponent
+    WorkUpdateComponent,
+    WorkManagementComponent
   ],
   imports: [
     CommonModule,

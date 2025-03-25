@@ -17,8 +17,4 @@ export class BasePageComponent extends BaseComponent{
      public connection:PageLoadingService, protected route:ActivatedRoute,elementRef:ElementRef, renderer:Renderer2){
     super(mediaQuery,common,elementRef, renderer);
   }
-
-  compareById(item1: any, item2: any): boolean {
-    return item1 && item2 && item1.id === item2.id;
-  }
 }

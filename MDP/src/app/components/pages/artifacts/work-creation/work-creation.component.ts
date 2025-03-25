@@ -22,7 +22,7 @@ import { ImageType } from '../../../../models/image-type';
   styleUrl: './work-creation.component.scss'
 })
 
-export class WorkCreationComponent extends BasePageComponent implements OnInit{
+export class WorkCreationComponent implements OnInit{
   
   name!: string;
   fullName!: string;
@@ -43,12 +43,10 @@ export class WorkCreationComponent extends BasePageComponent implements OnInit{
   demographicOptions: Demographic[] = [];
   ageRatingOptions: AgeRating[] = [];
 
-  constructor(private conn:AccessoryService, private worksConn:WorksService, private imagesConn:ImagesService, mediaQuery:MediaQueryService,common:CommonContainerService,
-      connection:PageLoadingService, route:ActivatedRoute,elementRef:ElementRef, renderer:Renderer2) { 
-    super(mediaQuery,common,connection, route,elementRef, renderer);
+  constructor(private conn:AccessoryService, private worksConn:WorksService, private imagesConn:ImagesService) { 
   }
 
-  override ngOnInit(): void {
+  ngOnInit(): void {
     this.conn.LoadAllMedias().subscribe((data) => {
       this.mediaOptions = data;
     });
@@ -111,18 +109,18 @@ export class WorkCreationComponent extends BasePageComponent implements OnInit{
   WarnAndClear(id:number){
     window.alert("Work sucessfully created with id: " + id);
     this.name = '';
-  this.fullName = '';
-  this.otherNames = '';
-  this.description = undefined;
-  this.media = undefined!;
-  this.categories = [];
-  this.targetDemographics = undefined;
-  this.ageRating = undefined!;
-  this.releaseDate = undefined;
-  this.mainBase64 = undefined;
-  this.mainExtension = undefined;
-  this.cardBase64 = undefined;
-  this.cardExtension = undefined;
+    this.fullName = '';
+    this.otherNames = '';
+    this.description = undefined;
+    this.media = undefined!;
+    this.categories = [];
+    this.targetDemographics = undefined;
+    this.ageRating = undefined!;
+    this.releaseDate = undefined;
+    this.mainBase64 = undefined;
+    this.mainExtension = undefined;
+    this.cardBase64 = undefined;
+    this.cardExtension = undefined;
   }
 
   ImageChosen(event: Event, type: 'main' | 'card') {
@@ -142,5 +140,9 @@ export class WorkCreationComponent extends BasePageComponent implements OnInit{
       };
       reader.readAsDataURL(file);
     }
+  }
+
+  compareById(item1: any, item2: any): boolean {
+    return item1 && item2 && item1.id === item2.id;
   }
 }

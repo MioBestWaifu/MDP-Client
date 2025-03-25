@@ -19,6 +19,7 @@ import { MusicPageComponent } from './components/pages/artifacts/music-page/musi
 import { SignupPageComponent } from './components/pages/signup-page/signup-page.component';
 import { WorkCreationComponent } from './components/pages/artifacts/work-creation/work-creation.component';
 import { WorkUpdateComponent } from './components/pages/artifacts/work-update/work-update.component';
+import { WorkManagementComponent } from './components/pages/artifacts/work-management/work-management.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -46,7 +47,7 @@ const routes: Routes = [
 
   { path: 'create-work', component: WorkCreationComponent },
   { path: 'update-work/:id', component: WorkUpdateComponent },
-
+  { path: 'manage-works', component: WorkManagementComponent },
 ];
 
 @NgModule({

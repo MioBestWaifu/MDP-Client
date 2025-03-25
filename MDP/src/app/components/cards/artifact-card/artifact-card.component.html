@@ -1,6 +1,6 @@
 <div class="card border-1" style="width: 150px; min-height: 265px;">
   <a [routerLink]="['/', artifact.media.name.toLowerCase(), artifact.id]">
-      <img [src]="artifact.cardImage.content" class="card-img-top" alt="..." style="width: 100%; min-height: 200px;">
+      <img *ngIf="artifact.cardImage" [src]="artifact.cardImage.content" class="card-img-top" alt="..." style="width: 100%; min-height: 200px;">
   </a>
   <div class="card-body p-2">
       <a [routerLink]="['/', artifact.media.name.toLowerCase(), artifact.id]" style="text-decoration: none; color: inherit;">

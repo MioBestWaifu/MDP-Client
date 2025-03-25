@@ -28,7 +28,7 @@ import { CompaniesService } from '../../../../services/companies.service';
   templateUrl: './work-update.component.html',
   styleUrl: './work-update.component.scss'
 })
-export class WorkUpdateComponent extends BasePageComponent implements OnInit {
+export class WorkUpdateComponent implements OnInit {
   artifact!: Artifact;
   otherNamesString!: string;
 
@@ -46,12 +46,12 @@ export class WorkUpdateComponent extends BasePageComponent implements OnInit {
   companyParticipants: CompanyParticipation[] = [];
   companySearchTerm: string = '';
 
-  constructor(private conn: AccessoryService, private router:Router, private worksConn: WorksService, private companiesConn:CompaniesService,private peopleConn:PeopleService, private imagesConn: ImagesService, mediaQuery: MediaQueryService, common: CommonContainerService,
-    connection: PageLoadingService, route: ActivatedRoute, elementRef: ElementRef, renderer: Renderer2) {
-    super(mediaQuery, common, connection, route, elementRef, renderer);
+  constructor(private conn: AccessoryService, private router:Router, private worksConn: WorksService, 
+    private companiesConn:CompaniesService,private peopleConn:PeopleService, 
+    private imagesConn: ImagesService, private route: ActivatedRoute) {
   }
 
-  override ngOnInit(): void {
+  ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.worksConn.Retrieve(id).subscribe((data) => {
       this.artifact = data;
@@ -214,5 +214,9 @@ export class WorkUpdateComponent extends BasePageComponent implements OnInit {
         !this.companyParticipants.some((p) => p.participant.id === company.id)
       );
     });
+  }
+
+  compareById(item1: any, item2: any): boolean {
+    return item1 && item2 && item1.id === item2.id;
   }
 }

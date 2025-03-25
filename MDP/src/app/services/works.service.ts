@@ -28,6 +28,14 @@ export class WorksService {
     return this.http.patch<Artifact>(this.baseURL, JSON.stringify(artifact), {headers: this.jsonHeader});
   }
 
+  Delete(id:number): Observable<boolean>{
+    return this.http.delete<boolean>(this.baseURL+"/"+id);
+  }
+
+  Search(term:string): Observable<Artifact[]>{
+    return this.http.get<Artifact[]>(this.baseURL+"/search?query="+term);
+  }
+
   GetParticipantPeople(id:number):Observable<PersonParticipation[]>{
     return this.http.get<PersonParticipation[]>(this.baseURL+"/"+id+"/people");
   }
