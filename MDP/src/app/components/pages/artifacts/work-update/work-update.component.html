@@ -1,1 +1,75 @@
-<p>work-update works!</p>
+<div class="container">
+  <div class="d-flex justify-content-around">
+    <!-- Main Image upload section -->
+    <div class="form-group text-center">
+      <label style="display: block;" for="mainImage">Main Image</label>
+      <img *ngIf="artifact.mainImage" [src]="artifact.mainImage.content" alt="Main Image" class="img-thumbnail mt-2" style="max-height: 200px;">
+      <input type="file" class="form-control mt-2" id="mainImage" (change)="imageChosen($event, 'main')" accept="image/png, image/jpeg">
+    </div>
+    <!-- Card Image upload section -->
+    <div class="form-group text-center">
+      <label style="display: block;"  for="cardImage">Card Image</label>
+      <img *ngIf="artifact.cardImage" [src]="artifact.cardImage.content" alt="Card Image" class="img-thumbnail mt-2" style="max-height: 200px;">
+      <input type="file" class="form-control mt-2" id="cardImage" (change)="imageChosen($event, 'card')" accept="image/png, image/jpeg">
+    </div>
+  </div>
+  <form (ngSubmit)="update()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" [(ngModel)]="artifact.shortName.literal" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="fullName">Full Name</label>
+      <input type="text" class="form-control" id="fullName" [(ngModel)]="artifact.fullName.literal" name="fullName" required>
+    </div>
+    <div class="form-group">
+        <label for="otherNames">Other Names (separate with comma)</label>
+        <input type="text" class="form-control" id="otherNames" [(ngModel)]="otherNamesString" name="otherNames">
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea class="form-control" id="description" [(ngModel)]="artifact.description" name="description"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="media">Media</label>
+      <select class="form-control" id="media" [(ngModel)]="artifact.media" name="media" [compareWith]="compareById" required>
+        <option *ngFor="let m of mediaOptions" [ngValue]="m">{{m.name}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="categories">Categories</label>
+      <select multiple class="form-control" id="categories" [(ngModel)]="artifact.categories" name="categories" [compareWith]="compareById" required>
+        <option *ngFor="let c of categoryOptions" [ngValue]="c">{{c.name}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="targetDemographics">Target Demographics</label>
+      <select multiple class="form-control" id="targetDemographics" [(ngModel)]="artifact.targetDemographics" name="targetDemographics" [compareWith]="compareById">
+        <option *ngFor="let d of demographicOptions" [ngValue]="d">{{d.name}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="ageRating">Age Rating</label>
+      <select class="form-control" id="ageRating" [(ngModel)]="artifact.ageRating" name="ageRating" [compareWith]="compareById" required>
+        <option *ngFor="let a of ageRatingOptions" [ngValue]="a">{{a.name}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="releaseDate">Release Date</label>
+      <input type="date" class="form-control" id="releaseDate" [(ngModel)]="artifact.releaseDate" name="releaseDate">
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+  </form>
+
+  <!-- Placeholder for People form -->
+  <form (ngSubmit)="update()">
+    <h3>Add People</h3>
+    <!-- Add People form fields here -->
+  </form>
+
+  <!-- Placeholder for Companies form -->
+  <form (ngSubmit)="update()">
+    <h3>Add Companies</h3>
+    <!-- Add Companies form fields here -->
+  </form>
+</div>

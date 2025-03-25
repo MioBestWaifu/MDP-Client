@@ -144,6 +144,7 @@ import { WorkUpdateComponent } from './components/pages/artifacts/work-update/wo
     ChipSearchComponent,
     GenderToStringPipe,
     WorkCreationComponent,
+    WorkUpdateComponent
   ],
   imports: [
     CommonModule,

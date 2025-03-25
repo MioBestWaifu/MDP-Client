@@ -17,4 +17,12 @@ export class WorksService {
   Create(artifact:ArtifactInsert): Observable<Artifact>{
     return this.http.post<Artifact>(this.baseURL, JSON.stringify(artifact), {headers: this.jsonHeader});
   }
+
+  Retrieve(id:number): Observable<Artifact>{
+    return this.http.get<Artifact>(this.baseURL+"/"+id);
+  }
+
+  Update(artifact:Artifact): Observable<Artifact>{
+    return this.http.patch<Artifact>(this.baseURL, JSON.stringify(artifact), {headers: this.jsonHeader});
+  }
 }

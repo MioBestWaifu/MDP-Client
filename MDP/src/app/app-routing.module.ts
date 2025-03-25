@@ -18,6 +18,7 @@ import { MangaPageComponent } from './components/pages/artifacts/manga-page/mang
 import { MusicPageComponent } from './components/pages/artifacts/music-page/music-page.component';
 import { SignupPageComponent } from './components/pages/signup-page/signup-page.component';
 import { WorkCreationComponent } from './components/pages/artifacts/work-creation/work-creation.component';
+import { WorkUpdateComponent } from './components/pages/artifacts/work-update/work-update.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -44,6 +45,7 @@ const routes: Routes = [
   { path: 'music', component: MusicPageComponent },
 
   { path: 'create-work', component: WorkCreationComponent },
+  { path: 'update-work/:id', component: WorkUpdateComponent },
 
 ];
 
