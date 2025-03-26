@@ -82,6 +82,9 @@ import { AffiliatesListComponent } from './components/widgets/affiliates-list/af
 import { WorkCreationComponent } from './components/pages/artifacts/work-creation/work-creation.component';
 import { WorkUpdateComponent } from './components/pages/artifacts/work-update/work-update.component';
 import { WorkManagementComponent } from './components/pages/artifacts/work-management/work-management.component';
+import { CompanyCreationComponent } from './components/pages/company-creation/company-creation.component';
+import { CompanyUpdateComponent } from './components/pages/company-update/company-update.component';
+import { CompanyManagementComponent } from './components/pages/company-management/company-management.component';
 
 @NgModule({
   declarations: [
@@ -146,7 +149,10 @@ import { WorkManagementComponent } from './components/pages/artifacts/work-manag
     GenderToStringPipe,
     WorkCreationComponent,
     WorkUpdateComponent,
-    WorkManagementComponent
+    WorkManagementComponent,
+    CompanyCreationComponent,
+    CompanyUpdateComponent,
+    CompanyManagementComponent
   ],
   imports: [
     CommonModule,

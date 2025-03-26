@@ -7,6 +7,7 @@ import { Category } from '../models/accessory/category';
 import { Demographic } from '../models/accessory/demographic';
 import { AgeRating } from '../models/accessory/age-rating';
 import { Role } from '../models/role';
+import { Country } from '../models/country';
 
 @Injectable({
   providedIn: 'root'
@@ -34,5 +35,10 @@ export class AccessoryService {
 
   LoadAllRoles(): Observable<Role[]>{
     return this.http.get<Role[]>(this.baseURL + "roles");
+  }
+
+  //Countries are not acessories, but they are in the acessories controller
+  LoadAllCountries(): Observable<Country[]>{
+    return this.http.get<Country[]>(this.baseURL + "countries");
   }
 }

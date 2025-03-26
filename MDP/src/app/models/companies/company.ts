@@ -14,6 +14,6 @@ export class Company implements IEntity{
     otherImages?:Image[];
     country!:Country;
     roles!:Role[];
-    foundingDate!:Date;
+    foundingDate?:Date;
     averageRating!:number;
 }

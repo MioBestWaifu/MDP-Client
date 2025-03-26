@@ -20,6 +20,9 @@ import { SignupPageComponent } from './components/pages/signup-page/signup-page.
 import { WorkCreationComponent } from './components/pages/artifacts/work-creation/work-creation.component';
 import { WorkUpdateComponent } from './components/pages/artifacts/work-update/work-update.component';
 import { WorkManagementComponent } from './components/pages/artifacts/work-management/work-management.component';
+import { CompanyCreationComponent } from './components/pages/company-creation/company-creation.component';
+import { CompanyUpdateComponent } from './components/pages/company-update/company-update.component';
+import { CompanyManagementComponent } from './components/pages/company-management/company-management.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -48,6 +51,10 @@ const routes: Routes = [
   { path: 'create-work', component: WorkCreationComponent },
   { path: 'update-work/:id', component: WorkUpdateComponent },
   { path: 'manage-works', component: WorkManagementComponent },
+
+  { path: 'create-company', component: CompanyCreationComponent },
+  { path: 'update-company/:id', component: CompanyUpdateComponent },
+  { path: 'manage-companies', component: CompanyManagementComponent },
 ];
 
 @NgModule({
