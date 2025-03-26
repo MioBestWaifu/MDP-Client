@@ -5,6 +5,7 @@ import { Dictionary } from '../classes/dictionary';
 import { Utils } from '../classes/utils';
 import { BasePageModel } from '../models/pages/base-page-model';
 import { environment } from '../../environments/environment';
+import { CommonContainerService } from './common-container.service';
 
 @Injectable({
   providedIn: 'root'
@@ -29,7 +30,7 @@ export class PageLoadingService {
   public manga = this.work + "manga";
   public music = this.work + "music";
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private common:CommonContainerService) { }
 
   LoadPage(page: string): Observable<BasePageModel> {
     return this.http.get<BasePageModel>(page);
