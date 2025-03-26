@@ -86,6 +86,8 @@ import { CompanyCreationComponent } from './components/pages/company-creation/co
 import { CompanyUpdateComponent } from './components/pages/company-update/company-update.component';
 import { CompanyManagementComponent } from './components/pages/company-management/company-management.component';
 import { PersonCreationComponent } from './components/pages/person-creation/person-creation.component';
+import { PersonUpdateComponent } from './components/pages/person-update/person-update.component';
+import { PersonManagementComponent } from './components/pages/person-management/person-management.component';
 
 @NgModule({
   declarations: [
@@ -154,7 +156,9 @@ import { PersonCreationComponent } from './components/pages/person-creation/pers
     CompanyCreationComponent,
     CompanyUpdateComponent,
     CompanyManagementComponent,
-    PersonCreationComponent
+    PersonCreationComponent,
+    PersonUpdateComponent,
+    PersonManagementComponent
   ],
   imports: [
     CommonModule,
