@@ -28,7 +28,7 @@ import { PersonUpdateComponent } from './components/pages/person-update/person-u
 import { PersonManagementComponent } from './components/pages/person-management/person-management.component';
 
 const routes: Routes = [
-  { path: '', component: HomePageComponent },
+  { path: '', component: SignPageComponent},
   { path: 'home', component: HomePageComponent },
   { path: 'community/:id', component: CommunityPageComponent },
   { path: 'company/:id', component: CompanyPageComponent },
