@@ -85,6 +85,7 @@ import { WorkManagementComponent } from './components/pages/artifacts/work-manag
 import { CompanyCreationComponent } from './components/pages/company-creation/company-creation.component';
 import { CompanyUpdateComponent } from './components/pages/company-update/company-update.component';
 import { CompanyManagementComponent } from './components/pages/company-management/company-management.component';
+import { PersonCreationComponent } from './components/pages/person-creation/person-creation.component';
 
 @NgModule({
   declarations: [
@@ -152,7 +153,8 @@ import { CompanyManagementComponent } from './components/pages/company-managemen
     WorkManagementComponent,
     CompanyCreationComponent,
     CompanyUpdateComponent,
-    CompanyManagementComponent
+    CompanyManagementComponent,
+    PersonCreationComponent
   ],
   imports: [
     CommonModule,

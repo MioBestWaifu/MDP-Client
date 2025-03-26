@@ -1,1 +1,61 @@
-<p>person-creation works!</p>
+<div class="container">
+  <div class="d-flex justify-content-around">
+    <!-- Main Image upload section -->
+    <div class="form-group">
+      <div>
+        <label style="display: block;" for="mainImage">Main Image</label>
+        <img *ngIf="mainBase64" [src]="mainBase64" alt="Main Image" class="img-thumbnail mt-2" style="max-height: 200px;">
+      </div>
+      <input type="file" class="form-control mt-2" id="mainImage" (change)="ImageChosen($event, 'main')" accept="image/png, image/jpeg">
+    </div>
+    <!-- Card Image upload section -->
+    <div class="form-group">
+      <div>
+        <label style="display: block;" for="cardImage">Card Image</label>
+        <img *ngIf="cardBase64" [src]="cardBase64" alt="Card Image" class="img-thumbnail mt-2" style="max-height: 200px;">
+      </div>
+      <input type="file" class="form-control mt-2" id="cardImage" (change)="ImageChosen($event, 'card')" accept="image/png, image/jpeg">
+    </div>
+  </div>
+  <form (ngSubmit)="Create()">
+    <div class="form-group">
+      <label for="shortName">Short Name</label>
+      <input type="text" class="form-control" id="shortName" [(ngModel)]="shortName" name="shortName" required>
+    </div>
+    <div class="form-group">
+      <label for="fullName">Full Name</label>
+      <input type="text" class="form-control" id="fullName" [(ngModel)]="fullName" name="fullName" required>
+    </div>
+    <div class="form-group">
+      <label for="nicknames">Nicknames (comma-separated)</label>
+      <input type="text" class="form-control" id="nicknames" [(ngModel)]="nicknamesString" name="nicknames">
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea class="form-control" id="description" [(ngModel)]="description" name="description"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="country">Country</label>
+      <select class="form-control" id="country" [(ngModel)]="country" name="country" [compareWith]="compareById" required>
+        <option *ngFor="let c of countryOptions" [ngValue]="c">{{ c.name }}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="roles">Roles</label>
+      <select multiple class="form-control" id="roles" [(ngModel)]="roles" name="roles" [compareWith]="compareById">
+        <option *ngFor="let r of roleOptions" [ngValue]="r">{{ r.name }}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="birthday">Birthday</label>
+      <input type="date" class="form-control" id="birthday" [(ngModel)]="birthday" name="birthday">
+    </div>
+    <div class="form-group">
+      <label for="gender">Gender</label>
+      <select class="form-control" id="gender" [(ngModel)]="gender" name="gender" [compareWith]="compareById" required>
+        <option *ngFor="let g of genderOptions; let i = index" [ngValue]="i">{{ g }}</option>
+     </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+  </form>
+</div>

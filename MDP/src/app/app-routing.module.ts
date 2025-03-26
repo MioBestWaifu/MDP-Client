@@ -23,6 +23,9 @@ import { WorkManagementComponent } from './components/pages/artifacts/work-manag
 import { CompanyCreationComponent } from './components/pages/company-creation/company-creation.component';
 import { CompanyUpdateComponent } from './components/pages/company-update/company-update.component';
 import { CompanyManagementComponent } from './components/pages/company-management/company-management.component';
+import { PersonCreationComponent } from './components/pages/person-creation/person-creation.component';
+import { PersonUpdateComponent } from './components/pages/person-update/person-update.component';
+import { PersonManagementComponent } from './components/pages/person-management/person-management.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -55,6 +58,10 @@ const routes: Routes = [
   { path: 'create-company', component: CompanyCreationComponent },
   { path: 'update-company/:id', component: CompanyUpdateComponent },
   { path: 'manage-companies', component: CompanyManagementComponent },
+
+  { path: 'create-person', component: PersonCreationComponent },
+  { path: 'update-person/:id', component: PersonUpdateComponent },
+  { path: 'manage-people', component: PersonManagementComponent },
 ];
 
 @NgModule({
