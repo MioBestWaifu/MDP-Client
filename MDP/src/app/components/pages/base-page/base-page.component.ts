@@ -11,6 +11,8 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './base-page.component.scss'
 })
 export class BasePageComponent extends BaseComponent{
+  
+  
   constructor (mediaQuery:MediaQueryService,common:CommonContainerService,
      public connection:PageLoadingService, protected route:ActivatedRoute,elementRef:ElementRef, renderer:Renderer2){
     super(mediaQuery,common,elementRef, renderer);

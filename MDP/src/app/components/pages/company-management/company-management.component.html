@@ -1,0 +1,37 @@
+<div class="container mt-4">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Company Management</h2>
+    <button class="btn btn-primary" (click)="NavigateToCreateCompany()">Add New Company</button>
+  </div>
+
+  <div class="form-group">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Search companies"
+      [(ngModel)]="searchTerm"
+      (keyup.enter)="SearchCompanies()"
+    />
+  </div>
+
+  <div class="row mt-4">
+    <div *ngFor="let company of companies" class="col-md-4 mb-3">
+      <div class="card">
+        <img
+          *ngIf="company.cardImage"
+          [src]="company.cardImage.content"
+          class="card-img-top"
+          alt="Company Image"
+          style="max-height: 150px; object-fit: cover;"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ company.shortName.literal }}</h5>
+          <div class="d-flex justify-content-between">
+            <button class="btn btn-warning" (click)="NavigateToUpdateCompany(company.id)">Edit</button>
+            <button class="btn btn-danger" (click)="DeleteCompany(company.id)">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -16,7 +16,7 @@ export class HomePageComponent extends BasePageComponent{
 
   override ngOnInit() {
     super.ngOnInit();
-    this.connection.LoadPage(this.connection.home).subscribe((result: BasePageModel) => {
+    this.connection.LoadPage(this.connection.home+"/"+this.common.user.id).subscribe((result: BasePageModel) => {
       this.pageModel = result as HomePageModel;
     });
   }

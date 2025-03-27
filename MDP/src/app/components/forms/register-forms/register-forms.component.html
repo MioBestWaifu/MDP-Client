@@ -1,79 +1,47 @@
-<!-- <mat-stepper [linear]="isLinear" #stepper>
-    <mat-step [stepControl]="firstFormGroup">
-        <form [formGroup]="firstFormGroup">
-            <ng-template matStepLabel>Fill out your credentials</ng-template>
-            <p><mat-form-field>
-                    <mat-label>Username</mat-label>
-                    <input matInput placeholder="" formControlName="username" required>
-                </mat-form-field></p>
-            <p><mat-form-field>
-                    <mat-label>Email</mat-label>
-                    <input matInput placeholder="" formControlName="email" required>
-                </mat-form-field></p>
-            <p><mat-form-field>
-                    <mat-label>Enter your password</mat-label>
-                    <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
-                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
-                        [attr.aria-pressed]="hide">
-                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                    </button>
-                </mat-form-field></p>
-            <p><mat-form-field>
-                    <mat-label>Confirm your password</mat-label>
-                    <input matInput [type]="hide ? 'password' : 'text'" formControlName="confirmedPassword">
-                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
-                        [attr.aria-pressed]="hide">
-                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                    </button>
-                </mat-form-field></p>
-            <div>
-                <button mat-button matStepperNext>Next</button>
-            </div>
-        </form>
-    </mat-step>
-    <mat-step  label="Set your preferences">
-        <form >
-            <mdp-interest-setup-page></mdp-interest-setup-page>
-            <div>
-                <button mat-button matStepperPrevious>Back</button>
-                <button mat-button matStepperNext>Next</button>             
-            </div>
-        </form>
-    </mat-step>
-    <mat-step>
-        <ng-template matStepLabel>Done</ng-template>
-        <p>You can now access the contents.</p>
-        <br>
-        <div>
-            <button mat-button matStepperPrevious>Back</button> -->
-            <!-- <button mat-button (click)="stepper.reset()">Reset</button> -->
-            <!-- <button routerLink="/home" mat-stroked-button color="primary">Ir</button>
-        </div>
-    </mat-step>
-</mat-stepper> -->
-<form>
-    <div class="mb-3">
-        <label for="exampleInputUsername" class="form-label">Username</label>
-        <input type="text" class="form-control" id="exampleInputUsername">
-    </div>
-    <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-    </div>
-    <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1">
-    </div>
-    <div class="mb-3">
-        <label for="exampleInputPassword2" class="form-label">Confirm password</label>
-        <input type="password" class="form-control" id="exampleInputPassword2">
-    </div>
-    <div class="mb-4">
-        <label for="exampleInputDate" class="form-label">Put your age</label>
-        <input type="date" class="form-control" id="exampleInputDate">
-    </div>
-    <div class="d-grid">
-      <button type="submit" class="btn btn-primary">Create account</button>  
-    </div> 
+<form (ngSubmit)="Register()">
+  <div class="mb-3">
+    <label for="exampleInputUsername" class="form-label">Username</label>
+    <input type="text" class="form-control" id="exampleInputUsername" [(ngModel)]="username" name="username" required>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" [(ngModel)]="email" name="email" required>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]="password" name="password" required>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword2" class="form-label">Confirm password</label>
+    <input type="password" class="form-control" id="exampleInputPassword2" [(ngModel)]="confirmedPassword" name="confirmedPassword" required>
+  </div>
+  <div class="mb-4">
+    <label for="exampleInputDate" class="form-label">Birthday</label>
+    <input type="date" class="form-control" id="exampleInputDate" [(ngModel)]="birthday" name="birthday" required>
+  </div>
+  <div class="mb-3">
+    <label for="country" class="form-label">Country</label>
+    <select class="form-control" id="country" [(ngModel)]="country" name="country" [compareWith]="compareById" required>
+      <option *ngFor="let c of countryOptions" [ngValue]="c">{{ c.name }}</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label for="gender" class="form-label">Gender</label>
+    <select class="form-control" id="gender" [(ngModel)]="gender" name="gender" required>
+      <option *ngFor="let g of genderOptions; let i = index" [ngValue]="i">{{ g }}</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label for="mainImage" class="form-label">Main Image</label>
+    <img *ngIf="mainBase64" [src]="mainBase64" alt="Main Image" class="img-thumbnail mt-2" style="max-height: 200px;">
+    <input type="file" class="form-control mt-2" id="mainImage" (change)="ImageChosen($event, 'main')" accept="image/png, image/jpeg">
+  </div>
+  <div class="mb-3">
+    <label for="cardImage" class="form-label">Card Image</label>
+    <img *ngIf="cardBase64" [src]="cardBase64" alt="Card Image" class="img-thumbnail mt-2" style="max-height: 200px;">
+    <input type="file" class="form-control mt-2" id="cardImage" (change)="ImageChosen($event, 'card')" accept="image/png, image/jpeg">
+  </div>
+  <div class="d-grid">
+    <button type="submit" class="btn btn-primary">Create account</button>
+  </div>
 </form>

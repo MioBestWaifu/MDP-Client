@@ -1,39 +1,11 @@
-<!-- <div id="login">
-        <p *ngIf="invalidCredentials">Invalid credentials!</p>
-    <div id="email">
-        <h2>Email</h2>
-        <div [ngClass]="invalidCredentials? 'box-red box':'box'">
-            <div>
-                <input type="text" [(ngModel)]="emailValue">
-            </div>
-        </div>
-    </div>
-    <div id="password">
-        <h2>Password</h2>
-        <div [ngClass]="invalidCredentials? 'box-red box':'box'">
-            <div>
-                <input type="password" [(ngModel)]="passwordValue">
-            </div>
-        </div>
-    </div>
-    <p (click)="handleRegisterClick()">You don't have a registration?Register now.</p>
-    <div id="buttons-sign">
-        <button (click)="handleLoginClick()">Login</button>
-    </div>
-</div> -->
 <form (ngSubmit)="onSubmit()">
     <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="email">
-        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        <label class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" [(ngModel)]="emailValue">
     </div>
     <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password">
-    </div>
-    <div class="mb-4 form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]="passwordValue" name="pass">
     </div>
     <p (click)="handleRegisterClick()">You don't have a registration?Register now.</p>
     <div class="d-grid">

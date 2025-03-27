@@ -17,9 +17,18 @@ import { GamePageComponent } from './components/pages/artifacts/game-page/game-p
 import { MangaPageComponent } from './components/pages/artifacts/manga-page/manga-page.component';
 import { MusicPageComponent } from './components/pages/artifacts/music-page/music-page.component';
 import { SignupPageComponent } from './components/pages/signup-page/signup-page.component';
+import { WorkCreationComponent } from './components/pages/artifacts/work-creation/work-creation.component';
+import { WorkUpdateComponent } from './components/pages/artifacts/work-update/work-update.component';
+import { WorkManagementComponent } from './components/pages/artifacts/work-management/work-management.component';
+import { CompanyCreationComponent } from './components/pages/company-creation/company-creation.component';
+import { CompanyUpdateComponent } from './components/pages/company-update/company-update.component';
+import { CompanyManagementComponent } from './components/pages/company-management/company-management.component';
+import { PersonCreationComponent } from './components/pages/person-creation/person-creation.component';
+import { PersonUpdateComponent } from './components/pages/person-update/person-update.component';
+import { PersonManagementComponent } from './components/pages/person-management/person-management.component';
 
 const routes: Routes = [
-  { path: '', component: HomePageComponent },
+  { path: '', component: SignPageComponent},
   { path: 'home', component: HomePageComponent },
   { path: 'community/:id', component: CommunityPageComponent },
   { path: 'company/:id', component: CompanyPageComponent },
@@ -40,8 +49,19 @@ const routes: Routes = [
   { path: 'book', component: BookPageComponent },
   { path: 'game', component: GamePageComponent },
   { path: 'manga', component: MangaPageComponent },
-  { path: 'music', component: MusicPageComponent }
+  { path: 'music', component: MusicPageComponent },
 
+  { path: 'create-work', component: WorkCreationComponent },
+  { path: 'update-work/:id', component: WorkUpdateComponent },
+  { path: 'manage-works', component: WorkManagementComponent },
+
+  { path: 'create-company', component: CompanyCreationComponent },
+  { path: 'update-company/:id', component: CompanyUpdateComponent },
+  { path: 'manage-companies', component: CompanyManagementComponent },
+
+  { path: 'create-person', component: PersonCreationComponent },
+  { path: 'update-person/:id', component: PersonUpdateComponent },
+  { path: 'manage-people', component: PersonManagementComponent },
 ];
 
 @NgModule({

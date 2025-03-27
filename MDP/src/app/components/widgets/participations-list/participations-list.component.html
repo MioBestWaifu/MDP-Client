@@ -1,7 +1,7 @@
 <div class="d-flex">
     @for (item of participations; track (useArtifact? item.artifact!.id : item.participant!.id)) {
         <div style="cursor:pointer;" class="row" [routerLink]="determineRoute(item)">
-            <img class="col-6" [src]="useArtifact ? item.artifact!.cardImage.url: item.participant!.cardImage.url">
+            <img class="col-6" [src]="useArtifact ? item.artifact!.cardImage.content: item.participant!.cardImage.content">
             <div class="col-6 d-flex flex-column">
                 <p>{{useArtifact ? item.artifact!.shortName.literal : item.participant!.shortName.literal}}</p>
                 @for (role of item.roles; track $index; let last = $last) {

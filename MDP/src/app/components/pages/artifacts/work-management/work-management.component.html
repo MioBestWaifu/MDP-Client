@@ -1,0 +1,37 @@
+<div class="container mt-4">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Work Management</h2>
+    <button class="btn btn-primary" (click)="NavigateToCreateWork()">Add New Work</button>
+  </div>
+
+  <div class="form-group">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Search works"
+      [(ngModel)]="searchTerm"
+      (keyup.enter)="SearchWorks()"
+    />
+  </div>
+
+  <div class="row mt-4">
+    <div *ngFor="let work of works" class="col-md-4 mb-3">
+      <div class="card">
+        <img
+          *ngIf="work.cardImage"
+          [src]="work.cardImage.content"
+          class="card-img-top"
+          alt="Work Image"
+          style="max-height: 150px; object-fit: cover;"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ work.shortName.literal }}</h5>
+          <div class="d-flex justify-content-between">
+            <button class="btn btn-warning" (click)="NavigateToUpdateWork(work.id)">Edit</button>
+            <button class="btn btn-danger" (click)="DeleteWork(work.id)">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

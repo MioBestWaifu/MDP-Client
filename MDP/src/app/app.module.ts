@@ -79,6 +79,15 @@ import { BadgeListComponent } from "./components/structure/badge-list/badge-list
 import { GenderToStringPipe } from './classes/gender-to-string.pipe';
 import { ParticipationsListComponent } from './components/widgets/participations-list/participations-list.component';
 import { AffiliatesListComponent } from './components/widgets/affiliates-list/affiliates-list.component';
+import { WorkCreationComponent } from './components/pages/artifacts/work-creation/work-creation.component';
+import { WorkUpdateComponent } from './components/pages/artifacts/work-update/work-update.component';
+import { WorkManagementComponent } from './components/pages/artifacts/work-management/work-management.component';
+import { CompanyCreationComponent } from './components/pages/company-creation/company-creation.component';
+import { CompanyUpdateComponent } from './components/pages/company-update/company-update.component';
+import { CompanyManagementComponent } from './components/pages/company-management/company-management.component';
+import { PersonCreationComponent } from './components/pages/person-creation/person-creation.component';
+import { PersonUpdateComponent } from './components/pages/person-update/person-update.component';
+import { PersonManagementComponent } from './components/pages/person-management/person-management.component';
 
 @NgModule({
   declarations: [
@@ -140,7 +149,16 @@ import { AffiliatesListComponent } from './components/widgets/affiliates-list/af
     ParticipationsListComponent,
     AffiliatesListComponent,
     ChipSearchComponent,
-    GenderToStringPipe
+    GenderToStringPipe,
+    WorkCreationComponent,
+    WorkUpdateComponent,
+    WorkManagementComponent,
+    CompanyCreationComponent,
+    CompanyUpdateComponent,
+    CompanyManagementComponent,
+    PersonCreationComponent,
+    PersonUpdateComponent,
+    PersonManagementComponent
   ],
   imports: [
     CommonModule,

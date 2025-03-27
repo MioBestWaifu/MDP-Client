@@ -1,0 +1,146 @@
+<div class="container">
+  <div class="d-flex justify-content-around">
+    <!-- Main Image upload section -->
+    <div class="form-group text-center">
+      <label style="display: block;" for="mainImage">Main Image</label>
+      <img *ngIf="artifact.mainImage" [src]="artifact.mainImage.content" alt="Main Image" class="img-thumbnail mt-2" style="max-height: 200px;">
+      <input type="file" class="form-control mt-2" id="mainImage" (change)="ImageChosen($event, 'main')" accept="image/png, image/jpeg">
+    </div>
+    <!-- Card Image upload section -->
+    <div class="form-group text-center">
+      <label style="display: block;"  for="cardImage">Card Image</label>
+      <img *ngIf="artifact.cardImage" [src]="artifact.cardImage.content" alt="Card Image" class="img-thumbnail mt-2" style="max-height: 200px;">
+      <input type="file" class="form-control mt-2" id="cardImage" (change)="ImageChosen($event, 'card')" accept="image/png, image/jpeg">
+    </div>
+  </div>
+  <form (ngSubmit)="Update()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" [(ngModel)]="artifact.shortName.literal" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="fullName">Full Name</label>
+      <input type="text" class="form-control" id="fullName" [(ngModel)]="artifact.fullName.literal" name="fullName" required>
+    </div>
+    <div class="form-group">
+        <label for="otherNames">Other Names (separate with comma)</label>
+        <input type="text" class="form-control" id="otherNames" [(ngModel)]="otherNamesString" name="otherNames">
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea class="form-control" id="description" [(ngModel)]="artifact.description" name="description"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="media">Media</label>
+      <select class="form-control" id="media" [(ngModel)]="artifact.media" name="media" [compareWith]="compareById" required>
+        <option *ngFor="let m of mediaOptions" [ngValue]="m">{{m.name}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="categories">Categories</label>
+      <select multiple class="form-control" id="categories" [(ngModel)]="artifact.categories" name="categories" [compareWith]="compareById" required>
+        <option *ngFor="let c of categoryOptions" [ngValue]="c">{{c.name}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="targetDemographics">Target Demographics</label>
+      <select multiple class="form-control" id="targetDemographics" [(ngModel)]="artifact.targetDemographics" name="targetDemographics" [compareWith]="compareById">
+        <option *ngFor="let d of demographicOptions" [ngValue]="d">{{d.name}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="ageRating">Age Rating</label>
+      <select class="form-control" id="ageRating" [(ngModel)]="artifact.ageRating" name="ageRating" [compareWith]="compareById" required>
+        <option *ngFor="let a of ageRatingOptions" [ngValue]="a">{{a.name}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="releaseDate">Release Date</label>
+      <input type="date" class="form-control" id="releaseDate" [(ngModel)]="artifact.releaseDate" name="releaseDate">
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+  </form>
+
+  <!-- Placeholder for People form -->
+<div class="d-flex justify-content-around">
+  <!-- People to be added -->
+  <div class="w-50">
+    <h3>Add People</h3>
+    <input type="text" class="form-control mb-3" placeholder="Search people" [(ngModel)]="searchTerm" (keyup.enter)="SearchPeople()">
+    <div *ngFor="let person of nonparticipants">
+      <div class="card mb-3">
+        <div class="card-body d-flex align-items-center">
+          <img [src]="person.cardImage.content" alt="Person Image" class="img-thumbnail mr-3" style="max-height: 50px;">
+          <div class="flex-grow-1">
+            <h5 class="card-title">{{ person.shortName.literal }}</h5>
+          </div>
+          <button class="btn btn-success ml-3" (click)="AddParticipation(person)">
+            <i class="fas fa-plus"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- People already added -->
+  <div class="w-50">
+    <h3>Participants</h3>
+    <div *ngFor="let participation of participants">
+      <div class="card mb-3">
+        <div class="card-body d-flex align-items-center">
+          <img [src]="participation.participant.cardImage.content" alt="Person Image" class="img-thumbnail mr-3" style="max-height: 50px;">
+          <div class="flex-grow-1">
+            <h5 class="card-title">{{ participation.participant.shortName.literal }}</h5>
+            <select class="form-control" [(ngModel)]="participation.roles" multiple [compareWith]="compareById">
+              <option *ngFor="let role of roleOptions" [ngValue]="role">{{ role.name }}</option>
+            </select>
+          </div>
+          <button class="btn btn-danger ml-3" (click)="RemoveParticipation(participation)">
+            <i class="fas fa-minus"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="d-flex justify-content-around">
+    <!-- Companies to be added -->
+    <div class="w-50">
+      <h3>Add Companies</h3>
+      <input type="text" class="form-control mb-3" placeholder="Search companies" [(ngModel)]="companySearchTerm" (keyup.enter)="SearchCompanies()">
+      <div *ngFor="let company of nonparticipantCompanies">
+        <div class="card mb-3">
+          <div class="card-body d-flex align-items-center">
+            <img [src]="company.cardImage.content" alt="Company Image" class="img-thumbnail mr-3" style="max-height: 50px;">
+            <div class="flex-grow-1">
+              <h5 class="card-title">{{ company.shortName.literal }}</h5>
+            </div>
+            <button class="btn btn-success ml-3" (click)="AddCompanyParticipation(company)">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Companies already added -->
+    <div class="w-50">
+      <h3>Company Participants</h3>
+      <div *ngFor="let participation of companyParticipants">
+        <div class="card mb-3">
+          <div class="card-body d-flex align-items-center">
+            <img [src]="participation.participant.cardImage.content" alt="Company Image" class="img-thumbnail mr-3" style="max-height: 50px;">
+            <div class="flex-grow-1">
+              <h5 class="card-title">{{ participation.participant.shortName.literal }}</h5>
+              <select class="form-control" [(ngModel)]="participation.roles" multiple [compareWith]="compareById">
+                <option *ngFor="let role of roleOptions" [ngValue]="role">{{ role.name }}</option>
+              </select>
+            </div>
+            <button class="btn btn-danger ml-3" (click)="RemoveCompanyParticipation(participation)">
+              <i class="fas fa-minus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
